@@ -1,0 +1,70 @@
+/* Login Signup */
+.login_signup_page {
+    min-height: 85vh;
+}
+
+.login_register_container {
+    /* margin-top: 40px; */
+    margin: 0 auto 0 auto;
+    max-width: 800px;
+    height: 30rem;
+    /* max-height: 60vh; */
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .login_register_form {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+  
+  .login_form {
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+  }
+  
+  .register_form {
+    backface-visibility: hidden;
+    overflow: auto;
+    transform: rotateY(180deg);
+  }
+  /* width */
+.register_form::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.register_form::-webkit-scrollbar-track {
+  background: #01030c; 
+}
+ 
+/* Handle */
+.register_form::-webkit-scrollbar-thumb {
+  background: #1b3357; 
+  border-radius: 4px;
+}
+  .rotate {
+    transform: rotateY(180deg);
+  }
+
+  .hidden_h1 {
+    display: none;
+  }
+
+  .hidden_link {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+
+      .hidden_h1 {
+        display: block;
+        text-align: center;
+      }
+
+      .hidden_link {
+        display: block;
+        margin: 30px auto;
+      }
+  }
+

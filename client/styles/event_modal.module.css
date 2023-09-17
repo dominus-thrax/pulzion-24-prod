@@ -1,0 +1,16 @@
+.event_modal_desc::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+.event_modal_desc::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.event_modal_desc::-webkit-scrollbar-thumb {
+  background-color: #46526d; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+.modal_gradient_class {
+  background: rgba(0, 0, 0, 0.2);
+}

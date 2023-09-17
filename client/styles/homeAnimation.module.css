@@ -1,0 +1,46 @@
+
+
+.animated {
+    position: relative;
+    width: 250px;
+    height: 48px;
+    display: inline-block;
+    background-image: linear-gradient(to bottom right, #172947c5, black);
+    margin: 20px;
+}
+
+.animated::before,
+.animated::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom right, #172947c5, black);
+    transition: 0.5s;
+    background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+}
+
+.animated::before{
+    inset: -3px;
+}
+
+.animated::after{
+    inset: -3px;
+    filter: blur(10px);
+}
+
+.animated span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(to bottom right, #172947c5, black);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid #002f64;
+    overflow: hidden;
+}

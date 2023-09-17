@@ -1,0 +1,259 @@
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(23, 41, 71, 0.73);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.card .imgBox {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 100%;
+  display: inline-block;
+  background: #fff;
+  margin: 20px;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .imgBox::before,
+.card .imgBox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f00;
+  transition: 0.5s;
+  background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+}
+
+.card .imgBox::before{
+  inset: -3px;
+}
+
+.card .imgBox::after{
+  inset: -3px;
+  filter: blur(10px);
+}
+
+.card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #002f64;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 1px solid #002f64;
+  overflow: hidden;
+}
+
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.event_title {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.event_tagline {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  background: #0c4a6e;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.transion {
+  opacity: 0;
+
+  transition: 0.5s;
+}
+.card:hover .contentBox .buy,
+.transion:hover {
+  top: 0;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .buy,
+  .transion {
+    top: 0 !important;
+    opacity: 1 !important;
+  }
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
+}
+
+.hero-link-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2vw 10%;
+  justify-content: center;
+}
+
+.hero-link-container .event-links {
+  margin: 1rem;
+}
+
+.event-links {
+  padding: 0.75rem 3rem;
+  font-size: 1.2rem;
+}
+
+.event-links-active {
+  background-color: #0c4a6e !important;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.event-links,
+.event-links1 {
+  border: 1px solid #0c4a6e;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  background-color: #1b1e1f;
+  margin: 20px 0.4rem 0;
+}
+
+
+.animated {
+  position: relative;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, #172947c5, black);
+}
+
+.animated::before,
+.animated::after {
+  content: "";
+  position: absolute;
+  inset: 4;
+  transition: 0.5s;
+  border-radius: 100%;
+  background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+}
+
+.animated::before{
+  inset: -3px;
+  border-radius: 100%;
+}
+
+.animated::after{
+  inset: 3px;
+  filter: blur(10px);
+  border-radius: 100%;
+  background-image: linear-gradient(to bottom right, #172947c5, black);
+}
+
+.event-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.contain::after {
+  clip-path: polygon(10px 0,0 10px,0 100%,95% 100%,100% 94%,100% 0);
+  position: absolute;
+  background: white;
+  width: 2000px;
+  height: 20000px;
+} 
+
+.contain::before {
+  clip-path: polygon(10px 0,0 10px,0 100%,95% 100%,100% 94%,100% 0);
+  position: absolute;
+  background: white;
+  width: 2000px;
+  height: 20000px;
+}
+
+.cards {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to bottom right, #172947c5, black);
+  top: 0;
+}
+
+.cards::before,
+.cards::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f00;
+  transition: 0.5s;
+  background: linear-gradient(33deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+}
+
+.cards::before{
+  inset: -3px;
+}
+
+.cards::after{
+  inset: -3px;
+  filter: blur(10px);
+}
+
+.cards div {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to bottom right, #172947c5, black);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 1px solid #002f64;
+  overflow: hidden;
+}

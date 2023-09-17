@@ -1,0 +1,62 @@
+.sponsorscard {
+  max-width: 320px;
+  width: 320px;
+
+  background: #07182e;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.sponsorstitle {
+  z-index: 99;
+  color: white;
+  margin-top: 15px;
+}
+
+.sponsorimg {
+  width: 240px;
+  height: 240px;
+  opacity: 100;
+  object-fit: contain;
+  z-index: 99;
+}
+
+.sponsorscard::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, #fff, #67e8f9);
+  height: 190%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+
+.sponsorscard::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom right, #172947c5, black);
+}
+
+.sponsorscard:hover:before {
+  animation: rotBGimg 3.5s linear infinite;
+}
+
+@keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
