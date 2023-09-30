@@ -6,14 +6,14 @@ import AppContext from "../context/AppContext";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { IoCalendarOutline } from "react-icons/io5";
-import styles from "../styles/homeAnimation.module.css"
+import styles from "../styles/homeAnimation.module.css";
 export default function Home() {
   const { user } = useContext(AppContext);
   const [exploring, setExploring] = useState(false);
   const router = useRouter();
 
   return (
-    <Layout>
+    <div>
       <Head>
         <title>Pulzion'23</title>
         <meta
@@ -27,8 +27,9 @@ export default function Home() {
         />
       </Head>
       <div
-        className={` flex flex-col items-center justify-center pb-5 ${exploring ? "" : "relative"
-          }  `}
+        className={` flex flex-col items-center justify-center pb-5 ${
+          exploring ? "" : "relative"
+        }  `}
         style={{
           paddingTop: "8vh",
           zIndex: 20,
@@ -40,7 +41,7 @@ export default function Home() {
           {/* <p className="text-3xl font-bold tracking-wide text-center text-primaries-100 md:text-5xl">
             PICT ACM Student Chapter
           </p> */}
-          <img src="magicflare.png" alt="magic flare" className="w-40"/>
+          <img src="magicflare.png" alt="magic flare" className="w-40" />
           <p className="text-lg italic font-normal text-center text-primaries-100 md:text-xl">
             presents
           </p>
@@ -52,19 +53,27 @@ export default function Home() {
             <IoCalendarOutline /> <p>3rd, 4th &amp; 5th May</p>
           </div>
           <div className="flex flex-col gap-6 xl:mt-5 sm:flex sm:flex-row">
-            <button className={`${styles.animated} some-button`}
+            <button
+              className={`${styles.animated} some-button`}
               onClick={() =>
                 user?.id ? router.push("/events") : router.push("/register")
               }
-            >            
-              <span className="text-xl italic tracking-normal">{user?.id ? "Register For Events" : "Register Now"}</span>
+            >
+              <span className="text-xl italic tracking-normal">
+                {user?.id ? "Register For Events" : "Register Now"}
+              </span>
             </button>
-            <button className={`${styles.animated}`} onClick={() => setExploring(() => !exploring)}>
-              <span className="text-xl italic tracking-normal">{exploring ? " Go back Main Page" : "Explore"}</span>
+            <button
+              className={`${styles.animated}`}
+              onClick={() => setExploring(() => !exploring)}
+            >
+              <span className="text-xl italic tracking-normal">
+                {exploring ? " Go back Main Page" : "Explore"}
+              </span>
             </button>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }

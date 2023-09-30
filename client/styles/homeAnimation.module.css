@@ -1,5 +1,3 @@
-
-
 .animated {
     position: relative;
     width: 250px;
@@ -16,14 +14,14 @@
     inset: 0;
     background-image: linear-gradient(to bottom right, #172947c5, black);
     transition: 0.5s;
-    background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+    background: linear-gradient(142deg, #03d3f0, transparent, transparent, transparent, #03d3f0);
 }
 
-.animated::before{
+.animated::before {
     inset: -3px;
 }
 
-.animated::after{
+.animated::after {
     inset: -3px;
     filter: blur(10px);
 }
