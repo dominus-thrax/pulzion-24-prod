@@ -132,14 +132,14 @@ const EventModal = forwardRef(
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         ></link>
         <div
-          className="fixed w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-sky-700"
+          className="fixed w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-orange-600"
           style={{
             top: "50%",
             left: "50%",
             transform: "translate(-50%,-50%)",
             pointerEvents: "all",
             height: "90vh",
-            backgroundImage: 'url("Modal_BG.jpeg")',
+            backgroundImage: 'url("event-modal-bkg.jpg")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}

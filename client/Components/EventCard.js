@@ -96,11 +96,11 @@ function EventCard(props) {
           }}
         />{" "}
       </div>
-      <div className="w-full">
-        <div className="xl:w-[100%] -z-0 sm:w-full cards h-[350px] xl:h-[400px] py-5 bg-gradient-to-br from-[#172947c5] to-black"
+      <div className="w-full flex justify-center">
+        <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
-          <div className="p-10 w-[100%] h-[350px] xl:h-[400px] gap-4 -top-5 flex flex-col justify-center items-center">
-              <h2 className="mt-20 text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
+          <div className="p-10 w-[100%] h-[500px] xl:h-[400px] gap-4 -top-5 flex flex-col justify-center items-center mt-[-7rem]">
+              <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
               <h3 className="text-lg font-medium tracking-wider text-center text-white">{props.tagline}</h3>
               {registeredEvent?.fk_slot && (
                 <h3 className="mt-2 text-center">
@@ -110,7 +110,7 @@ function EventCard(props) {
                 </h3>
               )}
               <button
-                className="relative mt-auto mb-3 py-2 px-6 text-black no-underline bg-[#03d3f0] hover:font-bold text-center rounded-full uppercase tracking-wide"
+                className="relative mt-auto mb-3 py-2 px-6 text-black no-underline bg-[#f06e03] hover:bg-[hsl(27,98%,28%)] hover:font-bold text-center rounded-md uppercase tracking-wide"
                 onClick={handleOpen}
               >
                 View

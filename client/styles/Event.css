@@ -28,7 +28,7 @@
   inset: 0;
   background: #f00;
   transition: 0.5s;
-  background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+  background: linear-gradient(142deg,#2471A3,transparent,transparent,transparent,#2471A3);
 }
 
 .card .imgBox::before{
@@ -163,9 +163,9 @@
 .animated {
   position: relative;
   display: inline-block;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   padding: 20px;
-  background-image: linear-gradient(to bottom right, #172947c5, black);
+  /* background-image: linear-gradient(to bottom right, #172947c5, black); */
 }
 
 .animated::before,
@@ -175,7 +175,7 @@
   inset: 4;
   transition: 0.5s;
   border-radius: 100%;
-  background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+  /* background: linear-gradient(142deg,#f06203,transparent,transparent,transparent,#f06203); */
 }
 
 .animated::before{
@@ -183,12 +183,12 @@
   border-radius: 100%;
 }
 
-.animated::after{
+/* .animated::after{
   inset: 3px;
   filter: blur(10px);
   border-radius: 100%;
   background-image: linear-gradient(to bottom right, #172947c5, black);
-}
+} */
 
 .event-logo {
   position: absolute;
@@ -222,7 +222,7 @@
 .cards {
   position: relative;
   display: inline-block;
-  background-image: linear-gradient(to bottom right, #172947c5, black);
+  /* background-image: linear-gradient(to bottom right, #172947c5, black); */
   top: 0;
 }
 
@@ -231,9 +231,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: #f00;
+  /* background: #f00; */
   transition: 0.5s;
-  background: linear-gradient(33deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+  /* background: linear-gradient(33deg,#f07503,transparent,transparent,transparent,#f07503); */
 }
 
 .cards::before{
@@ -248,12 +248,13 @@
 .cards div {
   position: relative;
   display: inline-block;
-  background-image: linear-gradient(to bottom right, #172947c5, black);
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  border: 1px solid #002f64;
+  border-width: 2px;
+  border-color: orange orange blue blue;
+  border-style: solid;
   overflow: hidden;
 }

@@ -428,7 +428,7 @@ const Layout = ({ children }) => {
       renderer.setSize(container?.clientWidth, container?.clientHeight);
     }
   }, []);
-  const [loader, setLoader] = useState(true)
+  const [loader, setLoader] = useState(false)
 
   useEffect(() => {
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -483,7 +483,7 @@ const Layout = ({ children }) => {
                 width: "100%",
               }}
             >
-              <video
+              {/* <video
                 id="bg_video"
                 style={{
                   zIndex: -1,
@@ -499,7 +499,7 @@ const Layout = ({ children }) => {
                 className={loader ? "hidden" : ""} 
               >
                 <source src="Cart_bg.mp4" type="video/mp4" />
-              </video>
+              </video> */}
               
               <img id="bg_image" src="space_bg.jpg" className="h-[100%] w-[100%] -z-1"/>
             </div>
