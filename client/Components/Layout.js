@@ -448,69 +448,58 @@ const Layout = ({ children }) => {
 
 
   return (
-    <>
-      {router.pathname === "/" && (
-        <div
-          id="canvas-container"
-          ref={bgRef}
-          style={{
-            objectFit: "cover",
-            height: "100vh",
-            width: "100vw",
-            position: "fixed",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-        </div>
-      )}
-      {loader && router.pathname !=="/" && <Loader />}
+  <>
+    {router.pathname === "/" && (
       <div
-        className={`min-h-screen flex flex-col styles.gradientClass   ${router.pathname === "/" ? "" : ""
-          }`}
+        id="canvas-container"
+        ref={bgRef}
+        style={{
+          objectFit: "cover",
+          height: "100vh",
+          width: "100vw",
+          position: "fixed",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          zIndex: -1, // Add this line to move it to the background
+        }}
       >
-        <Header />
-        <div
-          className={`flex-1  ${router.pathname === "/" ? "" : "background"}`}
-        >
-          {router.pathname !== "/" && (
-            <div
-              id="bg"
-              className="fixed bottom-0 left-0 right-0 min-w-full min-h-full"
+      </div>
+    )}
+    {/* {loader && router.pathname !== "/" && <Loader />} */}
+    <div className={`min-h-screen flex flex-col styles.gradientClass ${router.pathname === "/" ? "" : ""}`}>
+      <Header />
+      <div className={`flex-1 ${router.pathname === "/" ? "" : "background"}`}>
+        {router.pathname !== "/" && (
+          <div
+            id="bg"
+            className="fixed bottom-0 left-0 right-0 min-w-full min-h-full"
+            style={{
+              zIndex: -2, // Add this line to move it further to the background
+              height: "100vh",
+              width: "100%",
+            }}
+          >
+            <img
+              id="bg_img"
               style={{
                 zIndex: -1,
-                height: "100vh",
+                height: "100%",
                 width: "100%",
+                objectFit: "cover",
               }}
-            >
-              <video
-                id="bg_video"
-                style={{
-                  zIndex: -1,
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-                autoPlay
-                loop
-                muted
-                controls={false}
-                webkitPlaysinline={true}
-                className={loader ? "hidden" : ""} 
-              >
-                <source src="Cart_bg.mp4" type="video/mp4" />
-              </video>
-              
-              <img id="bg_image" src="space_bg.jpg" className="h-[100%] w-[100%] -z-1"/>
-            </div>
-          )}
+              src="main.png"
+              alt="Background Image"
+              // className={loader ? "false" : ""}
+            />
+          </div>
+        )}
 
-          {children}
-        </div>
-        {router.pathname !== "/" && <Footer />}
+        {children}
       </div>
-    </>
-  );
+      {router.pathname !== "/" && <Footer />}
+    </div>
+  </>
+);
 };
 
 export default Layout;

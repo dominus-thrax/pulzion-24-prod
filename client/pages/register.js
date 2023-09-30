@@ -6,6 +6,7 @@ import Layout from "../Components/Layout";
 import { useEffect, useState } from "react";
 import styles from "../styles/loginsignup.module.css"
 import publicRoute from "../routes/publicRoute";
+import hallo from '../public/hallo.jpg';
 
 const LoginSignup = () => {
   const [login, setLogin] = useState(true);
@@ -47,26 +48,29 @@ const LoginSignup = () => {
           <div className={`flex ${styles.login_register_container}`}>
               
               <div className={`hidden md:flex flex-col items-center justify-center rounded-l-md w-full lg:w-1/2 bg-gradient-to-br from-[#172947c5] to-black opacity-95`}>
-                  <h1 className="mb-5 text-5xl font-bold text-center text-primaries-100">Welcome</h1>
+                  <h1 className={`mb-5 text-5xl  text-center text-primaries-100 font-body `}>Welcome</h1>
+                  <div className={`w-300 h-300`}>
+                    <img src={hallo} alt="" className="" />
+                  </div>
                   {
                     !login ? 
                     <div className="flex flex-col items-center gap-2">
-                      <h1 className="text-xl text-center text-primaries-100">Already Have an Account?</h1>
+                      <h1 className="text-xl text-center text-red-500 font-body">Already Have an Account?</h1>
                       <button 
                         onClick={displayLogin} 
-                        className="text-lg font-bold text-center text-primaries-100 hover:underline" 
+                        className="text-xl font-body text-center   text-white hover:bg-blue-500 hover:rounded-md hover:p-2" 
                         >
                           Login
                       </button>
                     </div>
                     : 
-                    <div className="flex flex-col items-center gap-2">
-                      <h1 className="text-xl text-center text-primaries-100">Don't Have an Account?</h1>
-                      <button 
-                        onClick={displayRegister} 
-                        className="text-lg font-bold text-center text-primaries-100 hover:underline" 
+                    <div className="flex flex-col items-center gap-2 p-4 rounded-lg shadow-md">
+                      <h1 className="text-xl text-center text-red-500 font-body">Don't Have an Account?</h1>
+                      <button
+                        onClick={displayRegister}
+                        className="text-xl  font-body text-white hover:bg-blue-500 hover:rounded-md hover:p-2"
                       >
-                          Sign Up
+                        Sign Up
                       </button>
                     </div>
                     

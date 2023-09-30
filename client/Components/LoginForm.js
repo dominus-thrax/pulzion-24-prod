@@ -40,7 +40,7 @@ const LoginForm = (props) => {
   <form className={`${styles.login_form} bg-[#172947ba] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
       <h1 className={`${styles.hidden_h1} text-primaries-100 my-6 mx-auto`}>Welcome</h1>
       <div className="flex flex-col gap-2 mb-4">
-        <label className="block text-lg font-bold tracking-wide text-primaries-100" htmlFor="email">Email Address</label>
+        <label className="block text-lg font-body tracking-wide text-blue-500" htmlFor="email">Email Address</label>
         <input
           className="w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
           id="email"
@@ -57,7 +57,7 @@ const LoginForm = (props) => {
       </div>
 
       <div className="flex flex-col gap-2 mb-6">
-      <label className="block text-lg font-bold text-primaries-100" htmlFor="password">Password</label>
+      <label className="block text-lg  text-blue-500 font-body " htmlFor="password">Password</label>
         <input
           className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none border-primaries-100 bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
           id="password"
@@ -72,12 +72,12 @@ const LoginForm = (props) => {
           <div className="text-red-500">{formik.errors.password}</div>
         ) : null}
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between font-body text-2xl ">
         <PrimaryButton type='submit'>
           Login
         </PrimaryButton>
         <Link href="/forgotpassword">
-        <span className="inline-block text-sm font-bold text-blue-500 align-baseline cursor-pointer hover:text-blue-800">
+        <span className="inline-block text-sm font-body text-blue-500 align-baseline cursor-pointer hover:text-blue-800">
           Forgot Password?
         </span>
         </Link>

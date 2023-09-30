@@ -107,7 +107,7 @@ const RegisterForm = (props) => {
         </h1>
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="firstname"
           >
             First Name
@@ -129,7 +129,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="last_name"
           >
             Last Name
@@ -151,7 +151,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="mobile_number"
           >
             Mobile Number
@@ -184,7 +184,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="country"
           >
             Country
@@ -204,7 +204,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="college"
           >
             College
@@ -244,7 +244,7 @@ const RegisterForm = (props) => {
         {formik.values.college === "Others" || !others ? (
           <div className="flex flex-col gap-2 mb-4">
             <label
-              className="block text-lg font-bold text-primaries-100"
+              className="block text-lg font-body text-blue-500"
               htmlFor="college_name"
             >
               College Name
@@ -270,7 +270,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="year"
           >
             Year
@@ -311,7 +311,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="email"
           >
             Email Address
@@ -333,7 +333,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="password"
           >
             Password
@@ -355,7 +355,7 @@ const RegisterForm = (props) => {
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-blue-500"
             htmlFor="confirmPassword"
           >
             Confirm Password
@@ -374,12 +374,12 @@ const RegisterForm = (props) => {
             <div className="text-red-500">{formik.errors.confirmPassword}</div>
           ) : null}
         </div>
-        <PrimaryButton type="submit">Sign Up</PrimaryButton>
+        <PrimaryButton type="submit" className="font-body text-2xl bg-blue-500 rounded-md p-2">Sign Up</PrimaryButton>
 
         <button
           onClick={props.displayLogin}
           type="button"
-          className={`${!ios ? styles.hidden_link : ""} inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 my-6`}
+          className={`${!ios ? styles.hidden_link : ""} inline-block align-baseline font-body text-sm text-blue-500 hover:text-blue-800 my-6`}
         >
           Already have an account? Login
         </button>
