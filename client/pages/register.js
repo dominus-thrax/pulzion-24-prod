@@ -6,7 +6,6 @@ import Layout from "../Components/Layout";
 import { useEffect, useState } from "react";
 import styles from "../styles/loginsignup.module.css"
 import publicRoute from "../routes/publicRoute";
-import hallo from '../public/hallo.jpg';
 
 const LoginSignup = () => {
   const [login, setLogin] = useState(true);
@@ -46,11 +45,10 @@ const LoginSignup = () => {
       </Head>
       <div className={`${styles.login_signup_page} sm:px-8 md:px-12 lg:px-16 flex justify-center flex-col`}>
           <div className={`flex ${styles.login_register_container}`}>
-              
               <div className={`hidden md:flex flex-col items-center justify-center rounded-l-md w-full lg:w-1/2 bg-gradient-to-br from-[#172947c5] to-black opacity-95`}>
                   <h1 className={`mb-5 text-5xl  text-center text-primaries-100 font-body `}>Welcome</h1>
-                  <div className={`w-300 h-300`}>
-                    <img src={hallo} alt="" className="" />
+                  <div style={{marginLeft:"34%"}}>
+                    <img src="pumpkins.png" width={"50%"} />
                   </div>
                   {
                     !login ? 
