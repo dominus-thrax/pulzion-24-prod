@@ -88,8 +88,15 @@ function EventCard(props) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className={`animated z-[2] top-24 w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]`}>
+    <div className="flex flex-col pl-2 items-center justify-center" style={{
+      backgroundImage:`url('event_frame.png')`,
+      backgroundSize:'cover',
+      filter:'hue-rotate(345deg)',
+      filter:'contrast(150%)',
+      backgroundRepeat:'no-repeat',
+      padding: '0px 10px 10px 50px',
+    }}>
+      <div className={`animated z-[2] top-24 w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]`} >
         <img src={props.logo} alt={props.name} className="event-logo"
           style={{
             padding: "30px"
@@ -99,7 +106,7 @@ function EventCard(props) {
       <div className="w-full flex justify-center">
         <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
-          <div className="p-10 w-[100%] h-[500px] xl:h-[400px] gap-4 -top-5 flex flex-col justify-center items-center mt-[-7rem]">
+          <div className="p-10 w-[100%] h-[500px] xl:h-[400px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
               <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
               <h3 className="text-lg font-medium tracking-wider text-center text-white">{props.tagline}</h3>
               {registeredEvent?.fk_slot && (

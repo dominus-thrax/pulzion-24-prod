@@ -253,8 +253,9 @@
   justify-content: center;
   align-items: center;
   color: white;
-  border-width: 2px;
+  /* border-width: 2px;
   border-color: orange orange blue blue;
-  border-style: solid;
+  border-style: solid; */
+  background-color: #072452;
   overflow: hidden;
 }
