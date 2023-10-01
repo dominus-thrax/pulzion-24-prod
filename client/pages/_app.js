@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           
         }
       } catch (e) {
-        
+
       }
       setLoading(false);
     };
@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
         }}
       >
         <CartProvider>
-          <StriverModal isVisible={isVisible} setIsVisible={setIsVisible} />
+          {/* <StriverModal isVisible={isVisible} setIsVisible={setIsVisible} /> */}
           <ToastContainer />
           <Component {...pageProps} />
         </CartProvider>
