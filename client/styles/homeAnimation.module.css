@@ -1,46 +1,56 @@
-
-
-.animated {
-    position: relative;
-    width: 250px;
-    height: 48px;
-    display: inline-block;
-    background-image: linear-gradient(to bottom right, #172947c5, black);
-    margin: 20px;
+@font-face {
+    font-family: heaters;
+    src: url(Heaters.otf);
 }
 
-.animated::before,
-.animated::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(to bottom right, #172947c5, black);
-    transition: 0.5s;
-    background: linear-gradient(142deg,#03d3f0,transparent,transparent,transparent,#03d3f0);
+.tagline {
+    font-family: heaters;
 }
 
-.animated::before{
-    inset: -3px;
+.witch {
+    animation: float 3s linear infinite, slide 25s linear infinite;
 }
 
-.animated::after{
-    inset: -3px;
-    filter: blur(10px);
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
-.animated span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    background-image: linear-gradient(to bottom right, #172947c5, black);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border: 1px solid #002f64;
-    overflow: hidden;
+@keyframes slide {
+    0% {
+        left: calc(0% - 120px);
+    }
+
+    50% {
+        left: calc(50% - 60px);
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {
+    .witch {
+        animation: float 3s linear infinite, slide 20s linear infinite;
+    }
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {
+    .witch {
+        animation: float 4s linear infinite, slide 15s linear infinite;
+    }
 }
