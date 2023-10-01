@@ -192,14 +192,14 @@
 
 .event-logo {
   position: absolute;
-  top: 0;
+  top: 10;
   left: 0;
   display: inline-block;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  /* color: white; */
   overflow: hidden;
 }
 
@@ -252,10 +252,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  /* border-width: 2px;
-  border-color: orange orange blue blue;
-  border-style: solid; */
-  background-color: #072452;
+  background-color:rgba(0,0,0,0.4);
+  background-image: url('../public/photo_frame.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  /* background-position: center; */
   overflow: hidden;
 }

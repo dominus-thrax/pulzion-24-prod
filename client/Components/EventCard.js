@@ -88,27 +88,20 @@ function EventCard(props) {
   };
 
   return (
-    <div className="flex flex-col pl-2 items-center justify-center" style={{
-      backgroundImage:`url('event_frame.png')`,
-      backgroundSize:'cover',
-      filter:'hue-rotate(345deg)',
-      filter:'contrast(150%)',
-      backgroundRepeat:'no-repeat',
-      padding: '0px 10px 10px 50px',
-    }}>
+    <div className="flex flex-col pl-2 items-center justify-center">
       <div className={`animated z-[2] top-24 w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]`} >
         <img src={props.logo} alt={props.name} className="event-logo"
           style={{
-            padding: "30px"
+            padding: "35px",
           }}
         />{" "}
       </div>
       <div className="w-full flex justify-center">
         <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
-          <div className="p-10 w-[100%] h-[500px] xl:h-[400px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
-              <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
-              <h3 className="text-lg font-medium tracking-wider text-center text-white">{props.tagline}</h3>
+          <div className="p-10 w-[100%] h-[500px] xl:h-[500px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
+              <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-[#2A1A41] uppercase">{props.name}</h2>
+              <h3 className="text-lg  tracking-wider text-center font-extrabold text-[#1e132e]">{props.tagline}</h3>
               {registeredEvent?.fk_slot && (
                 <h3 className="mt-2 text-center">
                   {displayDate(registeredEvent.start_time)}{" "}
@@ -116,12 +109,20 @@ function EventCard(props) {
                   {displayFormat(registeredEvent.end_time)}
                 </h3>
               )}
-              <button
-                className="relative mt-auto mb-3 py-2 px-6 text-black no-underline bg-[#f06e03] hover:bg-[hsl(27,98%,28%)] hover:font-bold text-center rounded-md uppercase tracking-wide"
-                onClick={handleOpen}
-              >
+             <button
+              className="p-5 sm:p-7 rounded-sm text-center bg-contain bg-no-repeat relative z-0"
+              onClick={
+                handleOpen
+              }
+            >
+              <img
+                src="/homepage_button.svg"
+                className="absolute inset-0 w-full h-full -z-10"
+              />
+              <span className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
                 View
-              </button>
+              </span>
+            </button>
           </div>
         </div>
       </div>      
