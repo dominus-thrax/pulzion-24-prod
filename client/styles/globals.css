@@ -94,9 +94,12 @@ body {
   font-family: 'Quantico';
 }
 
-.nav-font {
+.nav-font,
+.mobile_nav_link {
   font-family: 'heaters';
 }
+
+
 
 button {
   cursor: pointer;
