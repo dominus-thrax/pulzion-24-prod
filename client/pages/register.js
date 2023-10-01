@@ -46,7 +46,7 @@ const LoginSignup = () => {
       <div className={`${styles.login_signup_page} sm:px-8 md:px-12 lg:px-16 flex justify-center flex-col`}>
         <div className={`flex ${styles.login_register_container}`}>
           <div className={`hidden md:flex flex-col items-center justify-center rounded-l-md w-full lg:w-1/2 bg-gradient-to-br from-[#B48754] to-[#EDCE9A] opacity-95`}>
-            <h1 className={`mb-5 text-5xl  text-center text-white font-body `}>Welcome</h1>
+            <h1 className={`mb-5 text-5xl  text-center text-black font-body `}>Welcome</h1>
             <div style={{ marginLeft: "34%" }}>
               <img src="pumpkins.png" width={"50%"} />
             </div>

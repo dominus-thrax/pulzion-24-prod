@@ -157,10 +157,11 @@ const RegisterForm = (props) => {
             Mobile Number
           </label>
           <PhoneInput
-          className={"font-body"}
+            className="font-body"
             country={"us"}
             value={formik.values.mobile_number}
             enableSearch={true}
+            placeholder="Mobile Number"
             onBlur={formik.handleBlur}
             onChange={(phone) =>
               formik.setValues({ ...formik.values, mobile_number: phone })
@@ -177,6 +178,7 @@ const RegisterForm = (props) => {
             buttonStyle={{
               background: "#01030c",
             }}
+           
           />
           {formik.touched.mobile_number && formik.errors.mobile_number ? (
             <div className="text-white-500">{formik.errors.mobile_number}</div>
@@ -288,7 +290,7 @@ const RegisterForm = (props) => {
             Email Address
           </label> */}
           <input
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none text-primaries-100  bg-black  focus:outline-none focus:shadow-outline"
             id="email"
             name="email"
             type="email"
