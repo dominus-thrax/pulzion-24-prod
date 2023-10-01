@@ -37,11 +37,11 @@ const LoginForm = (props) => {
     onSubmit: handleLogin
   });
   return (<>
-  <form className={`${styles.login_form} bg-[#172947ba] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
+  <form className={`${styles.login_form} bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
       <div className="flex flex-col gap-2 mb-4">
-        <label className="block text-lg font-body tracking-wide text-blue-500" htmlFor="email">Email Address</label>
+        {/* <label className="block text-lg font-body tracking-wide text-black-500" htmlFor="email">Email Address</label> */}
         <input
-          className="w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+          className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
           id="email"
           name="email"
           type="email"
@@ -51,14 +51,14 @@ const LoginForm = (props) => {
           placeholder='Email Address'
         />
         {formik.touched.email && formik.errors.email ? (
-          <div className="text-red-500">{formik.errors.email}</div>
+          <div className="text-white-500">{formik.errors.email}</div>
         ) : null}
       </div>
 
       <div className="flex flex-col gap-2 mb-6">
-      <label className="block text-lg  text-blue-500 font-body " htmlFor="password">Password</label>
+      {/* <label className="block text-lg  text-black-500 font-body " htmlFor="password">Password</label> */}
         <input
-          className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none border-primaries-100 bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+          className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
           id="password"
           name="password"
           type="password"
@@ -68,7 +68,7 @@ const LoginForm = (props) => {
           placeholder='Password'
         />
         {formik.touched.password && formik.errors.password ? (
-          <div className="text-red-500">{formik.errors.password}</div>
+          <div className="text-white-500">{formik.errors.password}</div>
         ) : null}
       </div>
       <div className="flex items-center justify-between font-body text-2xl ">

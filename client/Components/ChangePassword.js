@@ -37,9 +37,9 @@ const ChangePassword = ({handleForget}) => {
             <form className={`bg-primaries-700 shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
                 <h1 className={`text-primaries-100 mb-4`}>You would have received an OTP on your mail. Provide that along with the changed password</h1>
                 <div className="mb-4 flex flex-col gap-2">
-                    <label className="block text-primaries-100 text-lg font-bold" htmlFor="otp">OTP</label>
+                    {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="otp">OTP</label> */}
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-primaries-700 text-primaries-100 leading-tight focus:outline-none focus:shadow-outline"
+                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="otp"
                         name="otp"
                         type="password"
@@ -49,14 +49,14 @@ const ChangePassword = ({handleForget}) => {
                         placeholder='OTP'
                     />
                     {formik.touched.otp && formik.errors.otp ? (
-                        <div className="text-red-500">{formik.errors.otp}</div>
+                        <div className="text-white-500">{formik.errors.otp}</div>
                     ) : null}
                 </div>
                 
                 <div className="mb-4 flex flex-col gap-2">
-                    <label className="block text-primaries-100 text-lg font-bold" htmlFor="password">Password</label>
+                    {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="password">Password</label> */}
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-primaries-700 text-primaries-100 leading-tight focus:outline-none focus:shadow-outline"
+                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="password"
                         name="password"
                         type="password"
@@ -66,14 +66,14 @@ const ChangePassword = ({handleForget}) => {
                         placeholder='Password'
                     />
                     {formik.touched.password && formik.errors.password ? (
-                        <div className="text-red-500">{formik.errors.password}</div>
+                        <div className="text-white-500">{formik.errors.password}</div>
                     ) : null}
                 </div>
 
                 <div className="flex flex-col gap-2 mb-4">
-                    <label className="block text-primaries-100 text-lg font-bold" htmlFor="confirmPassword">Confirm Password</label>
+                    {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="confirmPassword">Confirm Password</label> */}
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 bg-primaries-700 text-primaries-100 leading-tight focus:outline-none focus:shadow-outline"
+                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="confirmPassword"
                         name="confirmPassword"
                         type="password"
@@ -83,7 +83,7 @@ const ChangePassword = ({handleForget}) => {
                         placeholder='Confirm Password'
                     />
                     {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-                        <div className="text-red-500">{formik.errors.confirmPassword}</div>
+                        <div className="text-white-500">{formik.errors.confirmPassword}</div>
                     ) : null}
                 </div>
 
