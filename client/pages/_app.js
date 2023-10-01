@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           
         }
       } catch (e) {
-        
+
       }
       setLoading(false);
     };
