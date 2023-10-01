@@ -6,7 +6,7 @@ import Image from "next/image";
 import ProfileCard from "../Components/ProfileCard";
 import SectionHeading from "../Components/SectionHeading";
 
-const TeamPage = () => {
+const TeamPage = () => {  
   const profiles = [
     {
       name: "Aditi Chavan",
