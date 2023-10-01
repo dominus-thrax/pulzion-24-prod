@@ -145,8 +145,8 @@ const Header = () => {
             ))}
           </div>
           {!user?.id ? (
-            <div className="hidden xl:block">
-              <PrimaryButton onClick={() => router.push("/register")}>
+            <div className="">
+              <PrimaryButton className="font-body bg-orange-600 text-black hover:bg-orange-800 hover:text-white   text-2xl p-2"  onClick={() => router.push("/register")}>
                 Login
               </PrimaryButton>
             </div>

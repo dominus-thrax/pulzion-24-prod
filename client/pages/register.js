@@ -46,7 +46,7 @@ const LoginSignup = () => {
       <div className={`${styles.login_signup_page} sm:px-8 md:px-12 lg:px-16 flex justify-center flex-col`}>
           <div className={`flex ${styles.login_register_container}`}>
               <div className={`hidden md:flex flex-col items-center justify-center rounded-l-md w-full lg:w-1/2 bg-gradient-to-br from-[#172947c5] to-black opacity-95`}>
-                  <h1 className={`mb-5 text-5xl  text-center text-primaries-100 font-body `}>Welcome</h1>
+                  <h1 className={`mb-5 text-5xl  text-center text-white font-body `}>Welcome</h1>
                   <div style={{marginLeft:"34%"}}>
                     <img src="pumpkins.png" width={"50%"} />
                   </div>
@@ -56,7 +56,7 @@ const LoginSignup = () => {
                       <h1 className="text-xl text-center text-red-500 font-body">Already Have an Account?</h1>
                       <button 
                         onClick={displayLogin} 
-                        className="text-xl font-body text-center   text-white hover:bg-blue-500 hover:rounded-md hover:p-2" 
+                        className="text-xl font-body text-center   text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white" 
                         >
                           Login
                       </button>
@@ -66,7 +66,7 @@ const LoginSignup = () => {
                       <h1 className="text-xl text-center text-red-500 font-body">Don't Have an Account?</h1>
                       <button
                         onClick={displayRegister}
-                        className="text-xl  font-body text-white hover:bg-blue-500 hover:rounded-md hover:p-2"
+                        className="text-xl  font-body text-black bg-orange-500 rounded-md p-2 hover:text-white hover:bg-orange-800 hover:rounded-md hover:p-2"
                       >
                         Sign Up
                       </button>

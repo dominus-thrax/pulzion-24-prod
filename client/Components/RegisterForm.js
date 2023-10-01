@@ -374,7 +374,7 @@ const RegisterForm = (props) => {
             <div className="text-red-500">{formik.errors.confirmPassword}</div>
           ) : null}
         </div>
-        <PrimaryButton type="submit" className="font-body text-2xl bg-blue-500 rounded-md p-2">Sign Up</PrimaryButton>
+        <PrimaryButton type="submit" className="font-body text-2xl text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white">Sign Up</PrimaryButton>
 
         <button
           onClick={props.displayLogin}

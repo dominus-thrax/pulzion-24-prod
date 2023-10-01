@@ -72,16 +72,16 @@ const LoginForm = (props) => {
         ) : null}
       </div>
       <div className="flex items-center justify-between font-body text-2xl ">
-        <PrimaryButton type='submit'>
+        <PrimaryButton type='submit ' className="text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white">
           Login
         </PrimaryButton>
         <Link href="/forgotpassword">
-        <span className="inline-block text-sm font-body text-blue-500 align-baseline cursor-pointer hover:text-blue-800">
+        <span className="inline-block text-sm font-body text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
           Forgot Password?
         </span>
         </Link>
       </div>
-      <button onClick={props.displayRegister} className={`${styles.hidden_link} inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 my-6`}>Don't have an account? Register</button>
+      <button onClick={props.displayRegister} className={`${styles.hidden_link} inline-block align-baseline font-body text-sm text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:text-white hover:rounded-md hover:p-2 my-6`}>Don't have an account? Register</button>
     </form> 
     {loading && <ContentLoader />}
     </>);
