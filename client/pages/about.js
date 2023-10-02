@@ -195,7 +195,7 @@ const AboutCard = ({ title, description, image }) => {
 
   return (
     <div className="flex flex-col items-center justify-center max-w-lg">
-      <div className="w-full p-6 rounded-md shadow-2xl bg-gradient-to-tr from-orange-500 via-yellow-500 to-blue-500">
+      <div className="w-full p-6 rounded-md shadow-2xl bg-gradient-to-tr from-red-300 via-orange-500 to-yellow-500">
         <Zoom>
           <div>
             <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
@@ -279,7 +279,7 @@ const SocialMedia = () => {
       <a
         href={link}
         target="_blank"
-        className="p-4 text-3xl border-2 rounded-full text-primaries-400 border-primaries-500 hover:bg-primaries-500 hover:text-white"
+        className="p-4 text-3xl border-2 rounded-full text-orange-500 border-white-500 hover:bg-orange-500 hover:text-white"
       >
         <Component />
       </a>
