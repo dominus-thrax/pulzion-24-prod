@@ -27,6 +27,7 @@ const Layout = ({ children }) => {
            style={{
              zIndex: -2,
              height: "100vh",
+             backgroundColor:'#000',
              width: "100%",
            }}
          >
@@ -41,6 +42,7 @@ const Layout = ({ children }) => {
                height: "100%",
                width: "100%",
                objectFit: "cover",
+               opacity:'0.2'
              }}
              src="main.png"
              alt="Background Image"

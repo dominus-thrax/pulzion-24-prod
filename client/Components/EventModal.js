@@ -138,16 +138,14 @@ const EventModal = forwardRef(
             margin:"15px auto 0px"
           }}>
         <div
-          className="w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px"
+          className="w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] event-modal"
           style={{
             // top: "50%",
             // left: "50%",
             // transform: "translate(-50%,-50%)",
             pointerEvents: "all",
             height: "90vh",
-            backgroundImage: 'url("event-modal-bkg.jpg")',
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            marginLeft:'15px'
           }}
         >
           {loading && <ContentLoader />}
