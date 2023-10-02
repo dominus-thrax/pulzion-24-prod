@@ -12,7 +12,7 @@ const Footer = () => {
           Designed & Developed by PASC Web Team
         </p>
         <Link href="/privacy_policy">
-          <span className="text-blue-500 cursor-pointer">Privacy Policy</span>
+          <span className="text-gray-300 font-extrabold cursor-pointer">Privacy Policy</span>
         </Link>
       </div>
       <p className="text-primaries-100 text-center block md:hidden mt-5 text-center">
