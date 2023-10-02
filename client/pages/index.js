@@ -18,6 +18,7 @@ export default function Home() {
 
   return (
     <Layout>
+
       <div className="relative">
         <Head>
           <title>Pulzion'23</title>
@@ -31,7 +32,8 @@ export default function Home() {
         and quizzing events."
           />
         </Head>
-        <div className="bg-[url('/homepage_background.png')] relative h-[90dvh] lg:h-[88dvh] bg-center bg-top bg-no-repeat bg-cover flex justify-center overflow-hidden">
+
+        <div className="bg-[url('/homepage_background.png')]  relative h-[100dvh]  bg-center bg-top bg-no-repeat bg-cover flex justify-center overflow-hidden">
           <Sound
             url="/halloween_sound.mp3"
             playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
