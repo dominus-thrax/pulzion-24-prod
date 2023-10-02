@@ -16,22 +16,6 @@ const Layout = ({ children }) => {
 
   return (
   <>
-    {router.pathname === "/" && (
-      <div
-        id="canvas-container"
-        ref={bgRef}
-        style={{
-          objectFit: "cover",
-          height: "100vh",
-          width: "100vw",
-          position: "fixed",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          zIndex: -1, // Add this line to move it to the background
-        }}
-      >
-      </div>
-    )}
     {/* {loader && router.pathname !== "/" && <Loader />} */}
     <div className={`min-h-screen flex flex-col styles.gradientClass ${router.pathname === "/" ? "" : ""}`}>
       <Header />
@@ -78,8 +62,9 @@ const Layout = ({ children }) => {
            />
          </div>
         )}
-
+        <div className={router.pathname !==`/` && 'pt-14'}>
         {children}
+        </div>
       </div>
       {router.pathname !== "/" && <Footer />}
     </div>
