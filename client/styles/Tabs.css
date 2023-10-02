@@ -41,7 +41,7 @@
   transition: all 0.2s;
 }
 .tabs-header li.active > a {
-  /* background: #2471a3; */
+  scale: 1.2;
 }
 .tabs-content {
   margin-top: 15px;
