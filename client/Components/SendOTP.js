@@ -21,7 +21,7 @@ const SendOTP = (props) => {
     return (
         <div>
             {/* formik.handleSubmit && props.toggleOTPScreen */}
-            <form className={`bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-ful`} onSubmit={formik.handleSubmit}>
+            <form className={`bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-0 h-full w-ful`} onSubmit={formik.handleSubmit}>
                 <div className="mb-4 flex flex-col gap-2">
                     {/* <label className="block text-primaries-100 text-lg font-bold tracking-wide" htmlFor="email">Your Email</label> */}
                     <input
@@ -38,16 +38,9 @@ const SendOTP = (props) => {
                     <div className="text-white-500">{formik.errors.email}</div>
                     ) : null}
                 </div>
-                <button className={`inline-block align-baseline font-body text-sm text-black-500 hover:text-blue-800 my-6`}
-                    type="submit"
-                    style={{
-                        borderRadius: '30px',
-                        margin: 'auto',
-                        textAlign: 'center'
-                    }}
-                >
+                <span className="inline-block text-sm font-body text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
                     Get OTP
-                </button>
+                </span>
             </form>    
         </div>
     )

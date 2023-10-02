@@ -150,12 +150,12 @@ const RegisterForm = (props) => {
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
+          {/* <label
             className="block text-lg font-body text-black-500"
             htmlFor="mobile_number"
           >
             Mobile Number
-          </label>
+          </label> */}
           <PhoneInput
           className={"font-body"}
             country={"us"}
