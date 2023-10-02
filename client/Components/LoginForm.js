@@ -55,7 +55,7 @@ const LoginForm = (props) => {
         ) : null}
       </div>
 
-      <div className="flex flex-col gap-2 mb-6">
+      <div className="flex flex-col gap-2 mb-0">
       {/* <label className="block text-lg  text-black-500 font-body " htmlFor="password">Password</label> */}
         <input
           className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
