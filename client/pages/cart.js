@@ -46,7 +46,7 @@ const CartPage = () => {
 
   return (
     <Layout>
-      {loading ? <ContentLoader /> : <div className="-z-10">
+      {!loading ? <ContentLoader /> : <div className="-z-10">
         <h1 className="mt-[50px] text-3xl font-black text-center uppercase sm:text-4xl md:text-5xl text-sky-400 list-none">
           <SectionHeading>Events Cart</SectionHeading>
         </h1>
@@ -150,4 +150,5 @@ const CartPage = () => {
   );
 };
 
-export default privateUserRoute(CartPage);
+// export default privateUserRoute(CartPage);
+export default (CartPage);
