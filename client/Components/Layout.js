@@ -6,7 +6,6 @@ import Loader from "./Loader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as THREE from "three";
 import * as styles from "../styles/layout.module.css";
-
 import headerImg from "../public/astronaut.svg";
 
 const Layout = ({ children }) => {
@@ -23,8 +22,14 @@ const Layout = ({ children }) => {
         <Header />
         <div
           className={`flex-1  ${router.pathname === "/" ? "" : "background"}`}
-        >
+        > 
+        
+        {router.pathname!=='/'? 
+        <div className="pt-10 bg-[url('/events_bg.png')] bg-fixed bg-cover bg-no-repeat">
           {children}
+        </div>:
+        children
+        }
         </div>
         {router.pathname !== "/" && <Footer />}
       </div>

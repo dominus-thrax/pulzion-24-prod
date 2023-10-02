@@ -82,9 +82,7 @@ function event() {
 				and quizzing events."
         />
       </Head>
-      <div className="px-4 py-5 events sm:px-8 md:px-12 lg:px-16 md:py-10" style={{
-        backgroundImage: 'linear-gradient(to bottom right, black, #072453)',
-      }}>
+      <div className="px-4 py-5 events sm:px-8 md:px-12 lg:px-16 md:py-10">
         {/* <object
           type="image/svg+xml"
           data="https://cdn.svgator.com/images/2021/10/animated-astronaut-illustration.svg"
