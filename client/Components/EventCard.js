@@ -100,8 +100,8 @@ function EventCard(props) {
         <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
           <div className="p-10 w-[100%] h-[500px] xl:h-[500px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
-              <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-[#2A1A41] uppercase">{props.name}</h2>
-              <h3 className="text-lg  tracking-wider text-center font-extrabold text-[#1e132e]">{props.tagline}</h3>
+              <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
+              <h3 className="text-lg  tracking-wider text-center font-extrabold text-white">{props.tagline}</h3>
               {registeredEvent?.fk_slot && (
                 <h3 className="mt-2 text-center">
                   {displayDate(registeredEvent.start_time)}{" "}
