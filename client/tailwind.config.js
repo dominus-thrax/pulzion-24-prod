@@ -21,6 +21,9 @@ module.exports = {
     },
     screen: {
       'nav': '1420px'
+    },
+    fontFamily:{
+      body:['Creepster']
     }
   },
   plugins: [

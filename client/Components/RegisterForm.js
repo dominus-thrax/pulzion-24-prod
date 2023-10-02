@@ -99,21 +99,21 @@ const RegisterForm = (props) => {
   return (
     <>
       <form
-        className={`${styles.register_form} bg-[#172947ba] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`}
+        className={`${styles.register_form} bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`}
         onSubmit={formik.handleSubmit}
       >
         <h1 className={`${styles.hidden_h1} text-primaries-100 md:text-5xl text-xl my-6`}>
           Welcome
         </h1>
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="firstname"
           >
             First Name
-          </label>
+          </label> */}
           <input
-            className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             id="first_name"
             name="first_name"
             type="text"
@@ -123,19 +123,19 @@ const RegisterForm = (props) => {
             placeholder="First Name"
           />
           {formik.touched.first_name && formik.errors.first_name ? (
-            <div className="text-red-500">{formik.errors.first_name}</div>
+            <div className="text-white-500">{formik.errors.first_name}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="last_name"
           >
             Last Name
-          </label>
+          </label> */}
           <input
-            className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             id="last_name"
             name="last_name"
             value={formik.values.last_name}
@@ -145,21 +145,23 @@ const RegisterForm = (props) => {
             placeholder="Last Name"
           />
           {formik.touched.last_name && formik.errors.last_name ? (
-            <div className="text-red-500">{formik.errors.last_name}</div>
+            <div className="text-white-500">{formik.errors.last_name}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
           <label
-            className="block text-lg font-bold text-primaries-100"
+            className="block text-lg font-body text-black-500"
             htmlFor="mobile_number"
           >
             Mobile Number
           </label>
           <PhoneInput
+            className="font-body"
             country={"us"}
             value={formik.values.mobile_number}
             enableSearch={true}
+            placeholder="Mobile Number"
             onBlur={formik.handleBlur}
             onChange={(phone) =>
               formik.setValues({ ...formik.values, mobile_number: phone })
@@ -168,7 +170,7 @@ const RegisterForm = (props) => {
               display: "block",
             }}
             inputStyle={{
-              color: "white",
+              color: "grey",
               background: "#01030c",
               fontSize: "1rem",
               width: "100%",
@@ -176,21 +178,22 @@ const RegisterForm = (props) => {
             buttonStyle={{
               background: "#01030c",
             }}
+           
           />
           {formik.touched.mobile_number && formik.errors.mobile_number ? (
-            <div className="text-red-500">{formik.errors.mobile_number}</div>
+            <div className="text-white-500">{formik.errors.mobile_number}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="country"
           >
             Country
-          </label>
+          </label> */}
           <CountryDropdown
-            className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             value={formik.values.country}
             onChange={(nation) =>
               formik.setValues({ ...formik.values, country: nation })
@@ -198,35 +201,20 @@ const RegisterForm = (props) => {
           />
 
           {formik.touched.country && formik.errors.country ? (
-            <div className="text-red-500">{formik.errors.country}</div>
+            <div className="text-white-500">{formik.errors.country}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="college"
           >
             College
-          </label>
+          </label> */}
           <select
             name="college"
-            className="form-select appearance-none
-                    block
-                    w-full
-                    px-3
-                    py-1.5
-                    text-base
-                    font-normal
-                    bg-primaries-700 
-                    text-primaries-100 
-                    bg-clip-padding bg-no-repeat
-                    border border-solid border-gray-300
-                    rounded
-                    transition
-                    ease-in-out
-                    m-0
-                    focus:text-primaries-100 focus:bg-primaries-700 focus:border-blue-600 focus:outline-none"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             aria-label="Default select example"
             value={formik.values.college}
             onClick={()=>{setOthers(true)}}
@@ -238,19 +226,19 @@ const RegisterForm = (props) => {
             <option value="Others">Others</option>
           </select>
           {formik.touched.college && formik.errors.college && others ? (
-            <div className="text-red-500">{formik.errors.college}</div>
+            <div className="text-white-500">{formik.errors.college}</div>
           ) : null}
         </div>        
         {formik.values.college === "Others" || !others ? (
           <div className="flex flex-col gap-2 mb-4">
-            <label
-              className="block text-lg font-bold text-primaries-100"
+            {/* <label
+              className="block text-lg font-body text-black-500"
               htmlFor="college_name"
             >
               College Name
-            </label>
+            </label> */}
             <input
-              className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+              className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
               id="college"
               name="college"
               type="text"
@@ -261,7 +249,7 @@ const RegisterForm = (props) => {
               placeholder="College Name"
             />            
             {formik.touched.college && formik.errors.college ? (
-              <div className="text-red-500">{formik.errors.college}</div>
+              <div className="text-white-500">{formik.errors.college}</div>
             ) : null}
           </div>
         ) : (
@@ -269,30 +257,15 @@ const RegisterForm = (props) => {
         )}
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="year"
           >
             Year
-          </label>
+          </label> */}
           <select
             name="year"
-            className="form-select appearance-none
-                    block
-                    w-full
-                    px-3
-                    py-1.5
-                    text-base
-                    font-normal
-                    bg-primaries-700 
-                    text-primaries-100 
-                    bg-clip-padding bg-no-repeat
-                    border border-solid border-gray-300
-                    rounded
-                    transition
-                    ease-in-out
-                    m-0
-                    focus:text-primaries-100 focus:bg-primaries-700 focus:border-blue-600 focus:outline-none"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             aria-label="Default select example"
             value={formik.values.year}
             onChange={formik.handleChange}
@@ -305,19 +278,19 @@ const RegisterForm = (props) => {
             <option value="BE">BE(Fourth Year)</option>
           </select>
           {formik.touched.year && formik.errors.year ? (
-            <div className="text-red-500">{formik.errors.year}</div>
+            <div className="text-white-500">{formik.errors.year}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="email"
           >
             Email Address
-          </label>
+          </label> */}
           <input
-            className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none text-primaries-100  bg-black  focus:outline-none focus:shadow-outline"
             id="email"
             name="email"
             type="email"
@@ -327,19 +300,19 @@ const RegisterForm = (props) => {
             placeholder="Email Address"
           />
           {formik.touched.email && formik.errors.email ? (
-            <div className="text-red-500">{formik.errors.email}</div>
+            <div className="text-white-500">{formik.errors.email}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="password"
           >
             Password
-          </label>
+          </label> */}
           <input
-            className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+           className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             id="password"
             name="password"
             type="password"
@@ -349,19 +322,19 @@ const RegisterForm = (props) => {
             placeholder="Password"
           />
           {formik.touched.password && formik.errors.password ? (
-            <div className="text-red-500">{formik.errors.password}</div>
+            <div className="text-white-500">{formik.errors.password}</div>
           ) : null}
         </div>
 
         <div className="flex flex-col gap-2 mb-4">
-          <label
-            className="block text-lg font-bold text-primaries-100"
+          {/* <label
+            className="block text-lg font-body text-black-500"
             htmlFor="confirmPassword"
           >
             Confirm Password
-          </label>
+          </label> */}
           <input
-            className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
             id="confirmPassword"
             name="confirmPassword"
             type="password"
@@ -371,15 +344,15 @@ const RegisterForm = (props) => {
             placeholder="Confirm Password"
           />
           {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-            <div className="text-red-500">{formik.errors.confirmPassword}</div>
+            <div className="text-white-500">{formik.errors.confirmPassword}</div>
           ) : null}
         </div>
-        <PrimaryButton type="submit">Sign Up</PrimaryButton>
+        <PrimaryButton type="submit" className="font-body text-2xl text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white">Sign Up</PrimaryButton>
 
         <button
           onClick={props.displayLogin}
           type="button"
-          className={`${!ios ? styles.hidden_link : ""} inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 my-6`}
+          className={`${!ios ? styles.hidden_link : ""} inline-block align-baseline font-body text-sm text-black-500 hover:text-blue-800 my-6`}
         >
           Already have an account? Login
         </button>

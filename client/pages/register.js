@@ -23,9 +23,9 @@ const LoginSignup = () => {
     setLogin(false);
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if(isIOS) {
+    if (isIOS) {
       setIos(true)
     } else {
       setIos(false)
@@ -44,38 +44,40 @@ const LoginSignup = () => {
 				and quizzing events."/>
       </Head>
       <div className={`${styles.login_signup_page} sm:px-8 md:px-12 lg:px-16 flex justify-center flex-col`}>
-          <div className={`flex ${styles.login_register_container}`}>
-              
-              <div className={`hidden md:flex flex-col items-center justify-center rounded-l-md w-full lg:w-1/2 bg-gradient-to-br from-[#172947c5] to-black opacity-95`}>
-                  <h1 className="mb-5 text-5xl font-bold text-center text-primaries-100">Welcome</h1>
-                  {
-                    !login ? 
-                    <div className="flex flex-col items-center gap-2">
-                      <h1 className="text-xl text-center text-primaries-100">Already Have an Account?</h1>
-                      <button 
-                        onClick={displayLogin} 
-                        className="text-lg font-bold text-center text-primaries-100 hover:underline" 
-                        >
-                          Login
-                      </button>
-                    </div>
-                    : 
-                    <div className="flex flex-col items-center gap-2">
-                      <h1 className="text-xl text-center text-primaries-100">Don't Have an Account?</h1>
-                      <button 
-                        onClick={displayRegister} 
-                        className="text-lg font-bold text-center text-primaries-100 hover:underline" 
-                      >
-                          Sign Up
-                      </button>
-                    </div>
-                    
-                  }
-              </div>
-              <div className={`${styles.login_register_form} border border-primaries-600 rounded-r-md w-full lg:w-1/2 flex`}>
-                  {login ? <LoginForm displayRegister={displayRegister}/> : <RegisterForm displayLogin={displayLogin}/>}
-              </div>
+        <div className={`flex ${styles.login_register_container}`}>
+          <div className={`hidden md:flex flex-col items-center justify-center rounded-l-md w-full lg:w-1/2 bg-gradient-to-br from-[#B48754] to-[#EDCE9A] opacity-95`}>
+            <h1 className={`mb-5 text-5xl  text-center text-black font-body `}>Welcome</h1>
+            <div style={{ marginLeft: "34%" }}>
+              <img src="pumpkins.png" width={"50%"} />
+            </div>
+            {
+              !login ?
+                <div className="flex flex-col items-center gap-2 p-4 rounded-lg shadow-md">
+                  <h1 className="text-xl text-center text-red-500 font-body">Already Have an Account?</h1>
+                  <button
+                    onClick={displayLogin}
+                    className="text-xl font-body text-center   text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white"
+                  >
+                    Login
+                  </button>
+                </div>
+                :
+                <div className="flex flex-col items-center gap-2 p-4 rounded-lg shadow-md">
+                  <h1 className="text-xl text-center text-red-500 font-body">Don't Have an Account?</h1>
+                  <button
+                    onClick={displayRegister}
+                    className="text-xl  font-body text-black bg-orange-500 rounded-md p-2 hover:text-white hover:bg-orange-800 hover:rounded-md hover:p-2"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+
+            }
           </div>
+          <div className={`${styles.login_register_form} border border-primaries-600 rounded-r-md w-full lg:w-1/2 flex`}>
+            {login ? <LoginForm displayRegister={displayRegister} /> : <RegisterForm displayLogin={displayLogin} />}
+          </div>
+        </div>
       </div>
     </Layout>
   );
