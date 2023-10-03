@@ -24,7 +24,7 @@ export const eventD = [
     id: 2,
     price: 50,
     name: "Codelicious",
-    logo: "/Codelicious.png",
+    logo: "/eventLogos/Codelicious.png",
     tagline: "“Coding is intelligence having fun!”",
     description:
       "Love programming?? 🤔 Then get set for a breathtaking global event, Codelicious where language is not at all a barrier. A perfect place to showcase your coding abilities so get ready to satisfy your hunger for astonishing algorithmic programming problems.",
@@ -34,7 +34,7 @@ export const eventD = [
       "1. Participants need to have an account on codechef.\n 2. Participants will get a maximum of 2 hours to solve the questions. \n 3. Use of unfair means will result in direct disqualification.\n 4. The decision of the organizers will be considered  final and binding to all the participants.",
     rounds: "Round 1: The only round will be held on CodeChef.",
     teams: "FE-SE-TE-BE Individual",
-    notes: "Ojas Kund - 70218 18353",
+    notes: "Tarun Santani - 9370937624",
     is_active: true,
     created_at: "2022-04-09 19:14:06",
     updated_at: "2022-04-21 16:10:49",

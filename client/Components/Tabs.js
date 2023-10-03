@@ -56,7 +56,12 @@ class TabHeader extends React.Component {
         >
           <a
             onClick={this.doClick.bind(this, index)}
-            className="bg-primaries-800"
+            // className="bg-primaries-800"
+            style={{
+              backgroundImage:'url(events_button.png)',
+              backgroundSize:'cover',
+              backgroundRepeat:'no-repeat'
+            }}
           >
             <span className="text-xl">{item}</span>
           </a>

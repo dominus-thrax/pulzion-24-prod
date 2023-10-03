@@ -119,27 +119,33 @@ const EventModal = forwardRef(
     const [active, setActive] = useState(-1);
 
     return (
+      // <div className="p-[2rem] h-[100%] w-[100%]">
       <div
         style={{
-          zIndex: "99",
           pointerEvents: "none",
           display: isVisible ? "block" : "none",
+          display: isVisible ? "block" : "none",
+          zIndex: "99",
         }}
-        className="fixed top-0 left-0 w-screen min-h-screen backdrop-blur"
-      >
+        className="fixed top-0 left-0 w-[100%] min-h-[100%] backdrop-blur"
+        >
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        ></link>
+          ></link>
+          <div className="w-fit h-fit m-3" style={{
+            backgroundColor:'linear-gradient(to top right,red,green)',
+            margin:"15px auto 0px"
+          }}>
         <div
-          className="fixed w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-sky-700"
+          className="w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px"
           style={{
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%,-50%)",
+            // top: "50%",
+            // left: "50%",
+            // transform: "translate(-50%,-50%)",
             pointerEvents: "all",
             height: "90vh",
-            backgroundImage: 'url("Modal_BG.jpeg")',
+            backgroundImage: 'url("event-modal-bkg.jpg")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -173,7 +179,7 @@ const EventModal = forwardRef(
                 setIsVisible(false);
                 document.querySelector("body").style.overflowY = "auto";
               }}
-            >
+              >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-8 w-8"
@@ -181,37 +187,37 @@ const EventModal = forwardRef(
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 stroke-width="2"
-              >
+                >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+                  />
               </svg>
             </div>
           </div>
           {slots?.length > 0 ? (
             <div
-              className={`${event_modal_desc} overflow-y-auto text-justify px-4 md:px-8 py-5`}
-              style={{ height: "70%" }}
+            className={`${event_modal_desc} overflow-y-auto text-justify px-4 md:px-8 py-5`}
+            style={{ height: "70%" }}
             >
               <p className="mb-5 text-3xl font-bold text-white">
                 Available Slots:
               </p>
               {slots.map((slot) => (
                 <SlotCard key={slot.id} slot={slot} handleBook={handleBook} />
-              ))}
+                ))}
             </div>
           ) : (
             <div
-              className={`${event_modal_desc} overflow-y-auto text-justify px-4 md:px-8 py-5 bg-black/[.4]`}
-              style={{ height: "70%" }}
+            className={`${event_modal_desc} overflow-y-auto text-justify px-4 md:px-8 py-5 bg-black/[.4]`}
+            style={{ height: "70%" }}
             >
               <div className="mb-5">
                 {description.map((txt) => (
                   <p
-                    className="text-lg font-normal text-left text-primaries-100 font"
-                    key={txt}
+                  className="text-lg font-normal text-left text-primaries-100 font"
+                  key={txt}
                   >
                     {txt}
                   </p>
@@ -220,16 +226,16 @@ const EventModal = forwardRef(
               <div className="border-collapse">
                 {tabs.map((tab) => (
                   <EventAccordian
-                    key={tab.id}
-                    title={tab.text}
-                    activeIndex={active}
-                    setActiveIndex={setActive}
-                    index={tab.id}
+                  key={tab.id}
+                  title={tab.text}
+                  activeIndex={active}
+                  setActiveIndex={setActive}
+                  index={tab.id}
                   >
                     {tab.content.map((txt) => (
                       <p
-                        className="text-lg font-normal text-primaries-100 font"
-                        key={txt}
+                      className="text-lg font-normal text-primaries-100 font"
+                      key={txt}
                       >
                         {txt}
                       </p>
@@ -244,7 +250,7 @@ const EventModal = forwardRef(
             style={{
               height: "15%",
             }}
-          >
+            >
             {!isLoggedIn ? (
               <button
                 className="px-5 py-2 font-bold tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-primaries-800 hover:bg-primaries-500"
@@ -252,7 +258,7 @@ const EventModal = forwardRef(
                   setIsVisible(false);
                   router.push("/register/");
                 }}
-              >
+                >
                 Login/SignUp to Register
               </button>
             ) : (
@@ -311,7 +317,9 @@ const EventModal = forwardRef(
             )}
           </div>
         </div>
+        </div>
       </div>
+      // </div>
     );
   }
 );
