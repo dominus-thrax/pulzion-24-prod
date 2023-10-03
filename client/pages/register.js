@@ -5,6 +5,8 @@ import RegisterForm from "../Components/RegisterForm";
 import Layout from "../Components/Layout";
 import styles from "../styles/loginsignup.module.css";
 import publicRoute from "../routes/publicRoute";
+import SectionHeading from "../Components/SectionHeading";
+
 
 const LoginSignup = () => {
   const [login, setLogin] = useState(true);
@@ -39,46 +41,16 @@ const LoginSignup = () => {
         management-based events, design and development based contests
         and quizzing events."/>
       </Head>
-      <div className="forms flex justify-center items-center flex-col">
-        <div className={`${styles.login_signup_page} sm:w-full md:w-3/4 lg:w-2/3 px-4 py-8 `}>
-          <div className={`flex flex-col md:flex-row ${styles.login_register_container}`}>
-            <div className={`md:w-1/2 hidden md:flex flex-col items-center justify-center rounded-l-md bg-gradient-to-br from-[#B48754] to-[#EDCE9A] opacity-50`}>
-              <h1 className={`mb-5 text-5xl text-center text-white font-body`}>Welcome</h1>
-              <div style={{ marginLeft: "34%" }}>
-                <img src="pumpkins.png" width={"50%"} />
-              </div>
-            </div>
-            <div className={`${styles.login_register_form} bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full  border border-primaries-600 rounded-r-md w-full md:w-1/2 flex flex-col items-center`}>
-              {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />}
-              <div className={`form-wrapper ${login ? 'is-active' : ''}`}>
-                {
-                  !login ?
-                    <div className={`bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`}>
-                      <h1 className="text-xl text-center text-red-500 font-body">Already Have an Account?</h1>
-                      <button
-                        type="button"
-                        onClick={() => switchForm('login')}
-                        className="text-xl font-body text-center text-black bg-orange-500 rounded-md p-2 hover:text-white hover:bg-orange-800 hover:rounded-md hover:p-2"
-                      >
-                        Login
-                        <span className="underline"></span>
-                      </button>
-                    </div>
-                    :
-                    <div className={`bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`}>
-                      <h1 className="text-xl text-center text-red-500 font-body">Don't Have an Account?</h1>
-                      <button
-                        type="button"
-                        onClick={() => switchForm('signup')}
-                        className="text-xl font-body text-center text-black bg-orange-500 rounded-md p-2 hover:text-white hover:bg-orange-800 hover:rounded-md hover:p-2"
-                      >
-                        Sign Up
-                        <span className="underline"></span>
-                      </button>
-                    </div>
-                }
-              </div>
-            </div>
+      <div className="forms flex justify-end md:ms-auto pt-20 items-center flex-col bg-[url('/register_bg.jpg')] bg-cover bg-no-repeat h-screen">
+
+        <div className={`${styles.login_register_form} md:w-1/2 shadow-md  px-8 pt-6 pb-8 mb-4 h-full rounded-r-md md:ml-auto  flex flex-col items-center`}>
+
+          <h1 className="heaters_font text-7xl text-cyan-100 tracking-wider">Welcome</h1>
+
+          {/* {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />} */}
+          <RegisterForm displayLogin={() => switchForm('login')} />
+          <div className={`form-wrapper ${login ? 'is-active' : ''}`}>
+
           </div>
         </div>
       </div>

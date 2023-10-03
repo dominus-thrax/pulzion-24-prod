@@ -1,5 +1,5 @@
 module.exports = {
-  mode : 'jit',
+  mode: 'jit',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./Components/**/*.{js,ts,jsx,tsx}",
@@ -22,8 +22,8 @@ module.exports = {
     screen: {
       'nav': '1420px'
     },
-    fontFamily:{
-      body:['Creepster']
+    fontFamily: {
+      body: ['Creepster']
     }
   },
   plugins: [
