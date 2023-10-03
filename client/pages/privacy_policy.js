@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
             </Head>
             <div className={`text-primaries-100 px-4 sm:px-8 md:px-12 lg:px-16`}>
                 <h1 className=' font-bold text-5xl mt-8 mb-5'>Privacy Policy</h1>
-                <p className='mt-1'>Last updated: April 08, 2022</p>
+                <p className='mt-1'>Last updated: October, 2023</p>
                 <p className='mt-1'>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
                     information when You use the Service and tells You about Your privacy rights and how the law protects
                     You.</p>
@@ -76,10 +76,10 @@ const PrivacyPolicy = () => {
                             visit).</p>
                     </li>
                     <li>
-                        <p className='mt-1'><strong>Website</strong> refers to Pulzion 2022, accessible from <a href="https://pulzion.in"
+                        <p className='mt-1'><strong>Website</strong> refers to Pulzion 2023, accessible from <a href="https://pulzion.co.in"
                             rel="external nofollow noopener noreferrer"
                             className='text-blue-600'
-                            target="_blank">https://pulzion.in</a>
+                            target="_blank">https://pulzion.co.in</a>
                         </p>
                     </li>
                     <li>

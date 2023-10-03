@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
                height: "100%",
                width: "100%",
                objectFit: "cover",
-               opacity:'0.2'
+               opacity:'0.5'
              }}
              src="main.png"
              alt="Background Image"

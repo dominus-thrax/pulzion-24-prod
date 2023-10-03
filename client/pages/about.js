@@ -197,7 +197,7 @@ const AboutCard = ({ title, description, image }) => {
     <div id="about-container">
     <div className="flex flex-col items-center justify-center max-w-lg">
       <div>
-      <div className="w-full p-6 rounded-md shadow-2xl bg-slate-900">
+      <div className="w-full p-6 rounded-md shadow-2xl bg-black">
         <Zoom>
             <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
               <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
