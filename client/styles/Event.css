@@ -269,11 +269,12 @@
   justify-content: center;
   align-items: center;
   background-color:rgba(0,0,0,0.4);
-  background-image: url('../public/photo_frame.jpg');
+  background-image: url('../public/photo_frame_2.png');
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: darken;
   /* background-position: center; */
   overflow: hidden;
+  border-radius: 10px;
 }

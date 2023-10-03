@@ -251,7 +251,7 @@ const EventModal = forwardRef(
             >
             {!isLoggedIn ? (
               <button
-                className="px-5 py-2 font-bold tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-primaries-800 hover:bg-primaries-500"
+                className="px-5 py-2 font-bold tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-[hsl(21,90%,28%)] hover:bg-[hsl(21,90%,48%)]"
                 onClick={() => {
                   setIsVisible(false);
                   router.push("/register/");
