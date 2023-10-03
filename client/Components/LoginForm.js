@@ -37,6 +37,8 @@ const LoginForm = (props) => {
     onSubmit: handleLogin
   });
   return (<>
+    <h1 className="heaters_font text-7xl text-cyan-100 tracking-wider">Login</h1>
+
     <form className={`${styles.login_form}  text-gray-50 pt-6 pb-8 mb-4 h-full md:w-8/12`} onSubmit={formik.handleSubmit}>
       <div className="flex flex-col mt-12 gap-2 mb-4 ">
         {/* <label className="block text-lg font-body tracking-wide text-black-500" htmlFor="email">Email Address</label> */}
@@ -72,7 +74,7 @@ const LoginForm = (props) => {
         ) : null}
       </div>
       <div className="flex items-center mt-8 justify-between font-body text-2xl ">
-        <PrimaryButton type='submit ' className="px-4 py-2 w-full mx-auto bg-cyan-400 text-cyan-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">
+        <PrimaryButton type='submit ' className="px-4 py-2 w-full mx-auto  bg-cyan-400 text-cyan-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">
           Login
         </PrimaryButton>
       </div>
@@ -82,7 +84,7 @@ const LoginForm = (props) => {
         </span>
       </Link>
       <div className={` px-8 pt-6 pb-8 mb-4 `}>
-        <p className="text-md text-center text-amber-300">Don't Have an Account? <button className="text-orange-300" onClick={props.displayRegister}>SignUp</button> </p>
+        <p className="text-md text-center ">Don't Have an Account? <button className="text-[#ff8415]" onClick={props.displayRegister}>SignUp</button> </p>
       </div>
     </form>
     {loading && <ContentLoader />}

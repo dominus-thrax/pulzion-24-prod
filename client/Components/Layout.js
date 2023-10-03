@@ -68,7 +68,7 @@ const Layout = ({ children }) => {
 
           {children}
         </div>
-        {router.pathname !== "/" && <Footer />}
+        {router.pathname !== "/" && router.pathname !== "/register" && <Footer />}
       </div>
     </>
   );

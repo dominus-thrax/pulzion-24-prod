@@ -89,6 +89,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.mont_font {
+  font-family: "Montserrat", sans-serif;
+}
+
 .aerospace_font {
   font-family: 'aerospaceregular';
 }

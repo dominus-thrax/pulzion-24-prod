@@ -98,13 +98,12 @@ const RegisterForm = (props) => {
 
   return (
     <>
+      <h1 className="heaters_font text-7xl text-cyan-100 tracking-wider">Register</h1>
+
       <form
-        className={`${styles.register_form} shadow-md pt-6 pb-8 mb-4 md:px-20`}
+        className={`${styles.register_form} text-white pt-6 pb-8 mb-4 md:px-20`}
         onSubmit={formik.handleSubmit}
       >
-        <h1 className={`${styles.hidden_h1} text-primaries-100 md:text-5xl text-xl my-6`}>
-          Welcome
-        </h1>
 
         <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
@@ -180,8 +179,7 @@ const RegisterForm = (props) => {
                 color: "grey",
                 background: "#0f172a",
                 fontSize: "1rem",
-                paddingTop: 10,
-                paddingBottom: 10,
+                padding: 20,
                 borderRadius: "1rem",
                 borderWidth: "2px",
                 borderColor: "#67e8f9",
@@ -367,9 +365,9 @@ const RegisterForm = (props) => {
         <button
           onClick={props.displayLogin}
           type="button"
-          className={`${!ios ? styles.hidden_link : ""} inline-block align-baseline font-body text-sm text-black-500 hover:text-blue-800 my-6`}
+          className={`text-md text-white mt-4 focus:outline-none `}
         >
-          Already have an account? Login
+          Already have an account? <span className="text-yellow-400">Login</span>
         </button>
       </form>
       {loading && <ContentLoader />}

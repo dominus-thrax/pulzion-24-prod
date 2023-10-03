@@ -41,14 +41,12 @@ const LoginSignup = () => {
         management-based events, design and development based contests
         and quizzing events."/>
       </Head>
-      <div className="forms flex justify-end md:ms-auto pt-20 items-center flex-col bg-[url('/register_bg.jpg')] bg-cover bg-no-repeat h-screen">
+      <div className="forms flex justify-center md:ms-auto pt-20 items-center flex-col bg-[url('/register_bg.jpg')] bg-cover bg-no-repeat bg-right-top lg:bg-left-top  min-h-screen">
 
-        <div className={`${styles.login_register_form} md:w-1/2 shadow-md  px-8 pt-6 pb-8 mb-4 h-full rounded-r-md md:ml-auto  flex flex-col items-center`}>
+        <div className={`${styles.login_register_form} md:w-1/2   px-8 pt-6 pb-8 mb-4 h-full rounded-r-md lg:ml-auto  flex flex-col items-center`}>
 
-          <h1 className="heaters_font text-7xl text-cyan-100 tracking-wider">Welcome</h1>
 
-          {/* {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />} */}
-          <RegisterForm displayLogin={() => switchForm('login')} />
+          {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />}
           <div className={`form-wrapper ${login ? 'is-active' : ''}`}>
 
           </div>
