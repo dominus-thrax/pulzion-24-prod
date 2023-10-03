@@ -74,7 +74,7 @@ const EventNumber = ({ name, count }) => {
       <div
         className={
           styles.GradientBorder +
-          " flex flex-col items-center justify-center bg-orange-600"
+          " flex flex-col items-center justify-center"
         }
       >
         <div className="flex flex-col">
@@ -153,7 +153,7 @@ const AboutModal = forwardRef(({ title, description, image }, ref) => {
       className="fixed top-0 left-0 w-screen min-h-screen backdrop-blur"
     >
       <div
-        className="bg-[hsl(21,90%,48%)] text-black fixed overflow-y-auto rounded-3xl p-10 w-[90%] md:w-[40%] overflow-y-auto about-mode"
+        className="bg-[hsl(21,90%,48%)] text-black fixed overflow-y-auto rounded-3xl p-10 w-[90%] md:w-[40%] about-mode"
         style={{
           top: "50%",
           left: "50%",
@@ -194,14 +194,15 @@ const AboutCard = ({ title, description, image }) => {
   const modalRef = useRef();
 
   return (
+    <div id="about-container">
     <div className="flex flex-col items-center justify-center max-w-lg">
-      <div className="w-full p-6 rounded-md shadow-2xl bg-gradient-to-tr from-red-300 via-orange-500 to-yellow-500">
+      <div>
+      <div className="w-full p-6 rounded-md shadow-2xl bg-slate-900">
         <Zoom>
-          <div>
             <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
               <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
-                <p className="text-xl font-semibold text-black">{title}</p>
-                <p className="text-black font-extrabold line-clamp-6">
+                <p className="text-xl font-semibold text-white">{title}</p>
+                <p className="text-white font-extrabold line-clamp-6">
                   {description.map((txt) => (
                     <p>{txt}</p>
                   ))}
@@ -243,10 +244,11 @@ const AboutCard = ({ title, description, image }) => {
                 </button>
               </div>
             </div>
-          </div>
         </Zoom>
       </div>
+      </div>
       <AboutModal ref={modalRef} {...{ title, image, description }} />
+    </div>
     </div>
   );
 };
@@ -332,7 +334,7 @@ const ContactUs = () => {
             <IoCall />
           </p>
           <p className="text-lg text-white">
-            Samarth Mali -{" "}
+            Samarth Mali :{" "}
             <a
               className="flex-auto hover:opacity-50"
               href="tel:9765608601"
@@ -342,7 +344,7 @@ const ContactUs = () => {
             </a>
           </p>
           <p className="text-lg text-white">
-            Pritika Rohera -
+            Pritika Rohera :
             <a
               className="flex-auto hover:opacity-50"
               href="tel:9172682087"
@@ -360,6 +362,7 @@ const ContactUs = () => {
                 width="100%"
                 style={{
                   minHeight: "300px",
+                  filter: "invert(90%)"
                 }}
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=pune%20institute%20of%20computer%20technology&t=&z=17&ie=UTF8&iwloc=&output=embed"
@@ -396,7 +399,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>Pulzion'23 | About</title>
+        <title>Pulzion | About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         <meta
           name="description"
