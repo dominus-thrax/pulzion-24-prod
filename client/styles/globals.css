@@ -611,3 +611,40 @@ video::-webkit-media-controls-start-playback-button {
   position: absolute;
   top: -99999px;
 }
+
+/* About Cards */
+
+#about-container{
+  padding: .5rem;
+  /* animation: animate 2s alternate-reverse infinite; */
+  background-image: linear-gradient(
+    var(--rotate),
+    #ffffff,
+    #ff6a00 43%,
+    #922e00
+  );
+  border-radius: 10px;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+@keyframes animate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

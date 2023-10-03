@@ -62,4 +62,5 @@ function order() {
     )
 }
 
-export default privateUserRoute(order);
+// export default privateUserRoute(order);
+export default (order);
