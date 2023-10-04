@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Components/Header'
 import EventAccordian from '../Components/EventAccordian';
+import Layout from '../Components/Layout';
 
 
 const data =
@@ -114,24 +115,26 @@ const tabs = [
 
 const eventdetails = () => {
 
+    const [active, setActive] = useState(-1)
+
 
 
 
     return (
-        <>
-            <div className="bg-[#00001E] text-gray-50  relative h-[100dvh]  bg-center  bg-no-repeat bg-cover flex justify-center overflow-hidden">
-                <Header />
-                <div className="absolute inset-0 bottom-0 w-full bg-[url('/event_info_bg.png')] top-28 left-0 right-0 bg-cover bg-no-repeat opacity-40 bg-center "></div>
+        <Layout>
+            <div className=" text-gray-50  m relative  bg-center p-12   bg-no-repeat bg-cover flex justify-center overflow-hidden">
+                <div className="absolute z-0 inset-0 container mx-auto my-10 bottom-0 w-full  bg-[url('/event_info_bg.png')] top-28 left-0 right-0 bg-cover bg-no-repeat opacity-40 bg-center "></div>
 
 
                 {/* Event Details Section */}
-                <div className="w-full mt-24">
+                <div className="w-full flex-col shadow-[0px_2px_15px_5px_#ebf4ff] md:flex-row container max-w-screen-xl min-h-[80vh] py-8 mx-auto flex gap-3  z-10  bg-slate-900 bg-opacity-50  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm ">
 
                     {/* Event Buy and Combo section */}
-                    <div className="w-5/12 flex flex-col border h-full items-center py-8 md:py-16">
-
-                        <div className="event_img bg-slate-800 opacity-80   w-52 h-52 p-4 rounded-md">
-                            <img src='/eventLogos/Recode.png' />
+                    <div className="md:w-5/12  flex flex-col h-full items-center px-8 ">
+                        <div className="relative z-[2] w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]">
+                            <div className="event-des-logo bg-gray-200 bg-opacity-80 p-5 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md  ">
+                                <img src='/eventLogos/Recode.png' />
+                            </div>
                         </div>
                         <h2 className="font-bold text-white text-3xl mt-4">{data.name}</h2>
                         {/* Price Location Section */}
@@ -148,25 +151,49 @@ const eventdetails = () => {
                         </div>
 
                         {/* Button To Buy */}
-                        <button class="inline-block text-black mt-4 font-semibold rounded-md border-0 bg-orange-400  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20" >
+                        <button class="inline-block text-black mt-4 font-semibold rounded-md border-0 bg-[#ff8415]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20" >
                             <span class="inline-block relative transition duration-700">Login/Sign up to Register <span class="absolute opacity-0 top-0 right-0 transition duration-700">for free</span></span>
                         </button>
 
-                    </div>
-                    <div className="w-7/12 flex flex-col border bg-red-50">
-                        <div
-                            className={`text-justify px-4 md:px-8 py-5`}>
-                            <div className="mb-5">
-                                {/* {description.map((txt) => ( */}
-                                <p
-                                    className="text-lg font-normal text-left text-primaries-100 font"
-                                >
-                                    {data.description}
-                                </p>
-                                {/* ))} */}
-                            </div>
+                        <p className="text-center text-sm mt-6">{data.description}</p>
 
-                        </div>
+                    </div>
+                    <div className="md:w-7/12 flex flex-col p-4 pt-0 ">
+                        <h5 className='text-xl font-semibold'>Rounds</h5>
+                        <p className='text-sm'>{data.rounds}</p>
+                        <h5 className='text-xl mt-2 font-semibold'>Rules and Regulations</h5>
+                        <p className='text-sm'>{data.rules}</p>
+                        {/*<h5 className='text-xl font-semibold'>Team Distribution</h5> 
+                        <p>{data.rules}</p>
+                        <h5 className='text-xl font-semibold'>Event Leads</h5>
+                        <p>{data.rules}</p> 
+                         <h5 className='text-xl font-semibold'>Rounds</h5>
+                        <p>{data.rounds}</p>
+                        <h5 className='text-xl font-semibold'>Rules and Regulations</h5>
+                        <p>{data.rules}</p>
+                        <h5 className='text-xl font-semibold'>Team Distribution</h5>
+                        <p>{data.rules}</p>
+                        <h5 className='text-xl font-semibold'>Event Leads</h5>
+                        <p>{data.rules}</p> */}
+
+                        {/* {tabs.map((tab) => (
+                            <EventAccordian
+                                key={tab.id}
+                                title={tab.text}
+                                activeIndex={active}
+                                setActiveIndex={setActive}
+                                index={tab.id}
+                            >
+                                {/* {tab.content.map((txt) => ( 
+                        <p
+                            className="text-lg font-normal text-primaries-100 font"
+                            key={tab.id}
+                        >
+                            {tab.content}
+                        </p>
+                        {/* ))}
+                    </EventAccordian>
+                        ))} */}
 
 
                     </div>
@@ -179,7 +206,7 @@ const eventdetails = () => {
             </div>
 
 
-        </>
+        </Layout >
     )
 }
 
