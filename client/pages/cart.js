@@ -52,12 +52,7 @@ const CartPage = () => {
         </h1>
         <div className="flex flex-col h-full mt-4 list-none lg:flex lg:flex-row lg:gap-2">
           <ul
-            className="m-5 p-4 lg:w-[70%] divide-y"
-            style={{
-              backgroundColor: "#000",
-              borderRadius: "12px",
-              border: "3px solid #EA580C",
-            }}
+            className="m-5 p-4 lg:w-[70%] divide-y bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 border border-gray-100"
           >
             {cart.length != 0 ? (
               cart.map((product) => (
@@ -107,12 +102,7 @@ const CartPage = () => {
           </ul>
 
           <div
-            className="sm:w-[50%] w-[50%] self-end lg:self-auto sm:h-[30%] sm:p-5 sm:m-5 text-white mr-5 ml-[40%]"
-            style={{
-              backgroundColor: "#000",
-              borderRadius: "12px",
-              border: "3px solid #EA580C",
-            }}
+            className="sm:w-[50%] w-[50%] self-end lg:self-auto sm:h-[30%] sm:p-5 sm:m-5 text-white mr-5 ml-[40%] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 border border-gray-100"
           >
             <div className="flex flex-col text-sm divide-y divide-gray-200">
               <h2 className="p-4 text-center"> Order Summary</h2>

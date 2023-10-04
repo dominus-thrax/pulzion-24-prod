@@ -8,26 +8,24 @@
 
 
 @font-face {
-  font-family: 'aerospaceregular';
-  src: url('aerospace-webfont.woff2') format('woff2'),
-    url('aerospace-webfont.woff') format('woff');
+  font-family: "aerospaceregular";
+  src: url("aerospace-webfont.woff2") format("woff2"),
+    url("aerospace-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'outerorbitmedium';
-  src: url('outerorbit-rggrl-webfont.woff2') format('woff2'),
-    url('outerorbit-rggrl-webfont.woff') format('woff');
+  font-family: "outerorbitmedium";
+  src: url("outerorbit-rggrl-webfont.woff2") format("woff2"),
+    url("outerorbit-rggrl-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'heaters';
-  src: url('Heaters.otf');
+  font-family: "heaters";
+  src: url("Heaters.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -52,32 +50,32 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #01030c;
+  background: #00001E;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #46526d;
+  background: #ff8415;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #46526d;
+  background: #ff8415;
 }
 
 .about-mode::-webkit-scrollbar-track {
-  background: #0e0b16;
+  background: #00001E;
   width: 8px;
 }
 
 /* Handle */
 .about-mode::-webkit-scrollbar-thumb {
-  background: #46526d;
+  background: #ff8415;
 }
 
 /* Handle on hover */
 .about-mode::-webkit-scrollbar-thumb:hover {
-  background: #46526d;
+  background: #ff8415;
 }
 
 body {
@@ -94,11 +92,11 @@ body {
 }
 
 .aerospace_font {
-  font-family: 'aerospaceregular';
+  font-family: "aerospaceregular";
 }
 
 .quantico_font {
-  font-family: 'Quantico';
+  font-family: "Quantico";
 }
 
 .merienda_font {
@@ -109,10 +107,8 @@ body {
 .nav-font,
 .heaters_font,
 .mobile_nav_link {
-  font-family: 'heaters';
+  font-family: "heaters";
 }
-
-
 
 button {
   cursor: pointer;
@@ -624,75 +620,44 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 /* About Cards */
-
-#about-container {
-  padding: .5rem;
-  /* animation: animate 2s alternate-reverse infinite; */
-  background-image: linear-gradient(var(--rotate),
-      #ffffff,
-      #ff6a00 43%,
-      #922e00);
+#gradient-container {
+  padding: 0.2rem;
+  position: relative;
   border-radius: 10px;
+  background-image: linear-gradient(#ffffff, #ff6a00);
+  overflow: hidden;
 }
 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-
-  100% {
-    --rotate: 360deg;
-  }
+#gradient-container .white-animation {
+  animation: animate 2s infinite linear;
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  width: 20%;
+  margin: auto;
+  background-color: black;
+  opacity: 0.8;
 }
 
 @keyframes animate {
+
+  /* from{
+    background-image: linear-gradient(
+      #ffffff,
+      #ff6a00
+    );
+  }
+ to{
+    background-image: linear-gradient(
+      #ff6a00,
+      #692100
+    );
+  } */
   0% {
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
 
   100% {
-    transform: rotate(360deg);
+    rotate: 360deg;
   }
-}
-
-
-/* Event */
-.event-des-logo {
-  --green: #1beafd;
-  font-size: 15px;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-family: inherit;
-  border-radius: 0.6em;
-  overflow: hidden;
-  transition: all 0.3s;
-  line-height: 1.4em;
-  border: 2px solid var(--green);
-  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
-  color: var(--green);
-  box-shadow: inset 0 0 10px rgba(27, 219, 253, 0.4), 0 0 9px 3px rgba(27, 212, 253, 0.1);
-}
-
-.event-des-logo:hover {
-  color: #82e4ff;
-  box-shadow: inset 0 0 10px rgba(27, 193, 253, 0.6), 0 0 9px 3px rgba(27, 249, 253, 0.2);
-}
-
-.event-des-logo:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  top: 0;
-  transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
-}
-
-.event-logo:hover:before {
-  transform: translateX(15em);
 }

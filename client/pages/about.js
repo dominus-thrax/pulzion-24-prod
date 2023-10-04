@@ -153,7 +153,7 @@ const AboutModal = forwardRef(({ title, description, image }, ref) => {
       className="fixed top-0 left-0 w-screen min-h-screen backdrop-blur"
     >
       <div
-        className="bg-[hsl(21,90%,48%)] text-black fixed overflow-y-auto rounded-3xl p-10 w-[90%] md:w-[40%] about-mode"
+        className="bg-black text-white fixed overflow-y-auto rounded-3xl p-10 w-[90%] md:w-[40%] about-mode"
         style={{
           top: "50%",
           left: "50%",
@@ -180,7 +180,7 @@ const AboutModal = forwardRef(({ title, description, image }, ref) => {
           ))}
         </p>
         <button
-          className="px-2 py-1 text-white bg-[hsl(21,90%,28%)] rounded hover:bg-[hsl(21,90%,18%)]"
+          className="px-2 py-1 text-white bg-orange-500 rounded hover:bg-orange-700"
           onClick={() => {
             setIsVisible(false);
           }}
@@ -194,7 +194,8 @@ const AboutCard = ({ title, description, image }) => {
   const modalRef = useRef();
 
   return (
-    <div id="about-container">
+    <div id="gradient-container">
+      <div className="white-animation"></div>
       <div className="flex flex-col items-center justify-center max-w-lg">
         <div>
           <div className="w-full p-6 rounded-md shadow-2xl bg-black">
@@ -209,7 +210,7 @@ const AboutCard = ({ title, description, image }) => {
                   </p>
 
                   <button
-                    className="block px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700 md:hidden"
+                    className="block px-2 py-1 text-white bg-orange-500 rounded hover:bg-orange-700 md:hidden"
                     onClick={() => modalRef?.current?.toggle()}
                   >
                     Know More
@@ -237,7 +238,7 @@ const AboutCard = ({ title, description, image }) => {
                   </div>
 
                   <button
-                    className="hidden px-2 py-1 text-white bg-[hsl(21,90%,48%)] rounded hover:bg-[hsl(21,90%,28%)] md:block"
+                    className="hidden px-2 py-1 text-white bg-orange-500 rounded hover:bg-orange-700 md:block"
                     onClick={() => modalRef?.current?.toggle()}
                   >
                     Know More
@@ -427,4 +428,5 @@ export default function About() {
       </div>
     </Layout>
   );
+
 }
