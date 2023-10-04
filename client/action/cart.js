@@ -62,7 +62,7 @@ export const getEventFromCart = async () => {
     url: `${apiConfig.url}/cart/`,
     headers: {
       "Content-Type": "application/json",
-       Authorization: `Bearer ${pulzion.token}`,
+       "Authorization": `Bearer ${pulzion.token}`,
     },
   };
   try {

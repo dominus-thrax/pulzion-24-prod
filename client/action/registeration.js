@@ -8,7 +8,7 @@ export const getAllEvents = async () => {
   };
   try {
     const res = await axios(options);
-    return res.data;
+    return res;
   } catch (e) {
     
     if (e?.response?.data) {

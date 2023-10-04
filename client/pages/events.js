@@ -60,9 +60,13 @@ function event() {
     //   }
     //   setLoading(false);
     // };
-    const fetchEvents = () => {
+    const fetchEvents = async () => {
       const data = eventDetails.eventD;
-      setEvents(data)
+      // const data = getAllEvents();
+      // await getAllEvents().then(data =>setEvents(data)).catch(err=>console.log(err));
+      // setEvents(data)
+      getAllEvents().then(res=>setEvents(res.data.events))
+      // console.log(getAllEvents())
       setLoading(false);
     }
     fetchEvents();

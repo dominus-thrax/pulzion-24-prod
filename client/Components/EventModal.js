@@ -91,7 +91,8 @@ const EventModal = forwardRef(
       []
     );
 
-    const closedEvents = [2, 18, 7, 14, 15, 16, 6, 1, 9, 13, 8, 5];
+    // const closedEvents = [2, 18, 7, 14, 15, 16, 6, 1, 9, 13, 8, 5];
+    const closedEvents = [];
 
     const tabs = [
       {
@@ -138,7 +139,7 @@ const EventModal = forwardRef(
             margin:"15px auto 0px"
           }}>
         <div
-          className="w-11/12 max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] event-modal"
+          className="w-11/12 max-w-xl text-orange-700 rounded-3xl shadow-[0px_0px_15px_5px] event-modal"
           style={{
             // top: "50%",
             // left: "50%",
@@ -294,7 +295,7 @@ const EventModal = forwardRef(
               <div className="flex flex-wrap items-center justify-center gap-2">
                 {!registeredEvent?.fk_slot && (
                   <button
-                    className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-primaries-800 hover:bg-primaries-500"
+                    className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
                     onClick={
                       slots?.length > 0 ? () => setSlots([]) : fetchSlots
                     }
@@ -304,7 +305,7 @@ const EventModal = forwardRef(
                 )}
                 {play && (
                   <a
-                    className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-primaries-800 hover:bg-primaries-500"
+                    className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
                     href={id===1 ? "https://www.codechef.com/CDLS2023" : link}
                     target="_blank"
                   >
