@@ -57,7 +57,7 @@ export default function Home() {
             presents
           </p> */}
             <img
-              src="/homepage_logo.png"
+              src="/homepage_logo_2.png"
               className="w-full sm:max-w-xl xl:max-w-2xl mt-10 lg:mt-20"
             />
             <h2
