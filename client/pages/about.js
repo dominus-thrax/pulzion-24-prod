@@ -29,8 +29,8 @@ const LINKS = [
     link: "https://www.instagram.com/acm.pict/",
   },
   {
-    Component:FaGlobe,
-    link:"https://pict.acm.org/",
+    Component: FaGlobe,
+    link: "https://pict.acm.org/",
   },
   {
     Component: FaFacebook,
@@ -195,60 +195,60 @@ const AboutCard = ({ title, description, image }) => {
 
   return (
     <div id="about-container">
-    <div className="flex flex-col items-center justify-center max-w-lg">
-      <div>
-      <div className="w-full p-6 rounded-md shadow-2xl bg-black">
-        <Zoom>
-            <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
-              <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
-                <p className="text-xl font-semibold text-white">{title}</p>
-                <p className="text-white font-extrabold line-clamp-6">
-                  {description.map((txt) => (
-                    <p>{txt}</p>
-                  ))}
-                </p>
+      <div className="flex flex-col items-center justify-center max-w-lg">
+        <div>
+          <div className="w-full p-6 rounded-md shadow-2xl bg-black">
+            <Zoom>
+              <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
+                <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
+                  <p className="text-xl font-semibold text-white">{title}</p>
+                  <p className="text-white font-extrabold line-clamp-6">
+                    {description.map((txt) => (
+                      <p>{txt}</p>
+                    ))}
+                  </p>
 
-                <button
-                  className="block px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700 md:hidden"
-                  onClick={() => modalRef?.current?.toggle()}
-                >
-                  Know More
-                </button>
-              </div>
-              <div
-                style={{
-                  width: "100px",
-                }}
-                className="flex flex-col justify-between"
-              >
+                  <button
+                    className="block px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700 md:hidden"
+                    onClick={() => modalRef?.current?.toggle()}
+                  >
+                    Know More
+                  </button>
+                </div>
                 <div
                   style={{
                     width: "100px",
-                    height: "100px",
                   }}
-                  className="p-2 rounded-md "
+                  className="flex flex-col justify-between"
                 >
-                  <Image
-                    src={image}
-                    width={100}
-                    height={100}
-                    objectFit="contain"
-                  />
-                </div>
+                  <div
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                    }}
+                    className="p-2 rounded-md "
+                  >
+                    <Image
+                      src={image}
+                      width={100}
+                      height={100}
+                      objectFit="contain"
+                    />
+                  </div>
 
-                <button
-                  className="hidden px-2 py-1 text-white bg-[hsl(21,90%,48%)] rounded hover:bg-[hsl(21,90%,28%)] md:block"
-                  onClick={() => modalRef?.current?.toggle()}
-                >
-                  Know More
-                </button>
+                  <button
+                    className="hidden px-2 py-1 text-white bg-[hsl(21,90%,48%)] rounded hover:bg-[hsl(21,90%,28%)] md:block"
+                    onClick={() => modalRef?.current?.toggle()}
+                  >
+                    Know More
+                  </button>
+                </div>
               </div>
-            </div>
-        </Zoom>
+            </Zoom>
+          </div>
+        </div>
+        <AboutModal ref={modalRef} {...{ title, image, description }} />
       </div>
-      </div>
-      <AboutModal ref={modalRef} {...{ title, image, description }} />
-    </div>
     </div>
   );
 };
