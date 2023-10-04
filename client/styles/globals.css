@@ -1,33 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quantico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 
 @font-face {
-  font-family: 'aerospaceregular';
-  src: url('aerospace-webfont.woff2') format('woff2'),
-    url('aerospace-webfont.woff') format('woff');
+  font-family: "aerospaceregular";
+  src: url("aerospace-webfont.woff2") format("woff2"),
+    url("aerospace-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'outerorbitmedium';
-  src: url('outerorbit-rggrl-webfont.woff2') format('woff2'),
-    url('outerorbit-rggrl-webfont.woff') format('woff');
+  font-family: "outerorbitmedium";
+  src: url("outerorbit-rggrl-webfont.woff2") format("woff2"),
+    url("outerorbit-rggrl-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'heaters';
-  src: url('Heaters.otf');
+  font-family: "heaters";
+  src: url("Heaters.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -89,19 +87,17 @@ body {
 }
 
 .aerospace_font {
-  font-family: 'aerospaceregular';
+  font-family: "aerospaceregular";
 }
 
 .quantico_font {
-  font-family: 'Quantico';
+  font-family: "Quantico";
 }
 
 .nav-font,
 .mobile_nav_link {
-  font-family: 'heaters';
+  font-family: "heaters";
 }
-
-
 
 button {
   cursor: pointer;
@@ -169,10 +165,12 @@ button:disabled {
   top: calc(50% - 1px);
   right: 0;
   height: 2px;
-  background: linear-gradient(-45deg,
-      rgba(0, 0, 255, 0),
-      #5f91ff,
-      rgba(0, 0, 255, 0));
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 255, 0),
+    #5f91ff,
+    rgba(0, 0, 255, 0)
+  );
   transform: translateX(50%) rotateZ(45deg);
   border-radius: 100%;
   -webkit-animation: shining 3000ms ease-in-out infinite;
@@ -185,10 +183,12 @@ button:disabled {
   top: calc(50% - 1px);
   right: 0;
   height: 2px;
-  background: linear-gradient(-45deg,
-      rgba(0, 0, 255, 0),
-      #5f91ff,
-      rgba(0, 0, 255, 0));
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 255, 0),
+    #5f91ff,
+    rgba(0, 0, 255, 0)
+  );
   transform: translateX(50%) rotateZ(45deg);
   border-radius: 100%;
   -webkit-animation: shining 3000ms ease-in-out infinite;
@@ -613,38 +613,41 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 /* About Cards */
-
-#about-container{
-  padding: .5rem;
-  /* animation: animate 2s alternate-reverse infinite; */
-  background-image: linear-gradient(
-    var(--rotate),
-    #ffffff,
-    #ff6a00 43%,
-    #922e00
-  );
+#gradient-container {
+  padding: 0.2rem;
+  position: relative;
   border-radius: 10px;
+  background-image: linear-gradient(#ffffff, #ff6a00);
+  overflow: hidden;
+}
+#gradient-container .white-animation {
+  animation: animate 2s infinite linear;
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  width: 20%;
+  margin: auto;
+  background-color: black;
+  opacity: 0.8;
 }
 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
 @keyframes animate {
+  /* from{
+    background-image: linear-gradient(
+      #ffffff,
+      #ff6a00
+    );
+  }
+ to{
+    background-image: linear-gradient(
+      #ff6a00,
+      #692100
+    );
+  } */
   0% {
-      transform: rotate(0deg);
+    rotate:0deg;
   }
   100% {
-      transform: rotate(360deg);
+    rotate:360deg;
   }
 }

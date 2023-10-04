@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-3 text-base bg-transparent relative">
+    <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-3 text-base bg-[rgba(0,0,0,0.3)] relative">
       <div className="flex items-center justify-between gap-5">
         <p className="text-primaries-100 text-center">
           &copy; PICT ACM Student Chapter
