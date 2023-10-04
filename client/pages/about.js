@@ -194,16 +194,16 @@ const AboutCard = ({ title, description, image }) => {
   const modalRef = useRef();
 
   return (
-    <div id="gradient-container">
+    <div>
       <div className="white-animation"></div>
     <div className="flex flex-col items-center justify-center max-w-lg">
       <div>
-      <div className="w-full p-6 rounded-md shadow-2xl bg-black">
+      <div className="w-full p-6 rounded-md shadow-2xl bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
         <Zoom>
             <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
               <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
                 <p className="text-xl font-semibold text-white">{title}</p>
-                <p className="text-white font-extrabold line-clamp-6">
+                <p className="text-white line-clamp-6">
                   {description.map((txt) => (
                     <p>{txt}</p>
                   ))}
