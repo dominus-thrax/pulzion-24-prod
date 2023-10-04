@@ -16,9 +16,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {loader && router.pathname !== "/" && <Loader />}
-
-
       {/* {loader && router.pathname !== "/" && <Loader />} */}
       <div className={`min-h-screen flex flex-col styles.gradientClass ${router.pathname === "/" ? "" : ""}`}>
         <Header />
@@ -26,49 +23,21 @@ const Layout = ({ children }) => {
           {router.pathname !== "/" && (
             <div
               id="bg"
-              className="fixed bottom-0 left-0 right-0 min-w-full min-h-full "
+              className="fixed bottom-0 left-0 right-0 min-w-full min-h-full bg-[url('/all_bg_4.png')] bg-cover bg-bottom bg-no-repeat z-0"
               style={{
                 zIndex: -2,
                 height: "100vh",
+                backgroundColor: '#000',
                 width: "100%",
               }}
             >
-              {/* Background Image */}
-              <img
-                id="bg_img"
-                style={{
-                  zIndex: -1,
-                  position: "absolute", // Use absolute positioning
-                  top: 0,
-                  left: 0,
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-                src="main.png"
-                alt="Background Image"
-              />
-              {/* Overlay Image */}
-              <img
-                id="bg_img"
-                style={{
-                  zIndex: 0, // You can adjust this value to control the stacking order
-                  position: "absolute", // Use absolute positioning
-                  top: 0,
-                  left: 0,
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-                src="bat_animation .gif"
-                alt="Overlay Image"
-              />
             </div>
           )}
-
-          {children}
+          <div className={router.pathname !== `/` && 'pt-14'}>
+            {children}
+          </div>
         </div>
-        {router.pathname !== "/" && router.pathname !== "/register" && <Footer />}
+        {router.pathname !== "/" && <Footer />}
       </div>
     </>
   );

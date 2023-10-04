@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Pulzion'23 | Sponsors</title>
+        <title>Pulzion | Sponsors</title>
       </Head>
       <div className="container py-8 mx-auto">
         <SectionHeading children={"Sponsors"} />

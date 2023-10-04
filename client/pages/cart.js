@@ -46,7 +46,7 @@ const CartPage = () => {
 
   return (
     <Layout>
-      {loading ? <ContentLoader /> : <div className="-z-10">
+      {!loading ? <ContentLoader /> : <div className="-z-10">
         <h1 className="mt-[50px] text-3xl font-black text-center uppercase sm:text-4xl md:text-5xl text-sky-400 list-none">
           <SectionHeading>Events Cart</SectionHeading>
         </h1>
@@ -54,9 +54,9 @@ const CartPage = () => {
           <ul
             className="m-5 p-4 lg:w-[70%] divide-y"
             style={{
-              backgroundColor: "rgba(23, 41, 71, 0.73)",
+              backgroundColor: "#000",
               borderRadius: "12px",
-              border: "1px solid rgba(255, 255, 255, 0.125)",
+              border: "3px solid #EA580C",
             }}
           >
             {cart.length != 0 ? (
@@ -79,7 +79,7 @@ const CartPage = () => {
                     <div className="text-white">
                       <button
                         type="button"
-                        className="ml-0 text-[10] text-white sm:text-lg font-medium hover:text-sky-400 sm:ml-0"
+                        className="ml-0 text-[10] text-white sm:text-lg font-medium hover:text-orange-400 sm:ml-0"
                         onClick={async () => {
                           const data = await deleteFromCart(product.id);
                           if (data?.error) {
@@ -109,9 +109,9 @@ const CartPage = () => {
           <div
             className="sm:w-[50%] w-[50%] self-end lg:self-auto sm:h-[30%] sm:p-5 sm:m-5 text-white mr-5 ml-[40%]"
             style={{
-              backgroundColor: "rgba(23, 41, 71, 0.73)",
+              backgroundColor: "#000",
               borderRadius: "12px",
-              border: "1px solid rgba(255, 255, 255, 0.125)",
+              border: "3px solid #EA580C",
             }}
           >
             <div className="flex flex-col text-sm divide-y divide-gray-200">
@@ -127,7 +127,7 @@ const CartPage = () => {
                 <Script src="https://checkout.razorpay.com/v1/checkout.js" />
                 <button
                   type="submit"
-                  className="w-full px-4 py-3 text-base font-medium text-white bg-[#0c4a6e] border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                  className="w-full px-4 py-3 text-base font-medium text-white hover:bg-[hsl(21,90%,28%)] bg-[#EA580C] border border-transparent rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
                   onClick={() => {
                     open();
                   }}
@@ -150,4 +150,5 @@ const CartPage = () => {
   );
 };
 
-export default privateUserRoute(CartPage);
+// export default privateUserRoute(CartPage);
+export default (CartPage);

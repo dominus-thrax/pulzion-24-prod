@@ -127,7 +127,7 @@ const TeamPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Pulzion'23 | Team</title>
+        <title>Pulzion | Team</title>
         <meta
           name="description"
           content="Pulzion is the annual flagship event organized by PICT ACM

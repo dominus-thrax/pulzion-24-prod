@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { IoCall, IoLocationSharp, IoMail } from "react-icons/io5";
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaGlobe } from "react-icons/fa";
 import Layout from "../Components/Layout";
 import AcmLogo from "../public/images/Acm-logo.webp";
 import PascLogo from "../public/images/Pasc-logo.webp";
@@ -27,6 +27,10 @@ const LINKS = [
   {
     Component: FaInstagram,
     link: "https://www.instagram.com/acm.pict/",
+  },
+  {
+    Component: FaGlobe,
+    link: "https://pict.acm.org/",
   },
   {
     Component: FaFacebook,
@@ -70,7 +74,7 @@ const EventNumber = ({ name, count }) => {
       <div
         className={
           styles.GradientBorder +
-          " flex flex-col items-center justify-center bg-primaries-800"
+          " flex flex-col items-center justify-center"
         }
       >
         <div className="flex flex-col">
@@ -89,7 +93,7 @@ const EventNumbers = () => {
     <Fade left cascade delay={600}>
       <div className="flex flex-col mb-10 space-y-5 md:mb-0 ">
         <div className="flex flex-row items-center justify-center">
-          <EventNumber name={"Events"} count={16} />
+          <EventNumber name={"Events"} count={10} />
         </div>
         <div className="flex flex-row items-end justify-center space-x-10">
           <EventNumber name={"Volunteers"} count={300} />
@@ -149,7 +153,7 @@ const AboutModal = forwardRef(({ title, description, image }, ref) => {
       className="fixed top-0 left-0 w-screen min-h-screen backdrop-blur"
     >
       <div
-        className="bg-primaries-800 text-white fixed overflow-y-auto rounded-3xl p-10 w-[90%] md:w-[40%] overflow-y-auto about-mode"
+        className="bg-[hsl(21,90%,48%)] text-black fixed overflow-y-auto rounded-3xl p-10 w-[90%] md:w-[40%] about-mode"
         style={{
           top: "50%",
           left: "50%",
@@ -176,7 +180,7 @@ const AboutModal = forwardRef(({ title, description, image }, ref) => {
           ))}
         </p>
         <button
-          className="px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700"
+          className="px-2 py-1 text-white bg-[hsl(21,90%,28%)] rounded hover:bg-[hsl(21,90%,18%)]"
           onClick={() => {
             setIsVisible(false);
           }}
@@ -190,59 +194,61 @@ const AboutCard = ({ title, description, image }) => {
   const modalRef = useRef();
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-lg">
-      <div className="w-full p-6 rounded-md shadow-2xl bg-primaries-800">
-        <Zoom>
-          <div>
-            <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
-              <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
-                <p className="text-xl font-semibold text-white">{title}</p>
-                <p className="text-white line-clamp-6">
-                  {description.map((txt) => (
-                    <p>{txt}</p>
-                  ))}
-                </p>
+    <div id="about-container">
+      <div className="flex flex-col items-center justify-center max-w-lg">
+        <div>
+          <div className="w-full p-6 rounded-md shadow-2xl bg-black">
+            <Zoom>
+              <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
+                <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
+                  <p className="text-xl font-semibold text-white">{title}</p>
+                  <p className="text-white font-extrabold line-clamp-6">
+                    {description.map((txt) => (
+                      <p>{txt}</p>
+                    ))}
+                  </p>
 
-                <button
-                  className="block px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700 md:hidden"
-                  onClick={() => modalRef?.current?.toggle()}
-                >
-                  Know More
-                </button>
-              </div>
-              <div
-                style={{
-                  width: "100px",
-                }}
-                className="flex flex-col justify-between"
-              >
+                  <button
+                    className="block px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700 md:hidden"
+                    onClick={() => modalRef?.current?.toggle()}
+                  >
+                    Know More
+                  </button>
+                </div>
                 <div
                   style={{
                     width: "100px",
-                    height: "100px",
                   }}
-                  className="p-2 rounded-md "
+                  className="flex flex-col justify-between"
                 >
-                  <Image
-                    src={image}
-                    width={100}
-                    height={100}
-                    objectFit="contain"
-                  />
-                </div>
+                  <div
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                    }}
+                    className="p-2 rounded-md "
+                  >
+                    <Image
+                      src={image}
+                      width={100}
+                      height={100}
+                      objectFit="contain"
+                    />
+                  </div>
 
-                <button
-                  className="hidden px-2 py-1 text-white bg-blue-500 rounded hover:bg-blue-700 md:block"
-                  onClick={() => modalRef?.current?.toggle()}
-                >
-                  Know More
-                </button>
+                  <button
+                    className="hidden px-2 py-1 text-white bg-[hsl(21,90%,48%)] rounded hover:bg-[hsl(21,90%,28%)] md:block"
+                    onClick={() => modalRef?.current?.toggle()}
+                  >
+                    Know More
+                  </button>
+                </div>
               </div>
-            </div>
+            </Zoom>
           </div>
-        </Zoom>
+        </div>
+        <AboutModal ref={modalRef} {...{ title, image, description }} />
       </div>
-      <AboutModal ref={modalRef} {...{ title, image, description }} />
     </div>
   );
 };
@@ -275,7 +281,7 @@ const SocialMedia = () => {
       <a
         href={link}
         target="_blank"
-        className="p-4 text-3xl border-2 rounded-full text-primaries-400 border-primaries-500 hover:bg-primaries-500 hover:text-white"
+        className="p-4 text-3xl border-2 rounded-full text-orange-500 border-white-500 hover:bg-orange-500 hover:text-white"
       >
         <Component />
       </a>
@@ -328,24 +334,24 @@ const ContactUs = () => {
             <IoCall />
           </p>
           <p className="text-lg text-white">
-            Tejas Padhiyar -{" "}
+            Samarth Mali :{" "}
             <a
               className="flex-auto hover:opacity-50"
               href="tel:9765608601"
               target="_blank"
             >
-              (+91) 9765608601
+              (+91) 9156331100
             </a>
           </p>
           <p className="text-lg text-white">
-            Aditi Chavan -
+            Pritika Rohera :
             <a
               className="flex-auto hover:opacity-50"
               href="tel:9172682087"
               target="_blank"
             >
               {" "}
-              (+91) 9172682087
+              (+91) 8087069750
             </a>
           </p>
         </div>
@@ -356,6 +362,7 @@ const ContactUs = () => {
                 width="100%"
                 style={{
                   minHeight: "300px",
+                  filter: "invert(90%)"
                 }}
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=pune%20institute%20of%20computer%20technology&t=&z=17&ie=UTF8&iwloc=&output=embed"
@@ -392,7 +399,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>Pulzion'23 | About</title>
+        <title>Pulzion | About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         <meta
           name="description"
