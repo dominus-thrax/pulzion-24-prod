@@ -57,13 +57,18 @@ export default function Home() {
             presents
           </p> */}
             <img
-              src="/homepage_logo_2.png"
+              src="/homepage_logo_3.png"
               className="w-full sm:max-w-xl xl:max-w-2xl mt-10 lg:mt-20"
             />
             <h2
               className={`text-black text-5xl sm:text-6xl uppercase text-center ${styles.tagline}`}
             >
               The annual techfest of PICT ACM Student Chapter
+            </h2>
+            <h2
+              className={`text-slate-900 text-4xl font-bold italic text-center font_montserrat`}
+            >
+              27th,28th & 29th October
             </h2>
             {/* <div className="flex flex-row items-center justify-center gap-4 text-2xl font-bold md:gap-6 text-primaries-100 md:text-5xl">
             <IoCalendarOutline /> <p>3rd, 4th &amp; 5th May</p>

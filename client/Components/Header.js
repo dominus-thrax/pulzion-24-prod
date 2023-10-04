@@ -146,14 +146,14 @@ const Header = () => {
             </div>
           ) : (
             <div className={`${styles.shower} relative hidden xl:block`}>
-              <button className="flex items-center justify-between gap-3 px-4 py-2 text-xl border-2 shadow-md bg-primaries-700 text-primaries-100 border-primaries-500 rounded-xl">
+              <button className="flex items-center justify-between gap-3 px-4 py-2 text-xl border-2 shadow-md bg-orange-700 text-primaries-100 border-[rgba(255,255,255,0.5)] rounded-xl">
                 <span>{user.first_name}</span>
                 <span>
                   <IoChevronDown />
                 </span>
               </button>
               <div
-                className={`${styles.drop} hidden absolute bg-primaries-800 text-primaries-100 w-40 flex-col px-4 text-lg rounded-md`}
+                className={`${styles.drop} hidden absolute bg-orange-700 text-primaries-100 w-40 flex-col px-4 text-lg rounded-md`}
                 style={{
                   top: "100%",
                   zIndex: 40,
