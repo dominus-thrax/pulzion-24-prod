@@ -49,32 +49,32 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #01030c;
+  background: #00001E;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #46526d;
+  background: #ff8415;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #46526d;
+  background: #ff8415;
 }
 
 .about-mode::-webkit-scrollbar-track {
-  background: #0e0b16;
+  background: #00001E;
   width: 8px;
 }
 
 /* Handle */
 .about-mode::-webkit-scrollbar-thumb {
-  background: #46526d;
+  background: #ff8415;
 }
 
 /* Handle on hover */
 .about-mode::-webkit-scrollbar-thumb:hover {
-  background: #46526d;
+  background: #ff8415;
 }
 
 body {
