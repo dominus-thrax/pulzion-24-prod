@@ -23,7 +23,7 @@ function EventCard(props) {
   const teams = seperateLine(props.teams ? props.teams : "");
   const notes = seperateLine(props.notes ? props.notes : "");
   const isLoggedIn = !!user?.id;
-  
+
   const [slots, setSlots] = useState([]);
   const alreadyRegistered = isLoggedIn
     ? !!contEvents.find((item) => item.id === props.id)?.id
@@ -65,7 +65,7 @@ function EventCard(props) {
         toast.error("Slot booking isn't active for this event!");
       }
     } catch (e) {
-      
+
       toast.error("Something went wrong");
     }
     setLoading(false);
@@ -100,16 +100,16 @@ function EventCard(props) {
         <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
           <div className="p-10 w-[100%] h-[500px] xl:h-[500px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
-              <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
-              <h3 className="text-lg  tracking-wider text-center font-extrabold text-white">{props.tagline}</h3>
-              {registeredEvent?.fk_slot && (
-                <h3 className="mt-2 text-center">
-                  {displayDate(registeredEvent.start_time)}{" "}
-                  {displayFormat(registeredEvent.start_time)} -{" "}
-                  {displayFormat(registeredEvent.end_time)}
-                </h3>
-              )}
-             <button
+            <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
+            <h3 className="text-lg  tracking-wider text-center font-extrabold text-white">{props.tagline}</h3>
+            {registeredEvent?.fk_slot && (
+              <h3 className="mt-2 text-center">
+                {displayDate(registeredEvent.start_time)}{" "}
+                {displayFormat(registeredEvent.start_time)} -{" "}
+                {displayFormat(registeredEvent.end_time)}
+              </h3>
+            )}
+            <button
               className="p-5 sm:p-7 rounded-sm text-center bg-contain bg-no-repeat relative z-0"
               onClick={
                 handleOpen
@@ -125,8 +125,8 @@ function EventCard(props) {
             </button>
           </div>
         </div>
-      </div>      
-      <EventModal        
+      </div>
+      <EventModal
         title={props.name}
         // title="Electroquest"
         play={props.play}
@@ -148,6 +148,7 @@ function EventCard(props) {
         handleBook={handleBook}
         registeredEvent={registeredEvent}
         setSlots={setSlots}
+
       />
     </div>
   );

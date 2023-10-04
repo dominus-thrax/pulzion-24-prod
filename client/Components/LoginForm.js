@@ -17,12 +17,12 @@ const LoginForm = (props) => {
   const handleLogin = async (values) => {
     try {
       setLoading(true);
-      const data = await userLogin(values, 'user' ,dispatchUser, dispatchEvents);
-      if(data?.error) {
+      const data = await userLogin(values, 'user', dispatchUser, dispatchEvents);
+      if (data?.error) {
         toast.error(data.error);
       }
-    } catch(e) {
-      
+    } catch (e) {
+
       toast.error('Something Went Wrong')
     }
     setLoading(false)
@@ -37,11 +37,13 @@ const LoginForm = (props) => {
     onSubmit: handleLogin
   });
   return (<>
-  <form className={`${styles.login_form} bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
-      <div className="flex flex-col gap-2 mb-4">
+    <h1 className="heaters_font text-7xl text-cyan-100 tracking-wider">Login</h1>
+
+    <form className={`${styles.login_form}  text-gray-50 pt-6 pb-8 mb-4 h-full md:w-8/12`} onSubmit={formik.handleSubmit}>
+      <div className="flex flex-col mt-12 gap-2 mb-4 ">
         {/* <label className="block text-lg font-body tracking-wide text-black-500" htmlFor="email">Email Address</label> */}
         <input
-          className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+          className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
           id="email"
           name="email"
           type="email"
@@ -55,10 +57,10 @@ const LoginForm = (props) => {
         ) : null}
       </div>
 
-      <div className="flex flex-col gap-2 mb-6">
-      {/* <label className="block text-lg  text-black-500 font-body " htmlFor="password">Password</label> */}
+      <div className="flex flex-col mt-8 gap-2 mb-0">
+        {/* <label className="block text-lg  text-black-500 font-body " htmlFor="password">Password</label> */}
         <input
-          className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+          className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
           id="password"
           name="password"
           type="password"
@@ -71,20 +73,23 @@ const LoginForm = (props) => {
           <div className="text-white-500">{formik.errors.password}</div>
         ) : null}
       </div>
-      <div className="flex items-center justify-between font-body text-2xl ">
-        <PrimaryButton type='submit ' className="text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white">
+      <div className="flex items-center mt-8 justify-between font-body text-2xl ">
+        <PrimaryButton type='submit ' className="px-4 py-2 w-full mx-auto  bg-cyan-400 text-cyan-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">
           Login
         </PrimaryButton>
-        <Link href="/forgotpassword">
-        <span className="inline-block text-sm font-body text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
+      </div>
+      <Link href="/forgotpassword">
+        <span className="inline-block text-sm text-cyan-400  rounded-md p-2 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
           Forgot Password?
         </span>
-        </Link>
+      </Link>
+      <div className={` px-8 pt-6 pb-8 mb-4 `}>
+        <p className="text-md text-center ">Don't Have an Account? <button className="text-[#ff8415]" onClick={props.displayRegister}>SignUp</button> </p>
       </div>
-      <button onClick={props.displayRegister} className={`${styles.hidden_link} inline-block align-baseline font-body text-sm text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:text-white hover:rounded-md hover:p-2 my-6`}>Don't have an account? Register</button>
-    </form> 
+    </form>
     {loading && <ContentLoader />}
-    </>);
+  </>);
 }
 
 export default LoginForm;
+

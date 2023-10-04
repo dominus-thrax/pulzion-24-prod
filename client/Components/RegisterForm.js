@@ -27,7 +27,7 @@ const RegisterForm = (props) => {
         toast.error(data.error);
       }
     } catch (e) {
-      
+
       toast.error("Something Went Wrong");
     }
     setLoading(false);
@@ -87,9 +87,9 @@ const RegisterForm = (props) => {
     onSubmit: handleRegister,
   });
 
-  useEffect(()=> {
+  useEffect(() => {
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if(isIOS) {
+    if (isIOS) {
       setIos(true)
     } else {
       setIos(false)
@@ -98,164 +98,177 @@ const RegisterForm = (props) => {
 
   return (
     <>
+      <h1 className="heaters_font text-7xl text-cyan-100 tracking-wider">Register</h1>
+
       <form
-        className={`${styles.register_form} bg-[#B48754] shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`}
+        className={`${styles.register_form} text-white pt-6 pb-8 mb-4 md:px-20`}
         onSubmit={formik.handleSubmit}
       >
-        <h1 className={`${styles.hidden_h1} text-primaries-100 md:text-5xl text-xl my-6`}>
-          Welcome
-        </h1>
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
+
+        <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
+
+          <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
+            {/* <label
             className="block text-lg font-body text-black-500"
             htmlFor="firstname"
           >
             First Name
           </label> */}
-          <input
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
-            id="first_name"
-            name="first_name"
-            type="text"
-            value={formik.values.first_name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder="First Name"
-          />
-          {formik.touched.first_name && formik.errors.first_name ? (
-            <div className="text-white-500">{formik.errors.first_name}</div>
-          ) : null}
-        </div>
+            <input
+              className="px-4 py-2 w-full border-2  mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              id="first_name"
+              name="first_name"
+              type="text"
+              value={formik.values.first_name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="First Name"
+            />
+            {formik.touched.first_name && formik.errors.first_name ? (
+              <div className="text-white-500">{formik.errors.first_name}</div>
+            ) : null}
+          </div>
 
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
+          <div className="flex flex-col gap-2 mb-4 md:w-1/2">
+            {/* <label
             className="block text-lg font-body text-black-500"
             htmlFor="last_name"
           >
             Last Name
           </label> */}
-          <input
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
-            id="last_name"
-            name="last_name"
-            value={formik.values.last_name}
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder="Last Name"
-          />
-          {formik.touched.last_name && formik.errors.last_name ? (
-            <div className="text-white-500">{formik.errors.last_name}</div>
-          ) : null}
+            <input
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              id="last_name"
+              name="last_name"
+              value={formik.values.last_name}
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="Last Name"
+            />
+            {formik.touched.last_name && formik.errors.last_name ? (
+              <div className="text-white-500">{formik.errors.last_name}</div>
+            ) : null}
+          </div>
         </div>
 
-        <div className="flex flex-col gap-2 mb-4">
-          <label
+        {/* Row2  */}
+        <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
+
+          <div className="flex flex-col gap-2 mb-4">
+            {/* <label
             className="block text-lg font-body text-black-500"
             htmlFor="mobile_number"
           >
             Mobile Number
-          </label>
-          <PhoneInput
-            className="font-body"
-            country={"us"}
-            value={formik.values.mobile_number}
-            enableSearch={true}
-            placeholder="Mobile Number"
-            onBlur={formik.handleBlur}
-            onChange={(phone) =>
-              formik.setValues({ ...formik.values, mobile_number: phone })
-            }
-            containerStyle={{
-              display: "block",
-            }}
-            inputStyle={{
-              color: "grey",
-              background: "#01030c",
-              fontSize: "1rem",
-              width: "100%",
-            }}
-            buttonStyle={{
-              background: "#01030c",
-            }}
-           
-          />
-          {formik.touched.mobile_number && formik.errors.mobile_number ? (
-            <div className="text-white-500">{formik.errors.mobile_number}</div>
-          ) : null}
-        </div>
+          </label> */}
+            <PhoneInput
+              className="font-body"
+              country={"us"}
+              value={formik.values.mobile_number}
+              enableSearch={true}
+              placeholder="Mobile Number"
+              onBlur={formik.handleBlur}
+              onChange={(phone) =>
+                formik.setValues({ ...formik.values, mobile_number: phone })
+              }
+              containerStyle={{
+                display: "block",
+              }}
+              inputStyle={{
+                color: "grey",
+                background: "#0f172a",
+                fontSize: "1rem",
+                padding: 20,
+                borderRadius: "1rem",
+                borderWidth: "2px",
+                borderColor: "#67e8f9",
+                width: "100%",
+              }}
+              buttonStyle={{
+                background: "#0f172a",
+                borderRadius: "1rem",
+              }}
 
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
+            />
+            {formik.touched.mobile_number && formik.errors.mobile_number ? (
+              <div className="text-white-500">{formik.errors.mobile_number}</div>
+            ) : null}
+          </div>
+
+          <div className="flex flex-col gap-2 mb-4">
+            {/* <label
             className="block text-lg font-body text-black-500"
             htmlFor="country"
           >
             Country
           </label> */}
-          <CountryDropdown
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
-            value={formik.values.country}
-            onChange={(nation) =>
-              formik.setValues({ ...formik.values, country: nation })
-            }
-          />
+            <CountryDropdown
+              className="px-4 py-2 md:w-60 border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              value={formik.values.country}
+              onChange={(nation) =>
+                formik.setValues({ ...formik.values, country: nation })
+              }
+            />
 
-          {formik.touched.country && formik.errors.country ? (
-            <div className="text-white-500">{formik.errors.country}</div>
-          ) : null}
+            {formik.touched.country && formik.errors.country ? (
+              <div className="text-white-500">{formik.errors.country}</div>
+            ) : null}
+          </div>
         </div>
+        <div className="flex flex-col md:flex-row justify-between gap-4 ">
 
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
+          <div className="flex flex-col w-full gap-2 mb-4">
+            {/* <label
             className="block text-lg font-body text-black-500"
             htmlFor="college"
           >
             College
           </label> */}
-          <select
-            name="college"
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
-            aria-label="Default select example"
-            value={formik.values.college}
-            onClick={()=>{setOthers(true)}}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}            
-          >
-            <option value="">{others? "Select College" : "Others"}</option>
-            <option value="PICT">PICT</option>
-            <option value="Others">Others</option>
-          </select>
-          {formik.touched.college && formik.errors.college && others ? (
-            <div className="text-white-500">{formik.errors.college}</div>
-          ) : null}
-        </div>        
-        {formik.values.college === "Others" || !others ? (
-          <div className="flex flex-col gap-2 mb-4">
-            {/* <label
+            <select
+              name="college"
+              className="px-4 py-2 w-full  border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              aria-label="Default select example"
+              value={formik.values.college}
+              onClick={() => { setOthers(true) }}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="">{others ? "Select College" : "Others"}</option>
+              <option value="PICT">PICT</option>
+              <option value="Others">Others</option>
+            </select>
+            {formik.touched.college && formik.errors.college && others ? (
+              <div className="text-white-500">{formik.errors.college}</div>
+            ) : null}
+          </div>
+          {formik.values.college === "Others" || !others ? (
+            <div className="flex flex-col gap-2 mb-4">
+              {/* <label
               className="block text-lg font-body text-black-500"
               htmlFor="college_name"
             >
               College Name
             </label> */}
-            <input
-              className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
-              id="college"
-              name="college"
-              type="text"
-              //value={formik.values.college_name}
-              onClick={handleInputChange}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              placeholder="College Name"
-            />            
-            {formik.touched.college && formik.errors.college ? (
-              <div className="text-white-500">{formik.errors.college}</div>
-            ) : null}
-          </div>
-        ) : (
-          <></>
-        )}
-
+              <input
+                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                id="college"
+                name="college"
+                type="text"
+                //value={formik.values.college_name}
+                onClick={handleInputChange}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="College Name"
+              />
+              {formik.touched.college && formik.errors.college ? (
+                <div className="text-white-500">{formik.errors.college}</div>
+              ) : null}
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
         <div className="flex flex-col gap-2 mb-4">
           {/* <label
             className="block text-lg font-body text-black-500"
@@ -265,7 +278,7 @@ const RegisterForm = (props) => {
           </label> */}
           <select
             name="year"
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
             aria-label="Default select example"
             value={formik.values.year}
             onChange={formik.handleChange}
@@ -290,7 +303,7 @@ const RegisterForm = (props) => {
             Email Address
           </label> */}
           <input
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none text-primaries-100  bg-black  focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
             id="email"
             name="email"
             type="email"
@@ -312,7 +325,7 @@ const RegisterForm = (props) => {
             Password
           </label> */}
           <input
-           className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
             id="password"
             name="password"
             type="password"
@@ -334,7 +347,7 @@ const RegisterForm = (props) => {
             Confirm Password
           </label> */}
           <input
-            className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-cyan-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
             id="confirmPassword"
             name="confirmPassword"
             type="password"
@@ -347,14 +360,14 @@ const RegisterForm = (props) => {
             <div className="text-white-500">{formik.errors.confirmPassword}</div>
           ) : null}
         </div>
-        <PrimaryButton type="submit" className="font-body text-2xl text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white">Sign Up</PrimaryButton>
+        <PrimaryButton type="submit" className="px-4 py-2 w-full mx-auto bg-cyan-400 text-cyan-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">Sign Up</PrimaryButton>
 
         <button
           onClick={props.displayLogin}
           type="button"
-          className={`${!ios ? styles.hidden_link : ""} inline-block align-baseline font-body text-sm text-black-500 hover:text-blue-800 my-6`}
+          className={`text-md text-white mt-4 focus:outline-none `}
         >
-          Already have an account? Login
+          Already have an account? <span className="text-yellow-400">Login</span>
         </button>
       </form>
       {loading && <ContentLoader />}

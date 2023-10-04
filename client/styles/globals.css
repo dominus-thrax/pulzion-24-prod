@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;500;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quantico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+
 
 @font-face {
   font-family: "aerospaceregular";
@@ -41,6 +41,7 @@ html {
   scroll-behavior: smooth;
   cursor: url("/cursor.svg"), auto;
 }
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -86,6 +87,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.mont_font {
+  font-family: "Montserrat", sans-serif;
+}
+
 .aerospace_font {
   font-family: "aerospaceregular";
 }
@@ -94,7 +99,13 @@ body {
   font-family: "Quantico";
 }
 
+.merienda_font {
+
+  font-family: 'Merienda', cursive;
+}
+
 .nav-font,
+.heaters_font,
 .mobile_nav_link {
   font-family: "heaters";
 }
@@ -165,12 +176,10 @@ button:disabled {
   top: calc(50% - 1px);
   right: 0;
   height: 2px;
-  background: linear-gradient(
-    -45deg,
-    rgba(0, 0, 255, 0),
-    #5f91ff,
-    rgba(0, 0, 255, 0)
-  );
+  background: linear-gradient(-45deg,
+      rgba(0, 0, 255, 0),
+      #5f91ff,
+      rgba(0, 0, 255, 0));
   transform: translateX(50%) rotateZ(45deg);
   border-radius: 100%;
   -webkit-animation: shining 3000ms ease-in-out infinite;
@@ -183,12 +192,10 @@ button:disabled {
   top: calc(50% - 1px);
   right: 0;
   height: 2px;
-  background: linear-gradient(
-    -45deg,
-    rgba(0, 0, 255, 0),
-    #5f91ff,
-    rgba(0, 0, 255, 0)
-  );
+  background: linear-gradient(-45deg,
+      rgba(0, 0, 255, 0),
+      #5f91ff,
+      rgba(0, 0, 255, 0));
   transform: translateX(50%) rotateZ(45deg);
   border-radius: 100%;
   -webkit-animation: shining 3000ms ease-in-out infinite;
@@ -620,6 +627,7 @@ video::-webkit-media-controls-start-playback-button {
   background-image: linear-gradient(#ffffff, #ff6a00);
   overflow: hidden;
 }
+
 #gradient-container .white-animation {
   animation: animate 2s infinite linear;
   position: absolute;
@@ -632,6 +640,7 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 @keyframes animate {
+
   /* from{
     background-image: linear-gradient(
       #ffffff,
@@ -645,9 +654,10 @@ video::-webkit-media-controls-start-playback-button {
     );
   } */
   0% {
-    rotate:0deg;
+    rotate: 0deg;
   }
+
   100% {
-    rotate:360deg;
+    rotate: 360deg;
   }
 }

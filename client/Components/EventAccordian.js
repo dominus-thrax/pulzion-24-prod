@@ -17,9 +17,9 @@ const EventAccordian = ({ title, children, index, activeIndex, setActiveIndex })
       </button>
 
       {/* {(activeIndex === index) && ( */}
-        <div className={`py-2 pl-4 text-left text-sm ease-in-out duration-300 ${activeIndex === index ? "block" : "hidden"}`}>
-          {children}
-        </div>
+      <div className={`py-2 pl-4 text-left text-sm ease-in-out duration-300 ${activeIndex === index ? "block" : "hidden"}`}>
+        {children}
+      </div>
       {/* )} */}
     </div>
   );

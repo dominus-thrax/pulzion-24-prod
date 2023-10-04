@@ -1,0 +1,44 @@
+/* Add Tailwind CSS classes to elements where needed */
+.forms-section {
+    @apply flex flex-col justify-center items-center;
+}
+
+.section-title {
+    @apply text-3xl text-white my-8;
+}
+
+.forms {
+    @apply flex items-start mt-8;
+}
+
+.form-wrapper {
+    @apply hideLayer;
+}
+
+.form-wrapper.is-active {
+    @apply showLayer;
+}
+
+/* Add Tailwind CSS classes for animations */
+@keyframes showLayer {
+    50% {
+        z-index: 1;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
+
+@keyframes hideLayer {
+    0% {
+        z-index: 1;
+    }
+
+    49.999% {
+        z-index: 1;
+    }
+}
+
+/* Continue to add Tailwind CSS classes and styles for the rest of the elements as needed */
+/* You can replace existing styles with Tailwind CSS classes wherever possible */

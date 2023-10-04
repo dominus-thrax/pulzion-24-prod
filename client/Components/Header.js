@@ -129,7 +129,7 @@ const Header = () => {
                 <span
                   className={`text-3xl cursor-pointer ease-in-out duration-300 px-5 py-1 text-center ${link.id > 6 ? "hidden" : ""
                     }  ${router.pathname === link.to
-                      ? "text-[#ff8415]"
+                      ? "text-[#ff8415] font-bold tracking-wider text-3.5xl"
                       : "text-white"
                     }`}
                 >
@@ -139,8 +139,8 @@ const Header = () => {
             ))}
           </div>
           {!user?.id ? (
-            <div className="">
-              <PrimaryButton className="font-body bg-orange-600 text-black hover:bg-orange-800 hover:text-white   text-2xl p-2"  onClick={() => router.push("/register")}>
+            <div className="hidden xl:block">
+              <PrimaryButton onClick={() => router.push("/register")}>
                 Login
               </PrimaryButton>
             </div>
