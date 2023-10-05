@@ -85,11 +85,6 @@ const Header = () => {
         to: "/sponsors",
       },
       {
-        id: 5,
-        text: "Team",
-        to: "/team",
-      },
-      {
         id: 6,
         text: "Glimpses",
         to: "/glimpses",
