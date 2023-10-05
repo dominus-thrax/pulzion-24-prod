@@ -282,7 +282,7 @@ const SocialMedia = () => {
       <a
         href={link}
         target="_blank"
-        className="p-4 text-3xl border-2 rounded-full text-orange-500 border-white-500 hover:bg-orange-500 hover:text-white"
+        className="p-2 text-3xl border-2 rounded-full text-orange-500 border-white-500 hover:bg-orange-500 hover:text-white"
       >
         <Component />
       </a>
