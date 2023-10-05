@@ -41,9 +41,9 @@ const LoginSignup = () => {
         management-based events, design and development based contests
         and quizzing events."/>
       </Head>
-      <div className="forms flex justify-center md:ms-auto pt-20 items-center flex-col bg-cover bg-no-repeat bg-right-top lg:bg-left-top  min-h-screen">
+      <div className="flex flex-col items-center justify-center min-h-screen pt-20 bg-right-top bg-no-repeat bg-cover forms md:ms-auto lg:bg-left-top">
 
-        <div className={`${styles.login_register_form} md:w-1/2   px-8 pt-6 pb-8 mb-4 h-full rounded-r-md lg:ml-auto  flex flex-col items-center`}>
+        <div className={`${styles.login_register_form} px-8 pt-6 pb-8 mb-4 h-full rounded-r-md flex flex-col items-center`}>
 
 
           {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />}

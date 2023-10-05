@@ -268,7 +268,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:rgba(0,0,0,0.4);
+  background-color:rgba(0, 0, 0, 0.091);
   background-image: url('../public/photo_frame_2.png');
   background-size:cover;
   background-repeat: no-repeat;
