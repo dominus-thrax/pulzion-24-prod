@@ -194,7 +194,7 @@ const AboutCard = ({ title, description, image }) => {
   const modalRef = useRef();
 
   return (
-    <div id="gradient-container">
+    <div>
       <div className="white-animation"></div>
       <div className="flex flex-col items-center justify-center max-w-lg">
         <div>

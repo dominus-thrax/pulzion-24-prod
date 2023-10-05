@@ -20,6 +20,7 @@ const RegisterForm = (props) => {
   const [ios, setIos] = useState(false);
 
   const handleRegister = async (values) => {
+    console.log("Handle Submit");
     try {
       setLoading(true);
       const data = await userRegister(values, dispatchUser);
@@ -103,6 +104,7 @@ const RegisterForm = (props) => {
       <form
         className={`${styles.register_form} text-white pt-6 pb-8 mb-4 md:px-20`}
         onSubmit={formik.handleSubmit}
+        method="POST"
       >
 
         <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
@@ -187,6 +189,7 @@ const RegisterForm = (props) => {
               }}
               buttonStyle={{
                 background: "#0f172a",
+                color: "#000000",
                 borderRadius: "1rem",
               }}
 

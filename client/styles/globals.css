@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
@@ -30,16 +30,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Merienda Medium';
+  src: url('./fonts/Merienda-Medium.ttf') format('truetype');
+  /* You can add more font properties here, like font-weight and font-style if needed */
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
+
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   cursor: url("/cursor.svg"), auto;
+
 }
 
 
@@ -80,7 +88,7 @@ html {
 
 body {
   line-height: 1.6;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   /* font-family: 'aerospaceregular'; */
   font-size: 16px;
   background-color: #ffffff;
@@ -88,7 +96,12 @@ body {
 }
 
 .mont_font {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.merienda_font {
+  font-family: 'Merienda Medium', cursive;
+
 }
 
 .aerospace_font {
@@ -577,7 +590,7 @@ button:disabled {
   }
 }
 
-.font_montserrat{
+.font_montserrat {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -668,6 +681,9 @@ video::-webkit-media-controls-start-playback-button {
 
 
 /* Event Details Page */
+.event_details {
+  font-family: 'Montserrat', sans-serif !important;
+}
 
 /* Event */
 .event-des-logo {
@@ -703,9 +719,6 @@ video::-webkit-media-controls-start-playback-button {
 .event-logo:hover:before {
   transform: translateX(15em);
 }
-
-
-
 
 .combo-details::-webkit-scrollbar-thumb {
   display: none;

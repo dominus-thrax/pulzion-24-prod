@@ -24,9 +24,15 @@ const CartPage = () => {
   }
 
   useEffect(() => {
+
+
     (async () => {
+
+      const combo = localStorage.getItem("combo_data");
+      console.log(combo);
       try {
         const res = await getEventFromCart();
+        console.log("Cart")
         console.log(res.events);
         if (res?.error) {
           setLoading(false)
@@ -48,6 +54,28 @@ const CartPage = () => {
   cart.forEach((item) => {
     total += item.price;
   });
+
+  // Delete From Cart
+  const deleteItem = async (id) => {
+    console.log("Hellooo" + id)
+    const combo_id = localStorage.getItem("combo_id");
+    console.log(combo_id);
+    const data = await deleteFromCart(id, combo_id);
+
+    if (data?.error) {
+      toast.error(data.error);
+      return;
+    }
+    if (data?.flag) {
+      localStorage.removeItem("combo_id");
+      localStorage.removeItem("combo_data");
+    }
+    let item = cart.filter(
+      (item) => item.id != id
+    );
+    setCart(item);
+
+  }
 
   return (
     <Layout>
@@ -80,17 +108,7 @@ const CartPage = () => {
                       <button
                         type="button"
                         className="ml-0 text-[10] text-white sm:text-lg font-medium hover:text-orange-400 sm:ml-0"
-                        onClick={async () => {
-                          const data = await deleteFromCart(product.id);
-                          if (data?.error) {
-                            toast.error(data.error);
-                            return;
-                          }
-                          let item = cart.filter(
-                            (item) => item.id != product.id
-                          );
-                          setCart(item);
-                        }}
+                        onClick={() => deleteItem(product.id)}
                       >
                         {/* <span>Remove</span> */}
                         Remove
@@ -140,7 +158,7 @@ const CartPage = () => {
           setCart={setCart}
           amount={total}
         />
-      </div>} 
+      </div>}
     </Layout>
   );
 };
