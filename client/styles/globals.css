@@ -651,6 +651,8 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 
+/* Event Details Page */
+
 /* Event */
 .event-des-logo {
   --green: #1beafd;
@@ -684,4 +686,15 @@ video::-webkit-media-controls-start-playback-button {
 
 .event-logo:hover:before {
   transform: translateX(15em);
+}
+
+
+
+
+.combo-details::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.combo-details::-webkit-scrollbar-track {
+  display: none;
 }

@@ -1,6 +1,26 @@
 import axios from "axios";
 import apiConfig from "../configs/api";
 
+export const getEvent = async (id) => {
+  const options = {
+    method: "GET",
+    url: `${apiConfig.url}/events/${id}`,
+  };
+  try {
+    const res = await axios(options);
+    console.log(id + " ", res)
+    console.log(res.data);
+    return res.data;
+  } catch (e) {
+
+    if (e?.response?.data) {
+      return e.response.data;
+    }
+    return {
+      error: "Something Went Wrong",
+    };
+  }
+};
 export const getAllEvents = async () => {
   const options = {
     method: "GET",
@@ -8,9 +28,10 @@ export const getAllEvents = async () => {
   };
   try {
     const res = await axios(options);
+    console.log(res.data);
     return res.data;
   } catch (e) {
-    
+
     if (e?.response?.data) {
       return e.response.data;
     }
@@ -39,7 +60,7 @@ export const getRegisteredEvents = async (dispatchEvents) => {
       });
       return res.data;
     } catch (e) {
-      
+
       if (e?.response?.data) {
         return e.response.data;
       }
@@ -69,7 +90,7 @@ export const registerEvent = async (formId, status) => {
       const res = await axios(options);
       return res.data;
     } catch (e) {
-      
+
       if (e?.response?.data) {
         return e.response.data;
       }
@@ -96,7 +117,7 @@ export const userRegisterEvent = async (event_id, dispatchEvents) => {
     };
     try {
       const res = await axios(options);
-      if(!res.data?.error) {
+      if (!res.data?.error) {
         dispatchEvents({
           type: "ADD_EVENT",
           event: res.data.event
@@ -104,7 +125,7 @@ export const userRegisterEvent = async (event_id, dispatchEvents) => {
       }
       return res.data;
     } catch (e) {
-      
+
       if (e?.response?.data) {
         return e.response.data;
       }
