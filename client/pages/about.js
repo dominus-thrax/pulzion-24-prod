@@ -198,12 +198,12 @@ const AboutCard = ({ title, description, image }) => {
       <div className="white-animation"></div>
       <div className="flex flex-col items-center justify-center max-w-lg">
         <div>
-          <div className="w-full p-6 rounded-md shadow-2xl bg-black">
+          <div className="w-full p-6 rounded-md shadow-2xl bg-slate-800 rbg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40   border-2 border-orange-300">
             <Zoom>
               <div className="flex flex-col-reverse items-center md:items-stretch md:flex-row md:justify-between">
                 <div className="flex flex-col items-center pt-3 space-y-3 text-center md:pr-6 md:text-left md:items-start md:pt-0">
                   <p className="text-xl font-semibold text-white">{title}</p>
-                  <p className="text-white font-extrabold line-clamp-6">
+                  <p className="text-white line-clamp-6">
                     {description.map((txt) => (
                       <p>{txt}</p>
                     ))}
@@ -282,7 +282,7 @@ const SocialMedia = () => {
       <a
         href={link}
         target="_blank"
-        className="p-2 text-3xl border-2 rounded-full text-orange-500 border-white-500 hover:bg-orange-500 hover:text-white"
+        className=" p-2 md:p-4 text-xl md:text-3xl border-2 rounded-full text-orange-500 border-white-500 hover:bg-orange-500 hover:text-white"
       >
         <Component />
       </a>
@@ -428,5 +428,4 @@ export default function About() {
       </div>
     </Layout>
   );
-
 }
