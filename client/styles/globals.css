@@ -36,6 +36,18 @@
   /* You can add more font properties here, like font-weight and font-style if needed */
 }
 
+@font-face {
+  font-family: 'DangerNight';
+  src: url('./fonts/Danger-Night.otf');
+  /* You can add more font properties here, like font-weight and font-style if needed */
+}
+
+@font-face {
+  font-family: 'FEASFBRG';
+  src: url('./fonts/FEASFBRG.ttf') format('truetype');
+  /* You can add more font properties here, like font-weight and font-style if needed */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -99,8 +111,8 @@ body {
   font-family: "Montserrat", sans-serif !important;
 }
 
-.merienda_font {
-  font-family: 'Merienda Medium', cursive;
+.dn_font {
+  font-family: 'DangerNight' !important;
 
 }
 
@@ -112,15 +124,19 @@ body {
   font-family: "Quantico";
 }
 
-.merienda_font {
-
-  font-family: 'Merienda', cursive;
+.primary_font {
+  font-family: 'FEASFBRG';
 }
 
 .nav-font,
 .heaters_font,
 .mobile_nav_link {
-  font-family: "heaters";
+  /* font-family: "heaters"; */
+  font-family: 'FEASFBRG';
+  letter-spacing: 4px;
+  font-weight: 300;
+  font-size: 1.2rem;
+
 }
 
 button {

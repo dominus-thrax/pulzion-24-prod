@@ -127,7 +127,7 @@ const Header = () => {
             {links.map((link) => (
               <Link href={link.to} key={link.id.toString()}>
                 <span
-                  className={`text-3xl cursor-pointer ease-in-out duration-300 px-5 py-1 text-center ${link.id > 6 ? "hidden" : ""
+                  className={`text-xl cursor-pointer  ease-in-out duration-300 px-5 py-1 text-center ${link.id > 6 ? "hidden" : ""
                     }  ${router.pathname === link.to
                       ? "text-[#ff8415] font-bold tracking-wider text-3.5xl"
                       : "text-white"
@@ -233,7 +233,7 @@ const Header = () => {
             <div className="flex flex-col items-center gap-5">
               {links.map((link) => (
                 <Link href={link.to} key={link.id.toString()}>
-                  <span className="text-3xl mobile_nav_link text-center duration-300 ease-in-out cursor-pointer text-primaries-100 hover:text-primaries-500">
+                  <span className="text-xl mobile_nav_link text-center duration-300 ease-in-out cursor-pointer text-primaries-100 hover:text-primaries-500">
                     {link.text}
                   </span>
                 </Link>
