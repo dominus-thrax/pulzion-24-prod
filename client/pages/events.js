@@ -61,11 +61,11 @@ function event() {
     //   setLoading(false);
     // };
     const fetchEvents = async () => {
-      const data = eventDetails.eventD;
+      // const data = eventDetails.eventD;
       // const data = getAllEvents();
       // await getAllEvents().then(data =>setEvents(data)).catch(err=>console.log(err));
       // setEvents(data)
-      getAllEvents().then(res=>setEvents(res.data.events))
+      getAllEvents().then(res => setEvents(res.events))
       // console.log(getAllEvents())
       setLoading(false);
     }

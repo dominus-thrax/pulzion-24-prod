@@ -12,6 +12,7 @@ import { addToCart } from "../action/cart";
 import { useCartContext } from "../context/CartContext.js";
 import { useRouter } from 'next/router'
 import { GrView } from "react-icons/gr"
+import Link from "next/link";
 
 function EventCard(props) {
   const modalRef = useRef();
@@ -111,17 +112,15 @@ function EventCard(props) {
             )}
             <button
               className="p-5 sm:p-7 rounded-sm text-center bg-contain bg-no-repeat relative z-0"
-              onClick={
-                handleOpen
-              }
+
             >
               <img
                 src="/homepage_button.svg"
                 className="absolute inset-0 w-full h-full -z-10"
               />
-              <span className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
+              <Link href={'event/' + props.id} className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
                 View
-              </span>
+              </Link>
             </button>
           </div>
         </div>
