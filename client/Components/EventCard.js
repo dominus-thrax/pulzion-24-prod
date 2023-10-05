@@ -89,7 +89,7 @@ function EventCard(props) {
   };
 
   return (
-    <div className="flex flex-col pl-2 items-center justify-center">
+    <div className="flex flex-col items-center justify-center pl-2">
       <div className={`animated z-[2] top-24 w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]`} >
         <img src={props.logo} alt={props.name} className="event-logo"
           style={{
@@ -97,12 +97,12 @@ function EventCard(props) {
           }}
         />{" "}
       </div>
-      <div className="w-full flex justify-center">
+      <div className="flex justify-center w-full">
         <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
           <div className="p-10 w-[100%] h-[500px] xl:h-[500px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
             <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
-            <h3 className="text-lg  tracking-wider text-center font-extrabold text-white">{props.tagline}</h3>
+            <h3 className="text-lg font-extrabold tracking-wider text-center text-white">{props.tagline}</h3>
             {registeredEvent?.fk_slot && (
               <h3 className="mt-2 text-center">
                 {displayDate(registeredEvent.start_time)}{" "}
@@ -111,7 +111,7 @@ function EventCard(props) {
               </h3>
             )}
             <button
-              className="p-5 sm:p-7 rounded-sm text-center bg-contain bg-no-repeat relative z-0"
+              className="relative z-0 p-5 text-center bg-no-repeat bg-contain rounded-sm sm:p-7"
 
             >
               <img
