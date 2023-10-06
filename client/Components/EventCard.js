@@ -118,8 +118,10 @@ function EventCard(props) {
                 src="/homepage_button.svg"
                 className="absolute inset-0 w-full h-full -z-10"
               />
-              <Link href={'event/' + props.id} className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
+              <Link href={'event/' + props.id} >
+              <a className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
                 View
+              </a>
               </Link>
             </button>
           </div>
