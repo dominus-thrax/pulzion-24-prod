@@ -41,7 +41,7 @@ const LoginForm = (props) => {
   });
   return (
   <div className="relative">
-    <img src="./frame-3.png" className="absolute -m-10 z-50 w-[600px] h-[500px]"/>
+    <img src="./frame-3.png" className="absolute -m-10 z--1 w-[600px] h-[500px]"/>
     {/* <SectionHeading>Login</SectionHeading> */}
     <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`}/>
     <img src="./pumpkin.png" className={`absolute top-0 left-0 z-40 w-20 h-20 ${styles.img}`}/>

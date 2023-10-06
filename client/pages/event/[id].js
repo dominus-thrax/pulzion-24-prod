@@ -294,7 +294,8 @@ const EventDetails = () => {
                                 )}
                                 <p className="text-center text-sm mt-6">{data.description}</p>
                                 <p className='text-start'>Event coordinartor :</p>
-                                <p className="text-start text-sm mt-2"> {data.notes}</p>
+                                <hr className="border-b border-gray-400" />
+                                <p className="text-start text-sm mt-2"> {data.notes.split('\n').map(str => <p>{str}</p>)}</p>
                             </div>
                             <div className="md:w-7/12 flex flex-col p-4 pt-0 md:pr-12">
                                 <h5 className='text-xl mt-8 font-semibold '>Rounds</h5>
@@ -309,6 +310,8 @@ const EventDetails = () => {
                                 <div className="combo_list">
 
                                     < h5 className='text-xl font-semibold mt-8' > Events Combos</h5>
+                                    <hr className="border-b border-gray-400" />
+                                    < h4 className='text-2xl font-semibold mt-8 font-body text-center' > Coming Soon...</h4>
                                     <div className=" flex-row combo-details flex gap-6 mt-4 overflow-x-scroll ">
                                         {((isLoggedIn || !alreadyRegistered) && data.offers) ? data.offers.map((item, index) => (
                                             <div className="combo_card flex p-4  rounded-2xl flex-col items-center justify-center bg-slate-900 bg-opacity-80 md:w-52">

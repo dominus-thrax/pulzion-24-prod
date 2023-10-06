@@ -15,11 +15,11 @@ const LoginSignup = () => {
   const switchForm = (formType) => {
     if (!ios) {
       const formElement = document.querySelector(`.${styles.login_register_form}`);
-      if (formType === 'login') {
-        formElement.classList.remove(`${styles.rotate.rotate}`);
-      } else {
-        formElement.classList.add(`${styles.rotate.rotate}`);
-      }
+      // if (formType === 'login') {
+      //   formElement.classList.remove(`${styles.rotate.rotate}`);
+      // } else {
+      //   formElement.classList.add(`${styles.rotate.rotate}`);
+      // }
     }
 
     setLogin(formType === 'login');
