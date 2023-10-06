@@ -99,14 +99,17 @@ const RegisterForm = (props) => {
 
   return (
     <>
-      <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-extralight my-6 mx-auto">Register</h1>
+      <div className="relative">
+      <img src="./frame-3.png" className="absolute -m-10 z--1 w-[700px] h-[700px]"/>
+      <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`}/>
+      <img src="./pumpkin.png" className={`absolute top-0 left-0 z-40 w-20 h-20 ${styles.img}`}/>
 
       <form
-        className={`${styles.register_form} text-white pt-6 pb-8 mb-4 md:px-20`}
+        className={`${styles.register_form} text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
         onSubmit={formik.handleSubmit}
         method="POST"
       >
-
+        <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-extralight my-6 mx-auto">Register</h1>
         <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
           <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
@@ -374,6 +377,7 @@ const RegisterForm = (props) => {
         </button>
       </form>
       {loading && <ContentLoader />}
+      </div>
     </>
   );
 };

@@ -284,7 +284,7 @@ const EventDetails = () => {
                                         {data.play && (
                                             <a
                                                 className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
-                                                href={id === 1 ? "https://www.codechef.com/CDLS2023" : data.link}
+                                                href={id === 14 ? "https://www.codechef.com/CDLS2023" : data.link}
                                                 target="_blank"
                                             >
                                                 Play

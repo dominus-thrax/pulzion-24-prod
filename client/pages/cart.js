@@ -51,7 +51,7 @@ const CartPage = () => {
   }, []);
 
   let total = 0;
-  cart.forEach((item) => {
+  cart.evDetails.forEach((item) => {
     total += item.price;
   });
 
