@@ -100,9 +100,9 @@ const RegisterForm = (props) => {
   return (
     <>
       <div className="relative">
-      <img src="./frame-3.png" className="absolute -m-10 z--1 w-[700px] h-[700px]"/>
       <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`}/>
       <img src="./pumpkin.png" className={`absolute top-0 left-0 z-40 w-20 h-20 ${styles.img}`}/>
+      <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`}/>
 
       <form
         className={`${styles.register_form} text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
