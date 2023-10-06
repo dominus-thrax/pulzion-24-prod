@@ -202,7 +202,7 @@ const EventDetails = () => {
         <Layout>
 
             {
-                loading ? <Loader /> :
+                loading ? '' :
                     <div className="event_details text-gray-50 mont_font m relative  bg-center p-6 md:p-12   bg-no-repeat bg-cover flex justify-center overflow-hidden">
                         <div className="absolute z-0 inset-0 container mx-auto my-10 bottom-0 w-full  bg-[url('/event_info_bg.png')] top-28 left-0 right-0 bg-cover bg-no-repeat opacity-40 bg-center "></div>
 
@@ -271,14 +271,14 @@ const EventDetails = () => {
                                 )}
                                 {isLoggedIn && alreadyRegistered && (
                                     <div className="flex flex-wrap items-center justify-center gap-2">
-                                        {!registeredEvent?.fk_slot && (
+                                        {!registeredEvent?.fk_slot && id !== 1 && (
                                             <button
                                                 className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
                                                 // onClick={
                                                 //     slots?.length > 0 ? () => setSlots([]) : fetchSlots
                                                 // }
                                                 onClick={
-                                                 ()=>   toast.warn("Slot booking for this event has not started yet!")
+                                                    () => toast.warn("Slot booking for this event has not started yet!")
                                                 }
                                             >
                                                 {slots?.length > 0 ? "Cancel" : "Book Slot"}
@@ -287,7 +287,7 @@ const EventDetails = () => {
                                         {data.play && (
                                             <a
                                                 className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
-                                                href={id === 14 ? "https://www.codechef.com/CDLS2023" : data.link}
+                                                href={id === 1 ? "https://www.codechef.com/CDLS2023" : data.link}
                                                 target="_blank"
                                             >
                                                 Play
@@ -304,7 +304,7 @@ const EventDetails = () => {
                                 <h5 className='text-xl mt-8 font-semibold '>Rounds</h5>
                                 <hr className="border-b border-gray-400" />
                                 <p className='text-sm'>{data.rounds.split('\n').map(str => <p>{str}</p>)
-}</p>
+                                }</p>
                                 {console.log(data.rounds)}
                                 <h5 className='text-xl mt-8  font-semibold'>Rules and Regulations</h5>
                                 <hr className="border-b border-gray-400" />
@@ -314,7 +314,7 @@ const EventDetails = () => {
 
                                     < h5 className='text-xl font-semibold mt-8' > Events Combos</h5>
                                     <hr className="border-b border-gray-400" />
-                                    < h4 className='text-2xl font-semibold mt-8 font-body text-center' > Coming Soon...</h4>
+                                    < h4 className='text-2xl font-semibold mt-8  text-center' > Coming Soon...</h4>
                                     <div className=" flex-row combo-details flex gap-6 mt-4 overflow-x-scroll ">
                                         {((isLoggedIn || !alreadyRegistered) && data.offers) ? data.offers.map((item, index) => (
                                             <div className="combo_card flex p-4  rounded-2xl flex-col items-center justify-center bg-slate-900 bg-opacity-80 md:w-52">

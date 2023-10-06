@@ -54,7 +54,7 @@ class TabHeader extends React.Component {
     let tabs = this.props.tabs.map((item, index) => {
       return (
         <li
-          className={`${activeClass === index ? "active" : ""
+          className={`${activeClass === index ? "tab-active" : ""
             } md:w-1/3 md:mx-5`}
         >
           <a

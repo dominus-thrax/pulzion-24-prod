@@ -3,12 +3,12 @@ import { useFormik } from "formik";
 import { toast } from 'react-toastify';
 import * as Yup from "yup";
 
-const ChangePassword = ({handleForget}) => {
+const ChangePassword = ({ handleForget }) => {
     const formik = useFormik({
         initialValues: {
-          otp: "",
-          password: "",
-          confirmPassword: ""
+            otp: "",
+            password: "",
+            confirmPassword: ""
         },
         validationSchema: Yup.object({
             otp: Yup.string().required("Required"),
@@ -20,18 +20,18 @@ const ChangePassword = ({handleForget}) => {
             confirmPassword: Yup.string().trim()
                 .required("Required")
                 .when("password", {
-                is: val => (val && val.length > 0 ? true : false),
-                then: Yup.string().oneOf(
-                    [Yup.ref("password")],
-                    "Password do not much!"
-                )
+                    is: val => (val && val.length > 0 ? true : false),
+                    then: Yup.string().oneOf(
+                        [Yup.ref("password")],
+                        "Password do not much!"
+                    )
                 })
-    
+
         }),
         onSubmit: (values) => {
             handleForget(values);
         }
-      });
+    });
     return (
         <div className={`flex justify-center`}>
             <form className={`bg-primaries-700 shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
@@ -39,7 +39,7 @@ const ChangePassword = ({handleForget}) => {
                 <div className="mb-4 flex flex-col gap-2">
                     {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="otp">OTP</label> */}
                     <input
-                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+                        className="block text-lg  text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="otp"
                         name="otp"
                         type="password"
@@ -52,11 +52,11 @@ const ChangePassword = ({handleForget}) => {
                         <div className="text-white-500">{formik.errors.otp}</div>
                     ) : null}
                 </div>
-                
+
                 <div className="mb-4 flex flex-col gap-2">
                     {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="password">Password</label> */}
                     <input
-                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+                        className="block text-lg  text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="password"
                         name="password"
                         type="password"
@@ -73,7 +73,7 @@ const ChangePassword = ({handleForget}) => {
                 <div className="flex flex-col gap-2 mb-4">
                     {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="confirmPassword">Confirm Password</label> */}
                     <input
-                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+                        className="block text-lg  text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="confirmPassword"
                         name="confirmPassword"
                         type="password"
@@ -87,7 +87,7 @@ const ChangePassword = ({handleForget}) => {
                     ) : null}
                 </div>
 
-                <button className={`px-8 py-2 text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white shadow-md hover:scale-105 ease-in-out`} 
+                <button className={`px-8 py-2 text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white shadow-md hover:scale-105 ease-in-out`}
                     type="submit"
                     style={{
                         borderRadius: '30px',

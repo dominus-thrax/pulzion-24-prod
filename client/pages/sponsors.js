@@ -62,19 +62,20 @@ export default function Home() {
       <Head>
         <title>Pulzion | Sponsors</title>
       </Head>
-      <div className="container w-fit text-center text-white text-4xl py-8 mx-auto">
-        <SectionHeading children={"Sponsors"} />
-        {/* <div className="flex items-center justify-center mt-10"> */}
-        {/* <SponsorsCard  
+      <div className="w-screen  items-center justify-center  ">
+        <div className="container w-fit text-center text-white text-4xl py-8 mx-auto">
+          <SectionHeading children={"Sponsors"} />
+          {/* <div className="flex items-center justify-center mt-10"> */}
+          {/* <SponsorsCard  
                 name = "Magicflare"
                 imgUrl = "./magicflare_sponsors_new.png"
                 type = "Title Sponsor"
           /> */}
-        {/* </div> */}
-        <h1 className="container py-8 mx-auto font-body ">
-          We are open for sponsorships!
-        </h1>
-        {/* <div className="flex flex-wrap items-center justify-around w-full h-full py-2">
+          {/* </div> */}
+          <h1 className="container py-8 mx-auto  ">
+            We are open for sponsorships!
+          </h1>
+          {/* <div className="flex flex-wrap items-center justify-around w-full h-full py-2">
           {
             sponsors.map((sponsor) => {
               return (
@@ -88,20 +89,20 @@ export default function Home() {
             })
           }
         </div> */}
-        <h2 className="text-2xl">Contact Us:</h2>
-        <div className="text-xl">
-          <h3>
-            Om Lachure: <a className="underline " href="tel:9518737103">+91 95187 37103</a>
-          </h3>
-          <h3>
-            Tanisha Bharadiya: <a className="underline " href="tel:7666245993">+91 76662 45993</a>
-          </h3>
-          <h3>
-            Rushi Balapure: <a className="underline " href="tel:8329707611">+91 83297 07611</a>
-          </h3>
+          <h2 className="text-2xl">Contact Us:</h2>
+          <div className="text-xl">
+            <h3>
+              Om Lachure: <a className="underline " href="tel:9518737103">+91 95187 37103</a>
+            </h3>
+            <h3>
+              Tanisha Bharadiya: <a className="underline " href="tel:7666245993">+91 76662 45993</a>
+            </h3>
+            <h3>
+              Rushi Balapure: <a className="underline " href="tel:8329707611">+91 83297 07611</a>
+            </h3>
+          </div>
         </div>
       </div>
-
       {/* <Sponsors></Sponsors> */}
     </Layout>
   );

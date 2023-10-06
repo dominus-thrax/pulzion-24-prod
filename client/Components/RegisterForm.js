@@ -100,283 +100,283 @@ const RegisterForm = (props) => {
   return (
     <>
       <div className="relative">
-      <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`}/>
-      <img src="./pumpkin.png" className={`absolute top-0 left-0 z-40 w-20 h-20 ${styles.img}`}/>
-      <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`}/>
+        <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`} />
+        <img src="./pumpkin.png" className={`absolute top-0 left-0 z-40 w-20 h-20 ${styles.img}`} />
+        <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`} />
 
-      <form
-        className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
-        onSubmit={formik.handleSubmit}
-        method="POST"
-      >
-        <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-FEASFBRG my-6 mx-auto">Register</h1>
-        <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
+        <form
+          className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
+          onSubmit={formik.handleSubmit}
+          method="POST"
+        >
+          <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-FEASFBRG my-6 mx-auto">Register</h1>
+          <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
-          <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
-            {/* <label
-            className="block text-lg font-body text-black-500"
+            <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
+              {/* <label
+            className="block text-lg  text-black-500"
             htmlFor="firstname"
           >
             First Name
           </label> */}
-            <input
-              className="px-4 py-2 w-full border-2  mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-              id="first_name"
-              name="first_name"
-              type="text"
-              value={formik.values.first_name}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              placeholder="First Name"
-            />
-            {formik.touched.first_name && formik.errors.first_name ? (
-              <div className="text-white-500">{formik.errors.first_name}</div>
-            ) : null}
-          </div>
+              <input
+                className="px-4 py-2 w-full border-2  mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                id="first_name"
+                name="first_name"
+                type="text"
+                value={formik.values.first_name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="First Name"
+              />
+              {formik.touched.first_name && formik.errors.first_name ? (
+                <div className="text-white-500">{formik.errors.first_name}</div>
+              ) : null}
+            </div>
 
-          <div className="flex flex-col gap-2 mb-4 md:w-1/2">
-            {/* <label
-            className="block text-lg font-body text-black-500"
+            <div className="flex flex-col gap-2 mb-4 md:w-1/2">
+              {/* <label
+            className="block text-lg  text-black-500"
             htmlFor="last_name"
           >
             Last Name
           </label> */}
-            <input
-              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-              id="last_name"
-              name="last_name"
-              value={formik.values.last_name}
-              type="text"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              placeholder="Last Name"
-            />
-            {formik.touched.last_name && formik.errors.last_name ? (
-              <div className="text-white-500">{formik.errors.last_name}</div>
-            ) : null}
+              <input
+                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                id="last_name"
+                name="last_name"
+                value={formik.values.last_name}
+                type="text"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder="Last Name"
+              />
+              {formik.touched.last_name && formik.errors.last_name ? (
+                <div className="text-white-500">{formik.errors.last_name}</div>
+              ) : null}
+            </div>
           </div>
-        </div>
 
-        {/* Row2  */}
-        <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
+          {/* Row2  */}
+          <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
-          <div className="flex flex-col gap-2 mb-4">
-            {/* <label
-            className="block text-lg font-body text-black-500"
+            <div className="flex flex-col gap-2 mb-4">
+              {/* <label
+            className="block text-lg  text-black-500"
             htmlFor="mobile_number"
           >
             Mobile Number
           </label> */}
-            <PhoneInput
-              className="font-body"
-              country={"us"}
-              value={formik.values.mobile_number}
-              enableSearch={true}
-              placeholder="Mobile Number"
-              onBlur={formik.handleBlur}
-              onChange={(phone) =>
-                formik.setValues({ ...formik.values, mobile_number: phone })
-              }
-              containerStyle={{
-                display: "block",
-              }}
-              inputStyle={{
-                color: "grey",
-                background: "#0f172a",
-                fontSize: "1rem",
-                padding: 20,
-                borderRadius: "1rem",
-                borderWidth: "2px",
-                borderColor: "orange",
-                width: "100%",
-              }}
-              buttonStyle={{
-                background: "#0f172a",
-                color: "#000000",
-                borderRadius: "1rem",
-              }}
+              <PhoneInput
+                className=""
+                country={"us"}
+                value={formik.values.mobile_number}
+                enableSearch={true}
+                placeholder="Mobile Number"
+                onBlur={formik.handleBlur}
+                onChange={(phone) =>
+                  formik.setValues({ ...formik.values, mobile_number: phone })
+                }
+                containerStyle={{
+                  display: "block",
+                }}
+                inputStyle={{
+                  color: "grey",
+                  background: "#0f172a",
+                  fontSize: "1rem",
+                  padding: 20,
+                  borderRadius: "1rem",
+                  borderWidth: "2px",
+                  borderColor: "orange",
+                  width: "100%",
+                }}
+                buttonStyle={{
+                  background: "#0f172a",
+                  color: "#000000",
+                  borderRadius: "1rem",
+                }}
 
-            />
-            {formik.touched.mobile_number && formik.errors.mobile_number ? (
-              <div className="text-white-500">{formik.errors.mobile_number}</div>
+              />
+              {formik.touched.mobile_number && formik.errors.mobile_number ? (
+                <div className="text-white-500">{formik.errors.mobile_number}</div>
+              ) : null}
+            </div>
+
+            <div className="flex flex-col gap-2 mb-4">
+              {/* <label
+            className="block text-lg  text-black-500"
+            htmlFor="country"
+          >
+            Country
+          </label> */}
+              <CountryDropdown
+                className="px-4 py-2 md:w-60 border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                value={formik.values.country}
+                onChange={(nation) =>
+                  formik.setValues({ ...formik.values, country: nation })
+                }
+              />
+
+              {formik.touched.country && formik.errors.country ? (
+                <div className="text-white-500">{formik.errors.country}</div>
+              ) : null}
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between gap-4 ">
+
+            <div className="flex flex-col w-full gap-2 mb-4">
+              {/* <label
+            className="block text-lg  text-black-500"
+            htmlFor="college"
+          >
+            College
+          </label> */}
+              <select
+                name="college"
+                className="px-4 py-2 w-full  border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                aria-label="Default select example"
+                value={formik.values.college}
+                onClick={() => { setOthers(true) }}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              >
+                <option value="">{others ? "Select College" : "Others"}</option>
+                <option value="PICT">PICT</option>
+                <option value="Others">Others</option>
+              </select>
+              {formik.touched.college && formik.errors.college && others ? (
+                <div className="text-white-500">{formik.errors.college}</div>
+              ) : null}
+            </div>
+            {formik.values.college === "Others" || !others ? (
+              <div className="flex flex-col gap-2 mb-4">
+                {/* <label
+              className="block text-lg  text-black-500"
+              htmlFor="college_name"
+            >
+              College Name
+            </label> */}
+                <input
+                  className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                  id="college"
+                  name="college"
+                  type="text"
+                  //value={formik.values.college_name}
+                  onClick={handleInputChange}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  placeholder="College Name"
+                />
+                {formik.touched.college && formik.errors.college ? (
+                  <div className="text-white-500">{formik.errors.college}</div>
+                ) : null}
+              </div>
+            ) : (
+              <></>
+            )}
+          </div>
+          <div className="flex flex-col gap-2 mb-4">
+            {/* <label
+            className="block text-lg  text-black-500"
+            htmlFor="year"
+          >
+            Year
+          </label> */}
+            <select
+              name="year"
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              aria-label="Default select example"
+              value={formik.values.year}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            >
+              <option value="">Select Year</option>
+              <option value="FE">FE(First Year)</option>
+              <option value="SE">SE(Second Year)</option>
+              <option value="TE">TE(Third Year)</option>
+              <option value="BE">BE(Fourth Year)</option>
+            </select>
+            {formik.touched.year && formik.errors.year ? (
+              <div className="text-white-500">{formik.errors.year}</div>
             ) : null}
           </div>
 
           <div className="flex flex-col gap-2 mb-4">
             {/* <label
-            className="block text-lg font-body text-black-500"
-            htmlFor="country"
-          >
-            Country
-          </label> */}
-            <CountryDropdown
-              className="px-4 py-2 md:w-60 border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-              value={formik.values.country}
-              onChange={(nation) =>
-                formik.setValues({ ...formik.values, country: nation })
-              }
-            />
-
-            {formik.touched.country && formik.errors.country ? (
-              <div className="text-white-500">{formik.errors.country}</div>
-            ) : null}
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-between gap-4 ">
-
-          <div className="flex flex-col w-full gap-2 mb-4">
-            {/* <label
-            className="block text-lg font-body text-black-500"
-            htmlFor="college"
-          >
-            College
-          </label> */}
-            <select
-              name="college"
-              className="px-4 py-2 w-full  border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-              aria-label="Default select example"
-              value={formik.values.college}
-              onClick={() => { setOthers(true) }}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            >
-              <option value="">{others ? "Select College" : "Others"}</option>
-              <option value="PICT">PICT</option>
-              <option value="Others">Others</option>
-            </select>
-            {formik.touched.college && formik.errors.college && others ? (
-              <div className="text-white-500">{formik.errors.college}</div>
-            ) : null}
-          </div>
-          {formik.values.college === "Others" || !others ? (
-            <div className="flex flex-col gap-2 mb-4">
-              {/* <label
-              className="block text-lg font-body text-black-500"
-              htmlFor="college_name"
-            >
-              College Name
-            </label> */}
-              <input
-                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-                id="college"
-                name="college"
-                type="text"
-                //value={formik.values.college_name}
-                onClick={handleInputChange}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                placeholder="College Name"
-              />
-              {formik.touched.college && formik.errors.college ? (
-                <div className="text-white-500">{formik.errors.college}</div>
-              ) : null}
-            </div>
-          ) : (
-            <></>
-          )}
-        </div>
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
-            className="block text-lg font-body text-black-500"
-            htmlFor="year"
-          >
-            Year
-          </label> */}
-          <select
-            name="year"
-            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-            aria-label="Default select example"
-            value={formik.values.year}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          >
-            <option value="">Select Year</option>
-            <option value="FE">FE(First Year)</option>
-            <option value="SE">SE(Second Year)</option>
-            <option value="TE">TE(Third Year)</option>
-            <option value="BE">BE(Fourth Year)</option>
-          </select>
-          {formik.touched.year && formik.errors.year ? (
-            <div className="text-white-500">{formik.errors.year}</div>
-          ) : null}
-        </div>
-
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
-            className="block text-lg font-body text-black-500"
+            className="block text-lg  text-black-500"
             htmlFor="email"
           >
             Email Address
           </label> */}
-          <input
-            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-            id="email"
-            name="email"
-            type="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder="Email Address"
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div className="text-white-500">{formik.errors.email}</div>
-          ) : null}
-        </div>
+            <input
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              id="email"
+              name="email"
+              type="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="Email Address"
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className="text-white-500">{formik.errors.email}</div>
+            ) : null}
+          </div>
 
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
-            className="block text-lg font-body text-black-500"
+          <div className="flex flex-col gap-2 mb-4">
+            {/* <label
+            className="block text-lg  text-black-500"
             htmlFor="password"
           >
             Password
           </label> */}
-          <input
-            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-            id="password"
-            name="password"
-            type="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder="Password"
-          />
-          {formik.touched.password && formik.errors.password ? (
-            <div className="text-white-500">{formik.errors.password}</div>
-          ) : null}
-        </div>
+            <input
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              id="password"
+              name="password"
+              type="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="Password"
+            />
+            {formik.touched.password && formik.errors.password ? (
+              <div className="text-white-500">{formik.errors.password}</div>
+            ) : null}
+          </div>
 
-        <div className="flex flex-col gap-2 mb-4">
-          {/* <label
-            className="block text-lg font-body text-black-500"
+          <div className="flex flex-col gap-2 mb-4">
+            {/* <label
+            className="block text-lg  text-black-500"
             htmlFor="confirmPassword"
           >
             Confirm Password
           </label> */}
-          <input
-            className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
-            id="confirmPassword"
-            name="confirmPassword"
-            type="password"
-            value={formik.values.confirmPassword}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            placeholder="Confirm Password"
-          />
-          {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-            <div className="text-white-500">{formik.errors.confirmPassword}</div>
-          ) : null}
-        </div>
-        <PrimaryButton type="submit" className="px-4 py-2 w-full mx-auto bg-orange-400 text-white-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">Sign Up</PrimaryButton>
+            <input
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              value={formik.values.confirmPassword}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="Confirm Password"
+            />
+            {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
+              <div className="text-white-500">{formik.errors.confirmPassword}</div>
+            ) : null}
+          </div>
+          <PrimaryButton type="submit" className="px-4 py-2 w-full mx-auto bg-orange-400 text-white-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">Sign Up</PrimaryButton>
 
-        <button
-          onClick={props.displayLogin}
-          type="button"
-          className={`text-md text-white mt-4 focus:outline-none `}
-        >
-          Already have an account? <span className="text-yellow-400">Login</span>
-        </button>
-      </form>
-      {loading && <ContentLoader />}
+          <button
+            onClick={props.displayLogin}
+            type="button"
+            className={`text-md text-white mt-4 focus:outline-none `}
+          >
+            Already have an account? <span className="text-yellow-400">Login</span>
+          </button>
+        </form>
+        {loading && <ContentLoader />}
       </div>
     </>
   );

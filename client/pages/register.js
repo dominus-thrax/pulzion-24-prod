@@ -41,15 +41,13 @@ const LoginSignup = () => {
         management-based events, design and development based contests
         and quizzing events."/>
       </Head>
-      <div className="flex flex-col items-center justify-center min-h-screen pt-20 bg-right-top bg-no-repeat bg-cover forms md:ms-auto lg:bg-left-top">
-
-        <div className={`${styles.login_register_form} px-8 pt-6 pb-8 mb-4 h-full rounded-r-md flex flex-col items-center`}>
+      <div className="flex items-center justify-center min-h-screen">
 
 
-          {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />}
-          <div className={`form-wrapper ${login ? 'is-active' : ''}`}>
 
-          </div>
+        {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />}
+        <div className={`form-wrapper ${login ? 'is-active' : ''}`}>
+
         </div>
       </div>
     </Layout>

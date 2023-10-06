@@ -28,7 +28,7 @@ export const getAllEvents = async () => {
   };
   try {
     const res = await axios(options);
-    console.log(res.data);
+    console.log(res);
     return res.data;
   } catch (e) {
 

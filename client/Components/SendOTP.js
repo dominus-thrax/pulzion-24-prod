@@ -25,7 +25,7 @@ const SendOTP = (props) => {
                 <div className="mb-4 flex flex-col gap-2">
                     {/* <label className="block text-primaries-100 text-lg font-bold tracking-wide" htmlFor="email">Your Email</label> */}
                     <input
-                        className="block text-lg font-body text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
+                        className="block text-lg  text-grey-500 w-full px-3 py-2 leading-tight tracking-wide border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                         id="email"
                         name="email"
                         type="email"
@@ -38,7 +38,7 @@ const SendOTP = (props) => {
                         <div className="text-white-500">{formik.errors.email}</div>
                     ) : null}
                 </div>
-                <span className="inline-block text-sm font-body text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
+                <span className="inline-block text-sm  text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
                     Get OTP
                 </span>
             </form>
