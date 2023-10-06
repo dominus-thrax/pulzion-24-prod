@@ -66,7 +66,7 @@ export default function Home() {
               The annual techfest of PICT ACM Student Chapter
             </h2>
             <h2
-              className={`text-slate-900 text-4xl font-bold italic text-center font_montserrat`}
+              className={`text-gray-900 text-4xl font-bold text-center font_montserrat`}
             >
               27th,28th & 29th October
             </h2>

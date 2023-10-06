@@ -214,7 +214,7 @@ const EventDetails = () => {
                                 <div className="relative flex items-center justify-center  w-80 h-80 bg-[url('/halloween_frame.png')] bg-center bg-contain bg-no-repeat p-2 z-50">
                                     <img src='/eventLogos/Recode.png' className='w-28 h-28 z-0' />
                                 </div>
-                                <h2 className="font-bold text-white text-3xl">{data.name}</h2>
+                                <h2 className="font-bold text-white text-3xl">{data?.name}</h2>
                                 {/* Price Location Section */}
                                 <div className="price_venue mt-4 flex items-center justify-center">
                                     <div className="loc p-3">
@@ -299,10 +299,12 @@ const EventDetails = () => {
                             <div className="md:w-7/12 flex flex-col p-4 pt-0 md:pr-12">
                                 <h5 className='text-xl mt-8 font-semibold '>Rounds</h5>
                                 <hr className="border-b border-gray-400" />
-                                <p className='text-sm'>{data.rounds}</p>
+                                <p className='text-sm'>{data.rounds.split('\n').map(str => <p>{str}</p>)
+}</p>
+                                {console.log(data.rounds)}
                                 <h5 className='text-xl mt-8  font-semibold'>Rules and Regulations</h5>
                                 <hr className="border-b border-gray-400" />
-                                <p className='text-sm'>{data.rules}</p>
+                                <p className='text-sm'>{data.rules.split('\n').map(str => <p>{str}</p>)}</p>
                                 {/* Combo Item */}
                                 <div className="combo_list">
 
