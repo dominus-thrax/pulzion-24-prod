@@ -38,6 +38,7 @@ const Dashboard = () => {
   useEffect(() => {
     (async () => {
       const { categorised, eventCount } = await getCount();
+      console.log(categorised);
       setCount({
         technical: categorised[0].count,
         nonTechnical: categorised[1].count,

@@ -33,7 +33,7 @@ export default function Home() {
           />
         </Head>
 
-        <div className="bg-[url('/homepage_background.png')]  relative h-[100dvh]  bg-center bg-top bg-no-repeat bg-cover flex justify-center overflow-hidden">
+        <div className="bg-[url('/homepage_background.png')]  w-screen relative h-[100dvh]  bg-top bg-no-repeat bg-cover flex justify-center overflow-hidden">
           <Sound
             url="/halloween_sound.mp3"
             playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}

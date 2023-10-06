@@ -274,8 +274,11 @@ const EventDetails = () => {
                                         {!registeredEvent?.fk_slot && (
                                             <button
                                                 className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
+                                                // onClick={
+                                                //     slots?.length > 0 ? () => setSlots([]) : fetchSlots
+                                                // }
                                                 onClick={
-                                                    slots?.length > 0 ? () => setSlots([]) : fetchSlots
+                                                 ()=>   toast.warn("Slot booking for this event has not started yet!")
                                                 }
                                             >
                                                 {slots?.length > 0 ? "Cancel" : "Book Slot"}

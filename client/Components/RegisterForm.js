@@ -105,11 +105,11 @@ const RegisterForm = (props) => {
       <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`}/>
 
       <form
-        className={`${styles.register_form} text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
+        className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
         onSubmit={formik.handleSubmit}
         method="POST"
       >
-        <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-extralight my-6 mx-auto">Register</h1>
+        <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-FEASFBRG my-6 mx-auto">Register</h1>
         <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
           <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">

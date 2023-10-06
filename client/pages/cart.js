@@ -9,7 +9,6 @@ import SectionHeading from "../Components/SectionHeading";
 import { deleteFromCart, getEventFromCart } from "../action/cart";
 import { toast } from "react-toastify";
 import ContentLoader from "../Components/ContentLoader";
-import { flattenJSON } from "three/src/animation/animationutils";
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
@@ -84,7 +83,8 @@ const CartPage = () => {
 
   return (
     <Layout>
-      {loading ? <ContentLoader /> : <div className="-z-10">
+      <ContentLoader />
+      {/* {loading ?  : <div className="-z-10">
         <h1 className="mt-[50px] text-3xl font-black text-center uppercase sm:text-4xl md:text-5xl text-sky-400 list-none">
           <SectionHeading>Events Cart</SectionHeading>
         </h1>
@@ -115,7 +115,6 @@ const CartPage = () => {
                         className="ml-0 text-[10] text-white sm:text-lg font-medium hover:text-orange-400 sm:ml-0"
                         onClick={() => deleteItem(product.id)}
                       >
-                        {/* <span>Remove</span> */}
                         Remove
                       </button>
                     </div>
@@ -163,7 +162,7 @@ const CartPage = () => {
           setCart={setCart}
           amount={total}
         />
-      </div>}
+      </div>} */}
     </Layout>
   );
 };

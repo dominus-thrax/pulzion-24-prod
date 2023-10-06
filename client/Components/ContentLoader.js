@@ -13,7 +13,7 @@ const ContentLoader = () => {
     },
   };
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-primaries-700">
+    <div className="h-screen w-screen flex flex-col items-center justify-center">
      <Lottie options={defaultOptions} height={400} width={400}></Lottie>
     </div>
   );
