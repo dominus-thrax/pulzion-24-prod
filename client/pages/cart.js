@@ -39,7 +39,7 @@ const CartPage = () => {
             msg: "error"
           };
         }
-        const cartArray = Object.values(res);
+        const cartArray = Object.values(res.events[0]);
         setTimeout(() => {
           setCart(cartArray);
           console.log(cartArray)
