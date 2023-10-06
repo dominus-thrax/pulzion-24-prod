@@ -16,11 +16,11 @@ export default function PaymentForm(props) {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get(
-        "https://pulzion-ems.s3.ap-south-1.amazonaws.com/referal/referal.json"
-      );
+      // const res = await axios.get(
+      //   "https://pulzion-ems.s3.ap-south-1.amazonaws.com/referal/referal.json"
+      // );
       
-      setData(res.data.refreal);
+      // setData(res.data.refreal);
     })();
   }, []);
 
