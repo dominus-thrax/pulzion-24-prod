@@ -84,7 +84,7 @@ export const getEventFromCart = async () => {
   const pulzion = JSON.parse(localStorage.getItem("pulzion"));
   const options = {
     method: "GET",
-    url: `${apiConfig.url}/cart/`,
+    url: `${apiConfig.url}/cart`,
     headers: {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${pulzion.token}`,

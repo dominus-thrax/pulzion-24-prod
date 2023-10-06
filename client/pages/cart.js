@@ -9,6 +9,7 @@ import SectionHeading from "../Components/SectionHeading";
 import { deleteFromCart, getEventFromCart } from "../action/cart";
 import { toast } from "react-toastify";
 import ContentLoader from "../Components/ContentLoader";
+import { flattenJSON } from "three/src/animation/animationutils";
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
@@ -24,34 +25,38 @@ const CartPage = () => {
   }
 
   useEffect(() => {
-
-
     (async () => {
-
       const combo = localStorage.getItem("combo_data");
       console.log(combo);
       try {
         const res = await getEventFromCart();
-        console.log("Cart")
-        console.log(res.events);
+        console.log("Cart");
+        console.log(res);
         if (res?.error) {
-          setLoading(false)
-          console.log("error in fetching cart")
+          setLoading(false);
+          console.log("error in fetching cart");
           return {
             msg: "error"
           };
         }
-        setLoading(false)
-        setCart(res.events);
+        const cartArray = Object.values(res.events[0]);
+        
+          setCart(cartArray);
+          console.log(cartArray)
+          console.log("After timeout");
+          console.log(cart);
+        
+        setLoading(false);
       } catch (e) {
-        console.log(e)
+        console.log(e);
         return e;
       }
     })();
   }, []);
+  
 
   let total = 0;
-  cart.evDetails.forEach((item) => {
+  cart.map((item) => {
     total += item.price;
   });
 
