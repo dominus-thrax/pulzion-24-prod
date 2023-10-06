@@ -40,12 +40,12 @@ const CartPage = () => {
           };
         }
         const cartArray = Object.values(res.events[0]);
-        setTimeout(() => {
+        
           setCart(cartArray);
           console.log(cartArray)
           console.log("After timeout");
           console.log(cart);
-        }, 3000);
+        
         setLoading(false);
       } catch (e) {
         console.log(e);
