@@ -261,7 +261,7 @@ const EventDetails = ({ event }) => {
                                     className="px-5 py-2 tracking-wider hover:cursor-pointer text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
                                     // href={id === 1 ? "https://www.codechef.com/CDLS2023" : event.link}
                                     // target="_blank"
-                                    onClick={()=>{
+                                    onClick={() => {
                                         toast.warn('Event hasn\'t started yet.')
                                     }}
                                 >
@@ -271,7 +271,10 @@ const EventDetails = ({ event }) => {
                         </div>
                     )}
                     <p className="text-justify text-sm mt-6">{event.description}</p>
-                    <p className='text-start'>Event coordinartor :</p>
+                    <p className='text-start mt-4 font-semibold'>Team Details :</p>
+                    <hr className="border-b border-gray-400" />
+                    <p className="text-start text-sm mt-2"> {event.teams.split('.').map(str => <p>{str}</p>)}</p>
+                    <p className='text-start mt-4 font-semibold'>Event coordinartor :</p>
                     <hr className="border-b border-gray-400" />
                     <p className="text-start text-sm mt-2"> {event.notes.split('\n').map(str => <p>{str}</p>)}</p>
                 </div>
