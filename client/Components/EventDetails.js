@@ -211,12 +211,12 @@ const EventDetails = ({ event }) => {
                                     <ToolTipButton
                                         loading={loading}
                                         text={
-                                            closedEvents.includes(id)
+                                            closedEvents.includes(event.id)
                                                 ? "Event Closed"
                                                 : `Add to Cart`
                                         }
                                         handleConfirm={
-                                            closedEvents.includes(id)
+                                            closedEvents.includes(event.id)
                                                 ? () => {
                                                     toast.error(
                                                         "Registration for this event has been Closed"
