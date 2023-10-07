@@ -17,6 +17,12 @@ import { useRouter } from "next/router";
 const EventDetails = ({ event }) => {
     const router = useRouter();
 
+    const [id, setId] = useState(null);
+    useEffect(() => {
+        setId(event.id);
+    }, [event])
+
+
 
     // id = parseInt(id);
     const [slots, setSlots] = useState([]);
