@@ -61,7 +61,7 @@ const LoginForm = (props) => {
             placeholder='Email Address'
           />
           {formik.touched.email && formik.errors.email ? (
-            <div className="text-white-500">{formik.errors.email}</div>
+            <div className="text-red-600 font-semibold">{formik.errors.email}</div>
           ) : null}
         </div>
 
@@ -78,7 +78,7 @@ const LoginForm = (props) => {
             placeholder='Password'
           />
           {formik.touched.password && formik.errors.password ? (
-            <div className="text-white-500">{formik.errors.password}</div>
+            <div className="text-red-600 font-semibold">{formik.errors.password}</div>
           ) : null}
         </div>
         <div className="flex items-center justify-between mt-8 text-2xl mont_font">

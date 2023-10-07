@@ -130,7 +130,7 @@ const RegisterForm = (props) => {
                 placeholder="First Name"
               />
               {formik.touched.first_name && formik.errors.first_name ? (
-                <div className="text-white-500">{formik.errors.first_name}</div>
+                <div className="text-red-600 font-semibold">{formik.errors.first_name}</div>
               ) : null}
             </div>
 
@@ -152,7 +152,7 @@ const RegisterForm = (props) => {
                 placeholder="Last Name"
               />
               {formik.touched.last_name && formik.errors.last_name ? (
-                <div className="text-white-500">{formik.errors.last_name}</div>
+                <div className="text-red-600 font-semibold">{formik.errors.last_name}</div>
               ) : null}
             </div>
           </div>
@@ -195,7 +195,7 @@ const RegisterForm = (props) => {
 
               />
               {formik.touched.mobile_number && formik.errors.mobile_number ? (
-                <div className="text-white-500">{formik.errors.mobile_number}</div>
+                <div className="text-red-600 font-semibold">{formik.errors.mobile_number}</div>
               ) : null}
             </div>
 
@@ -210,7 +210,7 @@ const RegisterForm = (props) => {
               />
 
               {formik.touched.country && formik.errors.country ? (
-                <div className="text-white-500">{formik.errors.country}</div>
+                <div className="text-red-600 font-semibold">{formik.errors.country}</div>
               ) : null}
             </div>
           </div>
@@ -237,7 +237,7 @@ const RegisterForm = (props) => {
                 <option value="Others">Others</option>
               </select>
               {formik.touched.college && formik.errors.college && others ? (
-                <div className="text-white-500">{formik.errors.college}</div>
+                <div className="text-red-600 font-semibold">{formik.errors.college}</div>
               ) : null}
             </div>
             {formik.values.college === "Others" || !others ? (
@@ -260,7 +260,7 @@ const RegisterForm = (props) => {
                   placeholder="College Name"
                 />
                 {formik.touched.college && formik.errors.college ? (
-                  <div className="text-white-500">{formik.errors.college}</div>
+                  <div className="text-red-600 font-semibold">{formik.errors.college}</div>
                 ) : null}
               </div>
             ) : (
@@ -289,7 +289,7 @@ const RegisterForm = (props) => {
               <option value="BE">BE(Fourth Year)</option>
             </select>
             {formik.touched.year && formik.errors.year ? (
-              <div className="text-white-500">{formik.errors.year}</div>
+              <div className="text-red-600 font-semibold">{formik.errors.year}</div>
             ) : null}
           </div>
 
@@ -311,7 +311,7 @@ const RegisterForm = (props) => {
               placeholder="Email Address"
             />
             {formik.touched.email && formik.errors.email ? (
-              <div className="text-white-500">{formik.errors.email}</div>
+              <div className="text-red-600 font-semibold">{formik.errors.email}</div>
             ) : null}
           </div>
 
@@ -333,7 +333,7 @@ const RegisterForm = (props) => {
               placeholder="Password"
             />
             {formik.touched.password && formik.errors.password ? (
-              <div className="text-white-500">{formik.errors.password}</div>
+              <div className="text-red-600 font-semibold">{formik.errors.password}</div>
             ) : null}
           </div>
 
@@ -355,7 +355,7 @@ const RegisterForm = (props) => {
               placeholder="Confirm Password"
             />
             {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-              <div className="text-white-500">{formik.errors.confirmPassword}</div>
+              <div className="text-red-600 font-semibold">{formik.errors.confirmPassword}</div>
             ) : null}
           </div>
           <PrimaryButton type="submit" className="px-4 py-2 w-full mx-auto bg-orange-400 text-white-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">Sign Up</PrimaryButton>

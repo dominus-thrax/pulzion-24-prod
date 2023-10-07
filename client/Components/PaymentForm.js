@@ -160,15 +160,15 @@ export default function PaymentForm(props) {
                 </div>
               ) : null}
 
-              <label
+              {/* <label
                 className="block mt-6 font-bold text-md text-primaries-100"
                 htmlFor="referal_code"
-              >
+              > */}
                 {/* Referral (Optional) */}
-                Are You Referred By Someone?
-              </label>
+                {/* Are You Referred By Someone?
+              </label> */}
 
-              <select
+              {/* <select
                 name="referal_code"
                 className="w-full px-3 py-2 mt-1 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                 aria-label="Default select example"
@@ -186,7 +186,7 @@ export default function PaymentForm(props) {
                     </option>
                   );
                 })}
-              </select>
+              </select> */}
               <button
                 type="submit"
                 className="float-right mt-4 px-4 py-2 mb-2 w-[55%] text-center border-4 border-[#3a5f9d] hover:border-[#172947] text-primaries-100 rounded-xl"
