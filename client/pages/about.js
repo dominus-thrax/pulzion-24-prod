@@ -2,9 +2,6 @@ import Image from "next/image";
 import { IoCall, IoLocationSharp, IoMail } from "react-icons/io5";
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaGlobe } from "react-icons/fa";
 import Layout from "../Components/Layout";
-import AcmLogo from "../public/images/Acm-logo.webp";
-import PascLogo from "../public/images/Pasc-logo.webp";
-import AcmWLogo from "../public/images/Acm-w-logo.webp";
 import styles from "../styles/About.module.css";
 import CountUp from "react-countup";
 import { forwardRef, useState, useImperativeHandle, useRef } from "react";
@@ -50,21 +47,21 @@ const ABOUT_US_CARDS = [
       "#UnitedWeStand",
       "At PASC, we all work together, as a team. We take utmost efforts for the success of each and every member of PASC. We help them to achieve not only technical superiority but also bring the best out of them in Non-technical fields as well so that they become the pioneers of today's world. Since, we at PASC bring our Motto into reality, last year we were honored as the BEST ACM STUDENT CHAPTER IN INDIA.",
     ],
-    image: PascLogo,
+    image: "/images/Pasc-logo.webp",
   },
   {
     title: "ACM-W",
     description: [
       "With the objective to support and celebrate the full engagement of women in all aspects of computing field, we conducted an event ACM Pune ‘Celebration of Women in Computing’ (APCWIC-2018) in association with ACM-W India and ACM Pune Professional Chapter. This was the first edition and it was held at PICT, Pune. We organized this event to provide a platform to women professionals and girl students for interaction with eminent individuals from the industry as well as academia, where in they learned about the various challenges and how one can overcome them",
     ],
-    image: AcmWLogo,
+    image: "/images/Acm-w-logo.webp",
   },
   {
     title: "ACM",
     description: [
       "The Association for Computing Machinery (ACM) is the world’s largest educational and scientific society uniting professionals, educators and researchers in the field of computer science to inspire dialogue, share resources and address the challenges in the domain. The purpose of this organization is to advance the scientific development, construction and application of the new machinery for computing, reasoning, and handling of information. The mission is to offer the students an opportunity to learn, innovate and grow into intellectuals, visionaries and technocrats, who contribute to promoting the advancements in science and technology. The ACM India Council is an effort of ACM aimed at improving the level of ACM activities across the country. The ACM India Council comprises a cross-section of the Computer Science and Information Technology communities committed to increasing the visibility and relevance of ACM in India.",
     ],
-    image: AcmLogo,
+    image: "/images/Acm-logo.webp",
   },
 ];
 
