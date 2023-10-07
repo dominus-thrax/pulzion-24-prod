@@ -1,23 +1,7 @@
-import Header from '../../Components/Header';
 import Layout from '../../Components/Layout';
 import { useRouter } from 'next/router'
 import EventDetails from '../../Components/EventDetails';
-import { getAllEvents, getEvent } from '../../action/registeration';
-import React, {
-    useState,
-    useImperativeHandle,
-    useRef,
-    useEffect,
-    useContext,
-} from "react";
-
-import ToolTipButton from "../../Components/Button/ToolTipButton";
-import { toast } from "react-toastify";
-import { userRegisterEvent } from "../../action/registeration";
-import AppContext from "../../context/AppContext";
-import { addItem } from '../../action/cart';
-import Loader from '../../Components/Loader';
-import PrimaryButton from '../../Components/Button/PrimaryButton';
+import { getEvent } from '../../action/registeration';
 
 const EventDetailsPage = ({ event }) => {
 
