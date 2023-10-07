@@ -258,9 +258,12 @@ const EventDetails = ({ event }) => {
                             )}
                             {event.play && (
                                 <a
-                                    className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
-                                    href={id === 1 ? "https://www.codechef.com/CDLS2023" : event.link}
-                                    target="_blank"
+                                    className="px-5 py-2 tracking-wider hover:cursor-pointer text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
+                                    // href={id === 1 ? "https://www.codechef.com/CDLS2023" : event.link}
+                                    // target="_blank"
+                                    onClick={()=>{
+                                        toast.warn('Event hasn\'t started yet.')
+                                    }}
                                 >
                                     Play
                                 </a>
