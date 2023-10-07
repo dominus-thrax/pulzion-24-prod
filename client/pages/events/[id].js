@@ -4,15 +4,15 @@ import EventDetails from "../../Components/EventDetails";
 import { getEvent } from "../../action/registeration";
 import { useEffect, useState } from "react";
 
-const EventDetailsPage = ({ event }) => {
-    // const [event, setEvent] = useState(null);
+const EventDetailsPage = (s) => {
+    const [event, setEvent] = useState(null);
     const router = useRouter();
     useEffect(() => {
         let { id } = router.query;
         if (id) {
             (async () => {
                 let res = await getEvent(id);
-                // setEvent(res.events);
+                setEvent(res.events);
             })();
         }
     }, [router]);
@@ -22,13 +22,4 @@ const EventDetailsPage = ({ event }) => {
 
 export default EventDetailsPage;
 
-//server side props
-export async function getServerSideProps({ query: { id } }) {
-    let res = await getEvent(id);
-    return {
-        props: {
-            event: res.events,
-        },
-    };
-}
-
+// Remove the getServerSideProps export from here
