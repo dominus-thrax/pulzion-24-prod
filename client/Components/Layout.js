@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       {loader && <Loader />}
       <div className={`min-h-screen flex flex-col styles.gradientClass ${router.pathname === "/" ? "" : ""}`}>
         <Header />
-        <div className={`${router.pathname === "/" ? "" : "background"} `}>
+        <div className={`${router.pathname === "/" ? "" : "background"} min-h-[95dvh]`}>
           {router.pathname !== "/" && (
             <div
               id="bg"

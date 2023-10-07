@@ -24,7 +24,6 @@ const EventDetailsPage = ({ event }) => {
     )
 }
 
-export default EventDetailsPage
 
 
 export async function getServerSideProps(context) {
@@ -55,3 +54,6 @@ export async function getServerSideProps(context) {
         }
     }
 }
+
+
+export default EventDetailsPage;

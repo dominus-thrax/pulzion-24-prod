@@ -12,8 +12,10 @@ import { userRegisterEvent } from "../action/registeration";
 import AppContext from "../context/AppContext";
 import { addItem } from '../action/cart';
 import PrimaryButton from './Button/PrimaryButton';
+import { useRouter } from "next/router";
 
 const EventDetails = ({ event }) => {
+    const router = useRouter();
 
 
     // id = parseInt(id);

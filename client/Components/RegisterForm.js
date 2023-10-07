@@ -105,7 +105,7 @@ const RegisterForm = (props) => {
         <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`} />
 
         <form
-          className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-10 rounded-lg pb-8 mb-4 h-full`}
+          className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-6 rounded-lg pb-8 mb-4 h-full`}
           onSubmit={formik.handleSubmit}
           method="POST"
         >
@@ -158,15 +158,10 @@ const RegisterForm = (props) => {
           </div>
 
           {/* Row2  */}
-          <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
+          <div className="w-full  flex-col md:flex-row justify-between gap-4 w-100 grid grid-cols-1 md:grid-cols-2">
 
             <div className="flex flex-col gap-2 ">
-              {/* <label
-            className="block text-lg  text-black-500"
-            htmlFor="mobile_number"
-          >
-            Mobile Number
-          </label> */}
+
               <PhoneInput
                 className=""
                 country={"in"}
@@ -205,12 +200,7 @@ const RegisterForm = (props) => {
             </div>
 
             <div className="flex flex-col gap-2 mb-4">
-              {/* <label
-            className="block text-lg  text-black-500"
-            htmlFor="country"
-          >
-            Country
-          </label> */}
+
               <CountryDropdown
                 className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
                 value={formik.values.country}
