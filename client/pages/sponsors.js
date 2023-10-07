@@ -63,7 +63,7 @@ export default function Home() {
         <title>Pulzion | Sponsors</title>
       </Head>
       <div className="w-screen  items-center justify-center  ">
-        <div className="container w-fit text-center text-white text-4xl py-8 mx-auto">
+        <div className="container w-fit text-center text-white text-4xl py-8 mx-auto h-[90vh]">
           <SectionHeading children={"Sponsors"} />
           {/* <div className="flex items-center justify-center mt-10"> */}
           {/* <SponsorsCard  
