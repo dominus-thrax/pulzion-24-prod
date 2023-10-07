@@ -1,10 +1,10 @@
 import Layout from "../../Components/Layout";
 import { useRouter } from "next/router";
 import EventDetails from "../../Components/EventDetails";
-import { getEvent } from "../../action/registeration";
+import { getAllEvents, getEvent } from "../../action/registeration";
 import { useEffect, useState } from "react";
 
-const EventDetailsPage = (s) => {
+const EventDetailsPage = () => {
     const [event, setEvent] = useState(null);
     const router = useRouter();
     useEffect(() => {
@@ -21,5 +21,3 @@ const EventDetailsPage = (s) => {
 };
 
 export default EventDetailsPage;
-
-// Remove the getServerSideProps export from here
