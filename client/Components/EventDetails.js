@@ -273,10 +273,10 @@ const EventDetails = ({ event }) => {
                     <p className="text-justify text-sm mt-6">{event.description}</p>
                     <p className='text-start mt-4 font-semibold'>Team Details :</p>
                     <hr className="border-b border-gray-400" />
-                    <p className="text-start text-sm mt-2"> {event.teams.split('.').map(str => <p>{str}</p>)}</p>
+                    <p className="text-justify text-sm mt-2"> {event.teams.split('\n').map(str => <p>{str}</p>)}</p>
                     <p className='text-start mt-4 font-semibold'>Event coordinartor :</p>
                     <hr className="border-b border-gray-400" />
-                    <p className="text-start text-sm mt-2"> {event.notes.split('\n').map(str => <p>{str}</p>)}</p>
+                    <p className="text-justify text-sm mt-2"> {event.notes.split('\n').map(str => <p>{str}</p>)}</p>
                 </div>
                 <div className="md:w-7/12 flex flex-col p-4 pt-0 md:pr-12">
                     <h5 className='text-xl mt-8 font-semibold '>Rounds</h5>
