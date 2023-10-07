@@ -184,7 +184,7 @@ const EventDetails = ({ event }) => {
                 {/* Event Buy and Combo section */}
                 <div className="md:w-5/12  flex flex-col h-full items-center px-8 border-r border-gray-400">
                     <div className="relative flex items-center justify-center  w-80 h-80 bg-[url('/halloween_frame.png')] bg-center bg-contain bg-no-repeat p-2 z-50">
-                        <img src='/eventLogos/Recode.png' className='w-28 h-28 z-0' />
+                        <img src={event?.logo} className='w-28 h-28 z-0' />
                     </div>
                     <h2 className="font-bold text-white text-3xl">{event?.name}</h2>
                     {/* Price Location Section */}
