@@ -40,7 +40,7 @@ const LoginForm = (props) => {
     onSubmit: handleLogin
   });
   return (
-    <div className="relative">
+    <div className="relative py-8 px-4 mt-20">
 
       {/* <SectionHeading>Login</SectionHeading> */}
       <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`} />

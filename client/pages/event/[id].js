@@ -19,12 +19,15 @@ import { addItem } from '../../action/cart';
 import Loader from '../../Components/Loader';
 import PrimaryButton from '../../Components/Button/PrimaryButton';
 
-const EventDetails = () => {
+const EventDetails = ({ event }) => {
 
     const router = useRouter();
     let { id } = router.query;
-    id = parseInt(id);
-    const [data, setData] = useState({});
+
+    console.log("Event: ")
+    console.log(event)
+
+    // id = parseInt(id);
     const [slots, setSlots] = useState([]);
     const [active, setActive] = useState(-1);
     const [combo_id, setComboId] = useState(null)
@@ -33,6 +36,10 @@ const EventDetails = () => {
 
     // const closedEvents = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const closedEvents = [];
+
+    // console.log("Props Event: ")
+    // console.log(event);
+
 
     const { contEvents, user, dispatchEvents } = useContext(AppContext);
     // const description = seperateLine(props.description);
@@ -51,40 +58,12 @@ const EventDetails = () => {
         ? contEvents.find((item) => item.id === id)
         : undefined;
 
-
-    //Fetch
+    // TEST  event
     useEffect(() => {
-        const fetchEvents = async () => {
-            // const data = getAllEvents();
-            // await getAllEvents().then(data =>setEvents(data)).catch(err=>console.log(err));
-            // setEvents(data)
-
-            //Set Combo ID
-            const c_id = localStorage.getItem("combo_id");
-            if (c_id) {
-                setComboId(c_id);
-            }
-
-            console.log('id', id);
-            await getEvent(id).then(res => {
-                console.log("Fetch : ")
-                setData(res.events)
-                console.log(res.events);
-                setLoading(false);
-            }).catch(err => {
-                setLoading(false);
-                toast.error(err);
-            })
-        }
-        fetchEvents();
-    }, []);
-
-    // TEST  Data
-    useEffect(() => {
-        console.log('events', data)
+        console.log('events', event)
         console.log("Already ?", alreadyRegistered)
         console.log(contEvents)
-    }, [data])
+    }, [event])
 
     //Slots - 
     const fetchSlots = async () => {
@@ -159,7 +138,7 @@ const EventDetails = () => {
 
             let combo_data;
 
-            data.offers.forEach(item => {
+            event.offers.forEach(item => {
                 if (item.id == id) {
                     combo_data = item;
                 }
@@ -202,7 +181,7 @@ const EventDetails = () => {
         <Layout>
 
             {
-                loading ? '' :
+                !event ? '' :
                     <div className="event_details text-gray-50 mont_font m relative  bg-center p-6 md:p-12   bg-no-repeat bg-cover flex justify-center overflow-hidden">
                         <div className="absolute z-0 inset-0 container mx-auto my-10 bottom-0 w-full  bg-[url('/event_info_bg.png')] top-28 left-0 right-0 bg-cover bg-no-repeat opacity-40 bg-center "></div>
 
@@ -214,16 +193,16 @@ const EventDetails = () => {
                                 <div className="relative flex items-center justify-center  w-80 h-80 bg-[url('/halloween_frame.png')] bg-center bg-contain bg-no-repeat p-2 z-50">
                                     <img src='/eventLogos/Recode.png' className='w-28 h-28 z-0' />
                                 </div>
-                                <h2 className="font-bold text-white text-3xl">{data?.name}</h2>
+                                <h2 className="font-bold text-white text-3xl">{event?.name}</h2>
                                 {/* Price Location Section */}
                                 <div className="price_venue mt-4 flex items-center justify-center">
                                     <div className="loc p-3">
-                                        <h5 className='text-right text-xl font-medium'>{data.mode}</h5>
+                                        <h5 className='text-right text-xl font-medium'>{event.mode}</h5>
                                         <p className="text-xs text-right text-gray-300">Location</p>
                                     </div>
                                     <div className="h-full my-3 w-[1.5px] bg-gray-500"></div>
                                     <div className="price p-3">
-                                        <h5 className='text-left text-xl font-medium'>₹{data.price}</h5>
+                                        <h5 className='text-left text-xl font-medium'>₹{event.price}</h5>
                                         <p className="text-xs text-left text-gray-300">Fees</p>
                                     </div>
                                 </div>
@@ -241,7 +220,7 @@ const EventDetails = () => {
                                 ) : (
                                     !alreadyRegistered && (
                                         <span>
-                                            {data.price > 0 ? (
+                                            {event.price > 0 ? (
                                                 <ToolTipButton
                                                     loading={loading}
                                                     text={
@@ -284,10 +263,10 @@ const EventDetails = () => {
                                                 {slots?.length > 0 ? "Cancel" : "Book Slot"}
                                             </button>
                                         )}
-                                        {data.play && (
+                                        {event.play && (
                                             <a
                                                 className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
-                                                href={id === 1 ? "https://www.codechef.com/CDLS2023" : data.link}
+                                                href={id === 1 ? "https://www.codechef.com/CDLS2023" : event.link}
                                                 target="_blank"
                                             >
                                                 Play
@@ -295,20 +274,20 @@ const EventDetails = () => {
                                         )}
                                     </div>
                                 )}
-                                <p className="text-center text-sm mt-6">{data.description}</p>
+                                <p className="text-justify text-sm mt-6">{event.description}</p>
                                 <p className='text-start'>Event coordinartor :</p>
                                 <hr className="border-b border-gray-400" />
-                                <p className="text-start text-sm mt-2"> {data.notes.split('\n').map(str => <p>{str}</p>)}</p>
+                                <p className="text-start text-sm mt-2"> {event.notes.split('\n').map(str => <p>{str}</p>)}</p>
                             </div>
                             <div className="md:w-7/12 flex flex-col p-4 pt-0 md:pr-12">
                                 <h5 className='text-xl mt-8 font-semibold '>Rounds</h5>
                                 <hr className="border-b border-gray-400" />
-                                <p className='text-sm'>{data.rounds.split('\n').map(str => <p>{str}</p>)
+                                <p className='text-sm'>{event.rounds.split('\n').map(str => <p>{str}</p>)
                                 }</p>
-                                {console.log(data.rounds)}
+                                {console.log(event.rounds)}
                                 <h5 className='text-xl mt-8  font-semibold'>Rules and Regulations</h5>
                                 <hr className="border-b border-gray-400" />
-                                <p className='text-sm'>{data.rules.split('\n').map(str => <p>{str}</p>)}</p>
+                                <p className='text-sm'>{event.rules.split('\n').map(str => <p>{str}</p>)}</p>
                                 {/* Combo Item */}
                                 <div className="combo_list">
 
@@ -316,7 +295,7 @@ const EventDetails = () => {
                                     <hr className="border-b border-gray-400" />
                                     < h4 className='text-2xl font-semibold mt-8  text-center' > Coming Soon...</h4>
                                     <div className=" flex-row combo-details flex gap-6 mt-4 overflow-x-scroll ">
-                                        {((isLoggedIn || !alreadyRegistered) && data.offers) ? data.offers.map((item, index) => (
+                                        {((isLoggedIn || !alreadyRegistered) && event.offers) ? event.offers.map((item, index) => (
                                             <div className="combo_card flex p-4  rounded-2xl flex-col items-center justify-center bg-slate-900 bg-opacity-80 md:w-52">
                                                 {
                                                     item.array_of_evname.map((item, index) => (
@@ -373,3 +352,34 @@ const EventDetails = () => {
 }
 
 export default EventDetails
+
+
+
+export async function getServerSideProps(context) {
+    const { id } = context.query;  //grab the id from the url
+    let event = null;
+    try {
+        console.log("API URL: ");
+
+        await getEvent(id).then(res => {
+            console.log("Response: ");
+            console.log(res);
+            event = res.events;
+            console.log(event);
+        }).catch(err => {
+            console.log(err);
+
+        })
+
+    } catch (err) {
+        console.log("Error: ");
+        console.log(err);
+        event = err;
+    }
+
+    return {
+        props: {
+            event,
+        }
+    }
+}

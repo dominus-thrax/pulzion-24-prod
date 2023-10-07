@@ -99,9 +99,9 @@ const RegisterForm = (props) => {
 
   return (
     <>
-      <div className="relative">
-        <img src="./pumpkin.png" className={`absolute z-40 -top-16 -left-16 w-36 h-36 ${styles.img}`} />
-        <img src="./pumpkin.png" className={`absolute top-0 left-0 z-40 w-20 h-20 ${styles.img}`} />
+      <div className="relative py-8 px-4 mt-12">
+        <img src="./pumpkin.png" className={`absolute z-40 -top-10 -left-16 w-36 h-36 ${styles.img}`} />
+        <img src="./pumpkin.png" className={`absolute top-8 left-5 z-40 w-20 h-20 ${styles.img}`} />
         <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`} />
 
         <form
@@ -109,7 +109,7 @@ const RegisterForm = (props) => {
           onSubmit={formik.handleSubmit}
           method="POST"
         >
-          <h1 className="text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl font-FEASFBRG my-6 mx-auto">Register</h1>
+          <h1 className="text-primaries-100 text-center primary_font uppercase text-3xl sm:text-4xl md:text-5xl font-FEASFBRG my-6 mx-auto">Register</h1>
           <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
             <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
@@ -160,7 +160,7 @@ const RegisterForm = (props) => {
           {/* Row2  */}
           <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
-            <div className="flex flex-col gap-2 mb-4">
+            <div className="flex flex-col gap-2 ">
               {/* <label
             className="block text-lg  text-black-500"
             htmlFor="mobile_number"
@@ -169,7 +169,7 @@ const RegisterForm = (props) => {
           </label> */}
               <PhoneInput
                 className=""
-                country={"us"}
+                country={"in"}
                 value={formik.values.mobile_number}
                 enableSearch={true}
                 placeholder="Mobile Number"
@@ -181,13 +181,15 @@ const RegisterForm = (props) => {
                   display: "block",
                 }}
                 inputStyle={{
-                  color: "grey",
+                  color: "white",
                   background: "#0f172a",
                   fontSize: "1rem",
                   padding: 20,
                   borderRadius: "1rem",
                   borderWidth: "2px",
                   borderColor: "orange",
+                  paddingLeft: "3rem",
+                  marginLeft: "auto",
                   width: "100%",
                 }}
                 buttonStyle={{
@@ -210,7 +212,7 @@ const RegisterForm = (props) => {
             Country
           </label> */}
               <CountryDropdown
-                className="px-4 py-2 md:w-60 border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
                 value={formik.values.country}
                 onChange={(nation) =>
                   formik.setValues({ ...formik.values, country: nation })
