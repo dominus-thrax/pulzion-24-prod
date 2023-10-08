@@ -55,11 +55,8 @@ class TabHeader extends React.Component {
       return (
         <li onClick={this.doClick.bind(this, index)}
           className={`${activeClass === index ? "tab-active" : ""
-            } md:w-1/3 md:mx-5`}
-        >
-
+            } md:w-1/3 md:mx-5`}>
           <span className="text-xl">{item}</span>
-
         </li>
       );
     });
