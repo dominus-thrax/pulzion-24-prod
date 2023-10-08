@@ -14,7 +14,7 @@ export const addItem = async (id, combo_id) => {
     data = { event_id: id, combo_id: combo_id }
   }
 
-  console.log(data);
+  // //console.log(data);
   const options = {
     method: "POST",
     url: `${apiConfig.url}/cart/`,
@@ -28,7 +28,7 @@ export const addItem = async (id, combo_id) => {
     const res = await axios(options);
     return res;
   } catch (e) {
-    console.log(e.response);
+    //console.log(e.response);
     if (e?.response?.data) {
 
       return e.response;
@@ -47,11 +47,11 @@ export const deleteFromCart = async (id, combo_id) => {
 
   if (combo_id) {
     data = { combo_id: combo_id }
-    console.log("Delete: ", data)
+    //console.log("Delete: ", data)
   }
 
 
-  console.log(data)
+  //console.log(data)
 
   const options = {
     method: "DELETE",
@@ -65,8 +65,8 @@ export const deleteFromCart = async (id, combo_id) => {
 
   try {
     const res = await axios(options);
-    console.log("LogDDel");
-    console.log(res);
+    //console.log("LogDDel");
+    //console.log(res);
     return res.data
   } catch (e) {
 

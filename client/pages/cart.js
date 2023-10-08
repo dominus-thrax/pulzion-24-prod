@@ -26,33 +26,33 @@ const CartPage = () => {
   useEffect(() => {
     (async () => {
       const combo = localStorage.getItem("combo_data");
-      console.log(combo);
+      //console.log(combo);
       try {
         const res = await getEventFromCart();
-        console.log("Cart");
-        console.log(res);
+        //console.log("Cart");
+        //console.log(res);
         if (res?.error) {
           setLoading(false);
-          console.log("error in fetching cart");
+          //console.log("error in fetching cart");
           return {
             msg: "error"
           };
         }
         const cartArray = Object.values(res.events[0]);
-        
-          setCart(cartArray);
-          console.log(cartArray)
-          console.log("After timeout");
-          console.log(cart);
-        
+
+        setCart(cartArray);
+        //console.log(cartArray)
+        //console.log("After timeout");
+        //console.log(cart);
+
         setLoading(false);
       } catch (e) {
-        console.log(e);
+        //console.log(e);
         return e;
       }
     })();
   }, []);
-  
+
 
   let total = 0;
   cart.map((item) => {
@@ -61,9 +61,9 @@ const CartPage = () => {
 
   // Delete From Cart
   const deleteItem = async (id) => {
-    console.log("Hellooo" + id)
+    //console.log("Hellooo" + id)
     const combo_id = localStorage.getItem("combo_id");
-    console.log(combo_id);
+    //console.log(combo_id);
     const data = await deleteFromCart(id, combo_id);
 
     if (data?.error) {
@@ -83,7 +83,7 @@ const CartPage = () => {
 
   return (
     <Layout>
-      {loading ? <ContentLoader />:   <div className="-z-10">
+      {loading ? <ContentLoader /> : <div className="-z-10">
         <h1 className="mt-[50px] text-3xl font-black text-center uppercase sm:text-4xl md:text-5xl text-sky-400 list-none">
           <SectionHeading>Events Cart</SectionHeading>
         </h1>

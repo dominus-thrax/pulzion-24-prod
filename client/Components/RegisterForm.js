@@ -20,7 +20,7 @@ const RegisterForm = (props) => {
   const [ios, setIos] = useState(false);
 
   const handleRegister = async (values) => {
-    console.log("Handle Submit");
+    //console.log("Handle Submit");
     try {
       setLoading(true);
       const data = await userRegister(values, dispatchUser);

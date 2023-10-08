@@ -8,8 +8,8 @@ export const getEvent = async (id) => {
   };
   try {
     const res = await axios(options);
-    console.log(id + " ", res)
-    console.log(res.data);
+    //console.log(id + " ", res)
+    //console.log(res.data);
     return res.data;
   } catch (e) {
 
@@ -28,7 +28,7 @@ export const getAllEvents = async () => {
   };
   try {
     const res = await axios(options);
-    console.log(res);
+    //console.log(res);
     return res.data;
   } catch (e) {
 

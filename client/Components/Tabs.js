@@ -27,9 +27,9 @@ const Tabs = ({ events }) => {
   }
 
 
-  console.log("Events: ")
+  //console.log("Events: ")
 
-  console.log(events)
+  //console.log(events)
   return (
     <div className="tabs-body">
       <TabHeader

@@ -57,9 +57,9 @@ const EventDetails = ({ event }) => {
 
     // TEST  event
     useEffect(() => {
-        console.log('events', event)
-        console.log("Already ?", alreadyRegistered)
-        console.log(contEvents)
+        // console.log('events', event)
+        // console.log("Already ?", alreadyRegistered)
+        // console.log(contEvents)
     }, [event])
 
     //Slots - 
@@ -283,7 +283,6 @@ const EventDetails = ({ event }) => {
                     <hr className="border-b border-gray-400" />
                     <p className='text-sm'>{event.rounds.split('\n').map(str => <p>{str}</p>)
                     }</p>
-                    {console.log(event.rounds)}
                     <h5 className='text-xl mt-8  font-semibold'>Rules and Regulations</h5>
                     <hr className="border-b border-gray-400" />
                     <p className='text-sm'>{event.rules.split('\n').map(str => <p>{str}</p>)}</p>

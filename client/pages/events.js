@@ -66,7 +66,7 @@ function event() {
       // await getAllEvents().then(data =>setEvents(data)).catch(err=>console.log(err));
       // setEvents(data)
       getAllEvents().then(res => setEvents(res.events))
-      // console.log(getAllEvents())
+      // //console.log(getAllEvents())
       setLoading(false);
     }
     fetchEvents();
