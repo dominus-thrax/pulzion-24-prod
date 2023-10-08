@@ -42,12 +42,10 @@
   /* font-size: xx-small; */
 }
 
-.tab-active {
-  background-color: #000 !important;
-}
 
-.tabs-header li>a span {
+.tabs-header li span {
   font-size: 2.5rem;
+  color: #f2f3f4;
   display: block;
 }
 
@@ -58,13 +56,10 @@
   transition: all 0.2s;
 }
 
-.tabs-content {
-  margin-top: 15px;
-  position: relative;
-  padding: 20px 25px;
-  overflow: hidden;
+.tab-active {
+  background-color: #000 !important;
+  box-shadow: 0px 0px 36px 11px rgba(255, 145, 5, 0.70);
 
-  background: #000;
 }
 
 .tabs-content .tabs-textItem {
@@ -81,6 +76,20 @@
 .tabs-content .tabs-textItem p {
   font: normal 15px/1.5 "Open Sans";
   color: #f2f3f4;
+}
+
+.tab-active span {
+
+  color: #EA580C !important;
+}
+
+.tabs-content {
+  margin-top: 15px;
+  position: relative;
+  padding: 20px 25px;
+  overflow: hidden;
+
+  background: #000;
 }
 
 @keyframes change {

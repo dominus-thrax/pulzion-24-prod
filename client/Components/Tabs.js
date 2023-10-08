@@ -53,16 +53,13 @@ class TabHeader extends React.Component {
 
     let tabs = this.props.tabs.map((item, index) => {
       return (
-        <li
+        <li onClick={this.doClick.bind(this, index)}
           className={`${activeClass === index ? "tab-active" : ""
             } md:w-1/3 md:mx-5`}
         >
-          <a
-            onClick={this.doClick.bind(this, index)}
-          // className="bg-primaries-800"
-          >
-            <span className="text-xl">{item}</span>
-          </a>
+
+          <span className="text-xl">{item}</span>
+
         </li>
       );
     });
