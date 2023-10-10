@@ -43,7 +43,7 @@ const LoginSignup = () => {
       </Head>
 
 
-      <div className="w-full md:w-1/2 lg:w-1/3 mx-auto h-[68vh]">
+      <div className="w-full md:w-1/2 lg:w-1/3 mx-auto ">
 
         {login ? <LoginForm displayRegister={() => switchForm('signup')} /> : <RegisterForm displayLogin={() => switchForm('login')} />}
         <div className={`form-wrapper ${login ? 'is-active' : ''}`}>

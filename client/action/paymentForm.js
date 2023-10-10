@@ -69,6 +69,7 @@ export const getTransaction = async () => {
   };
   try {
     const res = await axios(options);
+    console.log(res);
     return res.data;
   } catch (e) {
 
@@ -94,7 +95,7 @@ export const getPaymentDetails = async () => {
     };
     try {
       const res = await axios(options);
-
+      console.log("abc", res)
       return res.data.verify;
     } catch (e) {
 

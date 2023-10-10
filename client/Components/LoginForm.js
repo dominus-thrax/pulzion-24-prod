@@ -47,7 +47,7 @@ const LoginForm = (props) => {
       <img src="./pumpkin.png" className={`absolute top-8 left-0 z-40 w-20 h-20 ${styles.img}`} />
       <img src="./jar.png" className={`absolute bottom-0 -right-0 h-24 w-35 z-40 ${styles.img}`} />
       <form className={`${styles.login_form} text-gray-50  bg-[#1e293b85] backdrop-blur-sm pb-8 mt-8 shadow-[0px_0px_20px_7px] shadow-[#ff82157d] px-10 rounded-lg mb-4 h-full pt-4`} onSubmit={formik.handleSubmit}>
-        <h1 className={`text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl primary_font my-6 mx-auto`}>Login</h1>
+        <h1 className={`text-primaries-100 text-center uppercase text-3xl sm:text-4xl md:text-5xl primary_font my-6 mx-auto tracking-widest`}>Login</h1>
         <div className="flex flex-col gap-2 mt-8 mb-4 ">
           {/* <label className="block text-lg tracking-wide  text-black-500" htmlFor="email">Email Address</label> */}
           <input

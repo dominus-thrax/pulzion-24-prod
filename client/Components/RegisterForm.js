@@ -100,8 +100,8 @@ const RegisterForm = (props) => {
   return (
     <>
       <div className="relative mt-6 mx-4">
-        <img src="./pumpkin.png" className={`absolute z-40 -top-14 -left-20 w-32 h-32 ${styles.img}`} />
-        <img src="./pumpkin.png" className={`absolute top-2 -left-3 z-40 w-16 h-16 ${styles.img}`} />
+        <img src="./pumpkin.png" className={`absolute hidden md:block z-40 -top-14 -left-20 w-32 h-32 ${styles.img}`} />
+        <img src="./pumpkin.png" className={`absolute sm:top-2 -left-3 z-40 w-16 h-16 ${styles.img}`} />
         <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`} />
 
         <form
@@ -109,7 +109,7 @@ const RegisterForm = (props) => {
           onSubmit={formik.handleSubmit}
           method="POST"
         >
-          <h1 className="text-primaries-100 text-center primary_font uppercase text-2xl sm:text-4xl md:text-5xl font-FEASFBRG mb-4 mx-auto ">Register</h1>
+          <h1 className="text-primaries-100 text-center primary_font uppercase text-2xl sm:text-4xl md:text-5xl font-FEASFBRG mb-4 mx-auto tracking-widest">Register</h1>
           <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
             <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
@@ -192,6 +192,9 @@ const RegisterForm = (props) => {
                   background: "#0f172a",
                   color: "#000000",
                   borderRadius: "1rem",
+                  borderColor: "#FF7518",
+                  borderWidth: "2px",
+
                 }}
 
               />

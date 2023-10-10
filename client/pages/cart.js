@@ -116,7 +116,7 @@ const CartPage = () => {
             {
               events.length != 0 ? (
                 events?.map((product) => (
-                  <div className="flex items-center justify-between text-gray-200 flex-row bg-slate-900 border-none rounded-md p-6">
+                  <div className="flex items-center mt-2 justify-between text-gray-200 flex-row bg-slate-900 border-none rounded-md p-6">
                     <div className="img w-16 h-16 hidden md:block p-2 rounded-full ">
                       <img src={product.logo} alt="EventLogo" />
                     </div>
@@ -135,25 +135,25 @@ const CartPage = () => {
             }
 
             <h3 className="text-xl text-white font-semibold my-2 border-0 mt-6">Combos</h3>
-            <div className="grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
+            <div className="flex flex-col h-full mt-4 list-none  ">
               {
                 combos.length != 0 ? (
                   combos?.map((item) => (
-                    <div className="combo_card text-gray-50 overflow-hidden relative flex p-4  rounded-2xl flex-col items-center justify-center bg-slate-900 bg-opacity-80 md:w-52">
+                    <div className="combo_card mt-2 text-gray-50 overflow-hidden relative flex p-4  rounded-2xl flex-col items-center justify-center bg-slate-900 bg-opacity-80">
                       <h5 className="text-md font-semibold text-center mb-3">{item.combo_name}</h5>
-                      <div className="combo_body  flex rounded-2xl flex-col items-center justify-center ">
+                      <div className="combo_body w-full flex-col md:flex-row flex rounded-2xl items-center justify-between ">
                         {
                           item.array_of_evname.map((item, index) => (
-                            <div key={index} className="combo_event w-full px-4 flex justify-around items-center">
-                              <div className="w-1/4">
+                            <div key={index} className="combo_event w-full flex flex-row md:flex-col items-center sm:justify-center justify-around">
+                              <div className="w-1/4 sm:w-20 flex items-center justify-center py-2">
                                 <img src={item.logo} className='h-14 z-0 object-contain' alt={`Logo for ${item.name}`} />
                               </div>
-                              <p className='px-4 w-3/4 text-sm'>{item.name}</p>
+                              <p className='text-center w-3/4 text-sm'>{item.name}</p>
                             </div>
                             //Study this code
                           ))
                         }
-                        <div className="flex justify-between items-center mt-3 gap-5 w-full">
+                        <div className="flex justify-between items-center mt-3 gap-5 w-full lg:w-1/4">
                           <div className="flex flex-col">
                             <p className="text-sm font-medium line-through text-red-400">₹{item.total_price}</p>
                             <p className=" font-semibold mt-1 text-xl text-green-400">₹{item.discounted_price}</p>
@@ -174,9 +174,9 @@ const CartPage = () => {
             </div>
           </div>
           <div
-            className="w-100 mx-2 md:w-1/3 sm:p-5 sm:m-5 text-white mr-5 ml-[40%] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 border-2 border-gray-500 "
+            className="w-100  md:w-1/3 sm:p-5 sm:m-5 text-white mx-5 bg-slate-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-80 border-2 border-gray-500 "
           >
-            <div className="flex flex-col text-sm divide-y divide-gray-200">
+            <div className="flex flex-col w-100 text-sm divide-y divide-gray-200">
               <h2 className="p-4 text-center text-2xl font-bold"> Order Summary</h2>
               <div className="p-4">
                 <div className="flex flex-row w-full sm:gap-[65%]">
