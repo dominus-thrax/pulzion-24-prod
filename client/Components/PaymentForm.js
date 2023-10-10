@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import QrCode from "react-qr-code";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { paymentForm } from "../action/paymentForm";
 import { Router, useRouter } from "next/router";
 import { useCartContext } from "../context/CartContext";
@@ -27,30 +27,27 @@ export default function PaymentForm(props) {
   async function register(values) {
     try {
       setLoader(true);
-      console.log("hiiiiiiiii");
-      console.log(values)
-      console.log(props.events)
-      const data = await paymentForm(
+
+      const res = await paymentForm(
         values.transaction_id,
         values.referal_code,
         props.events,
         props.combos
       );
-      console.log(data);
-      if (data?.error) {
+      console.log("Response:")
+      console.log(res);
+      if (res.error) {
         setLoader(false);
-        toast.error(data.error);
+        toast.error(res.error);
         return;
       }
-      console.log("hisddfdfds");
+      console.log("Clear Cart");
       await clearCart();
       props.setEvents([]);
       props.setCombos([]);
-      console.log("hisddr454345fdfds");
 
       setLoader(false);
       toast.success("Transaction has been sent for verification");
-      console.log("hisddffdfs43dfds");
 
       router.push("/orders");
     } catch (error) {
@@ -85,7 +82,7 @@ export default function PaymentForm(props) {
       className="fixed top-0 left-0 w-[100%] min-h-screen backdrop-blur"
     >
       <div
-        className="fixed w-11/12 overflow-y-auto md:max-h-[500px] flex flex-col max-w-xl bg-slate-800 bg-opacity-90 text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-sky-700"
+        className="fixed w-11/12 overflow-y-auto md:max-h-[500px] flex flex-col max-w-xl bg-slate-800 bg-opacity-90 text-white rounded-3xl  shadow-[1px_3px_26px_2px_#dd6b20]"
         style={{
           top: "50%",
           left: "50%",

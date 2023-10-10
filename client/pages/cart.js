@@ -7,7 +7,7 @@ import Layout from "../Components/Layout";
 import PaymentForm from "../Components/PaymentForm";
 import SectionHeading from "../Components/SectionHeading";
 import { deleteComboFromCart, deleteEventFromCart, deleteFromCart, getEventFromCart } from "../action/cart";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import ContentLoader from "../Components/ContentLoader";
 import { FaTrashAlt } from "react-icons/fa";
 

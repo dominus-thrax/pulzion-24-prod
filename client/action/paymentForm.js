@@ -37,13 +37,14 @@ export const paymentForm = async (transaction_id, referal_code, events, combos) 
     },
   };
   try {
-    await axios(options).then((res) => {
-      console.log(res)
+    const res = await axios(options);
+    //If Response
+    if (res.data) {
       return res;
-    }).catch((err) => {
-      console.log(err)
-      return err;
-    });
+    }
+    if (res.data?.error) {
+      return res
+    }
   } catch (e) {
 
     if (e?.response?.data) {
