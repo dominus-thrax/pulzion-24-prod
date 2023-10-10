@@ -43,6 +43,12 @@
 }
 
 @font-face {
+  font-family: 'DangerNight';
+  src: url('./fonts/Gothica-Book.ttf');
+  /* You can add more font properties here, like font-weight and font-style if needed */
+}
+
+@font-face {
   font-family: 'FEASFBRG';
   src: url('./fonts/FEASFBRG.ttf') format('truetype');
   /* You can add more font properties here, like font-weight and font-style if needed */
@@ -743,3 +749,142 @@ video::-webkit-media-controls-start-playback-button {
 .combo-details::-webkit-scrollbar-track {
   display: none;
 }
+
+
+/*
+.combo_card:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.combo_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shine-effect);
+}
+
+.combo_card-hover::before {
+  left: -100%;
+  transition: var(--shine-transition);
+}
+
+.combo_card-hover:hover {
+  box-shadow: var(--btn-shadow);
+}
+
+.combo_card-hover:hover::before {
+  left: 100%;
+}
+
+.combo_card-anim::before {
+  -webkit-animation: shine 2s ease-in-out infinite;
+  animation: shine 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    left: -100%;
+    transition-property: left;
+  }
+
+  24.5283018868%,
+  100% {
+    left: 100%;
+    transition-property: left;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    transition-property: left;
+  }
+
+  24.5283018868%,
+  100% {
+    left: 100%;
+    transition-property: left;
+  }
+}
+
+.combo_card-alt:before {
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  left: 0;
+  filter: blur(30px);
+  -webkit-animation: shine-alt1 2s ease-in-out infinite;
+  animation: shine-alt1 2s ease-in-out infinite;
+}
+
+.combo_card-alt:after {
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  left: 30px;
+  filter: blur(5px);
+  -webkit-animation: shine-alt2 2s ease-in-out infinite;
+  animation: shine-alt2 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes shine-alt1 {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+
+  24.5283018868%,
+  100% {
+    opacity: 0.6;
+    transform: translateX(300px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+}
+
+@keyframes shine-alt1 {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+
+  24.5283018868%,
+  100% {
+    opacity: 0.6;
+    transform: translateX(300px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+}
+
+@-webkit-keyframes shine-alt2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+
+  24.5283018868%,
+  100% {
+    opacity: 1;
+    transform: translateX(300px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+}
+
+@keyframes shine-alt2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+
+  24.5283018868%,
+  100% {
+    opacity: 1;
+    transform: translateX(300px) skewX(-15deg);
+    transition-property: opacity, transform;
+  }
+}
+
+*/

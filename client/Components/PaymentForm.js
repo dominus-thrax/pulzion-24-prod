@@ -19,7 +19,7 @@ export default function PaymentForm(props) {
       // const res = await axios.get(
       //   "https://pulzion-ems.s3.ap-south-1.amazonaws.com/referal/referal.json"
       // );
-      
+
       // setData(res.data.refreal);
     })();
   }, []);
@@ -27,25 +27,38 @@ export default function PaymentForm(props) {
   async function register(values) {
     try {
       setLoader(true);
+      console.log("hiiiiiiiii");
+      console.log(values)
+      console.log(props.events)
       const data = await paymentForm(
         values.transaction_id,
         values.referal_code,
-        props.cart
+        props.events,
+        props.combos
       );
+      console.log(data);
       if (data?.error) {
         setLoader(false);
         toast.error(data.error);
         return;
       }
+      console.log("hisddfdfds");
       await clearCart();
-      props.setCart([]);
+      props.setEvents([]);
+      props.setCombos([]);
+      console.log("hisddr454345fdfds");
+
       setLoader(false);
       toast.success("Transaction has been sent for verification");
+      console.log("hisddffdfs43dfds");
+
       router.push("/orders");
     } catch (error) {
-      
+
       setLoader(false);
+      console.log(error.data);
       toast.error("Something went wrong");
+      // console.log(error);
     }
   }
 
@@ -72,7 +85,7 @@ export default function PaymentForm(props) {
       className="fixed top-0 left-0 w-[100%] min-h-screen backdrop-blur"
     >
       <div
-        className="fixed w-11/12 overflow-y-auto md:max-h-[500px] flex flex-col max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-sky-700"
+        className="fixed w-11/12 overflow-y-auto md:max-h-[500px] flex flex-col max-w-xl bg-slate-800 bg-opacity-90 text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-sky-700"
         style={{
           top: "50%",
           left: "50%",
@@ -81,7 +94,7 @@ export default function PaymentForm(props) {
           height: "90vh",
         }}
       >
-        <div className="flex flex-row items-center w-full px-5 py-6 overflow-hidden shadow-2xl bg-sky-700 bg-opacity-10 md:px-8 event_modal_title rounded-t-3xl">
+        <div className="flex flex-row items-center w-full px-5 py-6 overflow-hidden shadow-2xl bg-slate-800 bg-opacity-90 md:px-8 event_modal_title rounded-t-3xl">
           <div className="font-bold whitespace-pre sm:text-xl text-md basis-1/2 md:text-2xl">
             Registration Form
           </div>
@@ -106,7 +119,7 @@ export default function PaymentForm(props) {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-between w-full gap-2 px-2 shadow-lg sm:py-6 sm:flex-row md:px-5 event_modal_title rounded-t-3xl">
+        <div className="flex flex-col items-center justify-between w-full  gap-2 px-2 shadow-lg sm:py-6 sm:flex-row md:px-5 event_modal_title rounded-t-3xl">
           <div className="flex flex-col gap-1 mt-2 bg-white sm:h-auto rounded-xl">
             <QrCode
               className="p-2 pointer-events-none sm:p-4"
@@ -164,8 +177,8 @@ export default function PaymentForm(props) {
                 className="block mt-6 font-bold text-md text-primaries-100"
                 htmlFor="referal_code"
               > */}
-                {/* Referral (Optional) */}
-                {/* Are You Referred By Someone?
+              {/* Referral (Optional) */}
+              {/* Are You Referred By Someone?
               </label> */}
 
               {/* <select

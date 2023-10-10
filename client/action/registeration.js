@@ -21,6 +21,31 @@ export const getEvent = async (id) => {
     };
   }
 };
+export const getEventLogin = async (id) => {
+  const pulzion = JSON.parse(localStorage.getItem("pulzion"));
+  const options = {
+    method: "GET",
+    url: `${apiConfig.url}/events/combo/${id}`,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${pulzion.token}`,
+    },
+  };
+  try {
+    const res = await axios(options);
+    //console.log(id + " ", res)
+    //console.log(res.data);
+    return res.data;
+  } catch (e) {
+
+    if (e?.response?.data) {
+      return e.response.data;
+    }
+    return {
+      error: "Something Went Wrong",
+    };
+  }
+};
 export const getAllEvents = async () => {
   const options = {
     method: "GET",
