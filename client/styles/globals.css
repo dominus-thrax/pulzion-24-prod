@@ -43,8 +43,8 @@
 }
 
 @font-face {
-  font-family: 'DangerNight';
-  src: url('./fonts/Gothica-Book.ttf');
+  font-family: 'Gothica-Book';
+  src: url('./fonts/Gothica-Book.ttf') format('truetype');
   /* You can add more font properties here, like font-weight and font-style if needed */
 }
 
@@ -81,12 +81,14 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ff8415;
+  background: #FF7518;
+  border-radius: 10px;
+
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff8415;
+  background: #FF7518;
 }
 
 .about-mode::-webkit-scrollbar-track {
@@ -96,17 +98,20 @@ html {
 
 /* Handle */
 .about-mode::-webkit-scrollbar-thumb {
-  background: #ff8415;
+  background: #FF7518;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 .about-mode::-webkit-scrollbar-thumb:hover {
-  background: #ff8415;
+  background: #FF7518;
 }
 
 body {
   line-height: 1.6;
   font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Gothica-Book'; */
+  /* font-family: 'Gothica-Book'; */
   /* font-family: 'aerospaceregular'; */
   font-size: 16px;
   background-color: #ffffff;
@@ -132,6 +137,7 @@ body {
 
 .primary_font {
   font-family: 'FEASFBRG';
+  /* font-family: 'Gothica-Book'; */
 }
 
 .nav-font,
@@ -748,6 +754,20 @@ video::-webkit-media-controls-start-playback-button {
 
 .combo-details::-webkit-scrollbar-track {
   display: none;
+}
+
+.combo_body::-webkit-scrollbar {
+  width: .4rem;
+
+}
+
+.combo_body::-webkit-scrollbar-thumb {
+  width: thin;
+
+}
+
+.combo_body::-webkit-scrollbar-track {
+  width: thin;
 }
 
 

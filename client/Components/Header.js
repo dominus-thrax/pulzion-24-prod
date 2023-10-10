@@ -122,7 +122,7 @@ const Header = () => {
             {links.map((link) => (
               <Link href={link.to} key={link.id.toString()}>
                 <span
-                  className={`text-xl cursor-pointer  ease-in-out duration-300 px-5 py-1 text-center ${link.id > 6 ? "hidden" : ""
+                  className={`text-2xl cursor-pointer  ease-in-out duration-300 px-5 py-1 text-center ${link.id > 6 ? "hidden" : ""
                     }  ${router.pathname === link.to
                       ? "text-[#ff8415] font-bold tracking-wider text-3.5xl"
                       : "text-white"

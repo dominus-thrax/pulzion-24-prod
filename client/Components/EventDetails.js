@@ -7,7 +7,7 @@ import React, {
 } from "react";
 
 import { MdAdd } from "react-icons/md";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 
 import ToolTipButton from './Button/ToolTipButton';
 import { userRegisterEvent } from "../action/registeration";
@@ -171,18 +171,24 @@ const EventDetails = ({ event }) => {
     };
 
     return (
-        <div className="event_details text-gray-50 mont_font m relative  bg-center p-6 md:p-12   bg-no-repeat bg-cover flex justify-center overflow-hidden">
+        <div className="event_details  text-gray-50 mont_font m relative  bg-center p-6 md:p-12   bg-no-repeat bg-cover flex justify-center overflow-hidden">
             <div className="absolute z-0 inset-0 container mx-auto my-10 bottom-0 w-full  bg-[url('/event_info_bg.png')] top-28 left-0 right-0 bg-cover bg-no-repeat opacity-40 bg-center "></div>
 
 
             {/* Event Details Section */}
-            <div className="w-full flex-col shadow-[0px_2px_15px_5px_#ebf4ff] md:flex-row container max-w-screen-xl min-h-[80vh] pb-8 pt-2 mx-auto flex gap-3  z-10  bg-slate-900 bg-opacity-50  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm ">
+            <div className="w-full flex-col mont_font shadow-[1px_3px_26px_2px_#dd6b20] md:flex-row container max-w-screen-xl min-h-[80vh] pb-8 pt-2 mx-auto flex gap-3  z-10  bg-slate-800 bg-opacity-50  rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm ">
                 {/* Event Buy and Combo section */}
-                <div className="md:w-5/12  flex flex-col h-full items-center px-8 border-r border-gray-400">
-                    <div className="relative flex items-center justify-center  w-80 h-80 bg-[url('/halloween_frame.png')] bg-center bg-contain bg-no-repeat p-2 z-50">
-                        <img src={event?.logo} className='w-28 h-28 z-0' />
+                <div className="md:w-5/12  mont_font flex flex-col h-full items-center px-8 border-r border-gray-400">
+                    <div className="relative flex items-center justify-center px-10 py-14  w-80 h-80 z-50">
+                        <div className="absolute top-1/2 transform -translate-y-1/2 " >
+                            <img src="/halloween_frame.png" alt="" />
+                        </div>
+                        <div className="img-logo bg-slate-900 w-full h-full flex items-center justify-center">
+                            <img src={event?.logo} className='w-28 h-28 z-0' />
+
+                        </div>
                     </div>
-                    <h2 className="font-bold text-white text-3xl">{event?.name}</h2>
+                    <h2 className=" text-white text-3xl tracking-widest  primary_font">{event?.name}</h2>
                     {/* Price Location Section */}
                     <div className="price_venue mt-4 flex items-center justify-center">
                         <div className="loc p-3">
@@ -198,7 +204,7 @@ const EventDetails = ({ event }) => {
                     {/* Button To Buy */}
                     {!isLoggedIn ? (
                         <button
-                            className="inline-block text-black mt-4 font-semibold rounded-md border-0 bg-[#ff8415]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20"
+                            className="inline-block text-black mt-4 font-semibold rounded-md border-0 bg-[#FF7518]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20"
                             onClick={() => {
                                 setIsVisible(false);
                                 router.push("/register/");
@@ -266,22 +272,22 @@ const EventDetails = ({ event }) => {
                             )}
                         </div>
                     )}
-                    <p className="text-justify text-sm mt-6">{event.description}</p>
+                    <p className="text-justify text-md mt-6">{event.description}</p>
                     <p className='text-start mt-4 font-semibold'>Team Details :</p>
                     <hr className="border-b border-gray-400" />
-                    <p className="text-justify text-sm mt-2"> {event.teams.split('\n').map(str => <p>{str}</p>)}</p>
+                    <p className="text-justify text-md mt-2"> {event.teams.split('\n').map(str => <p>{str}</p>)}</p>
                     <p className='text-start mt-4 font-semibold'>Event coordinartor :</p>
                     <hr className="border-b border-gray-400" />
-                    <p className="text-justify text-sm mt-2"> {event.notes.split('\n').map(str => <p>{str}</p>)}</p>
+                    <p className="text-justify text-md mt-2"> {event.notes.split('\n').map(str => <p>{str}</p>)}</p>
                 </div>
                 <div className="md:w-7/12 flex flex-col p-4 pt-0 md:pr-12">
                     <h5 className='text-xl mt-8 font-semibold '>Rounds</h5>
                     <hr className="border-b border-gray-400" />
-                    <p className='text-sm'>{event.rounds.split('\n').map(str => <p>{str}</p>)
+                    <p className='text-md '>{event.rounds.split('\n').map(str => <p>{str}</p>)
                     }</p>
                     <h5 className='text-xl mt-8  font-semibold'>Rules and Regulations</h5>
                     <hr className="border-b border-gray-400" />
-                    <p className='text-sm'>{event.rules.split('\n').map(str => <p>{str}</p>)}</p>
+                    <p className='text-md '>{event.rules.split('\n').map(str => <p>{str}</p>)}</p>
                     {/* Combo Item */}
                     <div className="combo_list">
                         < h5 className='text-xl font-semibold mt-8' > Events Combos</h5>
@@ -289,48 +295,47 @@ const EventDetails = ({ event }) => {
                         <div className=" flex-row combo-details flex gap-6 mt-4 overflow-x-scroll ">
                             {((isLoggedIn || !alreadyRegistered) && event.offers) ? event.offers.map((item, index) => (
                                 <div className="combo_card overflow-hidden relative flex p-4 border border-orange-200 rounded-2xl flex-col items-center justify-center bg-slate-900 bg-opacity-80 md:w-52">
-                                    <div className="combo_body  flex rounded-2xl flex-col items-center justify-center ">
-                                        <h5 className="text-md font-semibold text-center mb-3">{item.combo_name}</h5>
+                                    <h5 className="text-md font-semibold text-center mb-3">{item.combo_name}</h5>
+                                    <ul className="combo_body flex rounded-2xl flex-col items-center justify-start overflow-y-auto max-h-60">
                                         {
                                             item.array_of_evname.map((item, index) => (
-                                                <div key={index} className="combo_event w-full px-4 flex justify-around items-center">
-                                                    <div className="w-1/4">
+                                                <li key={index} className="combo_event w-full flex justify-around items-center">
+                                                    <div className="w-1/4 py-2">
                                                         <img src={item.logo} className='h-14 z-0 object-contain' alt={`Logo for ${item.name}`} />
                                                     </div>
-                                                    <p className='px-4 w-3/4 text-sm'>{item.name}</p>
-                                                </div>
-                                                //Study this code
+                                                    <p className='px-4 w-3/4 text-md'>{item.name}</p>
+                                                </li>
                                             )).reduce((prev, curr, index, arr) => (
                                                 index === arr.length - 1 ? [prev, curr] : [prev, curr, <MdAdd key={`separator-${index}`} color="white" size="18" />]
                                             ), [])
                                         }
-                                        <div className="flex justify-between items-center mt-3 gap-5 w-full">
+                                    </ul>
+                                    <div className="flex justify-between items-center mt-3 gap-5 w-full">
 
-                                            {
-                                                isLoggedIn ? (
-                                                    <PrimaryButton onClick={() => handleAddComboToCart(item.id)} class="inline-block font-semibold rounded-md border-0 bg-[#ff8415]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20" >
-                                                        Add+
-                                                    </PrimaryButton>
-                                                ) : (
-                                                    <button
-                                                        className="inline-block mt-0 text-black font-semibold rounded-md border-0 bg-[#ff8415]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20"
-                                                        onClick={() => {
-                                                            toast.warn("Login/Signup to add to cart");
-                                                            setIsVisible(false);
-                                                            router.push("/register/");
-                                                        }}
-                                                    >
-                                                        Add+
-                                                    </button>
-                                                )
-                                            }
+                                        {
+                                            isLoggedIn ? (
+                                                <PrimaryButton onClick={() => handleAddComboToCart(item.id)} class="inline-block font-semibold rounded-md border-0 bg-[#FF7518]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20" >
+                                                    Add+
+                                                </PrimaryButton>
+                                            ) : (
+                                                <button
+                                                    className="inline-block mt-0 text-black font-semibold rounded-md border-0 bg-[#FF7518]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20"
+                                                    onClick={() => {
+                                                        toast.warn("Login/Signup to add to cart");
+                                                        setIsVisible(false);
+                                                        router.push("/register/");
+                                                    }}
+                                                >
+                                                    Add+
+                                                </button>
+                                            )
+                                        }
 
 
 
-                                            <div className="flex flex-col">
-                                                <p className="text-xs font-medium line-through">₹{item.total_price}</p>
-                                                <p className=" font-semibold mt-1 text-xl">₹{item.discounted_price}</p>
-                                            </div>
+                                        <div className="flex flex-col">
+                                            <p className="text-xs font-medium line-through">₹{item.total_price}</p>
+                                            <p className=" font-semibold mt-1 text-xl">₹{item.discounted_price}</p>
                                         </div>
                                     </div>
                                 </div>

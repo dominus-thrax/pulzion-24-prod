@@ -58,7 +58,7 @@
 
 .tab-active {
   background-color: #000 !important;
-  box-shadow: 0px 0px 36px 11px rgba(255, 145, 5, 0.70);
+  box-shadow: 1px 3px 22px 8px #dd6b20;
 
 }
 

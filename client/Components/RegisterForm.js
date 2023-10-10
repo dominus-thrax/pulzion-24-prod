@@ -99,17 +99,17 @@ const RegisterForm = (props) => {
 
   return (
     <>
-      <div className="relative py-8 px-4 mt-12">
-        <img src="./pumpkin.png" className={`absolute z-40 -top-10 -left-16 w-36 h-36 ${styles.img}`} />
-        <img src="./pumpkin.png" className={`absolute top-8 left-5 z-40 w-20 h-20 ${styles.img}`} />
+      <div className="relative mt-6 mx-4">
+        <img src="./pumpkin.png" className={`absolute z-40 -top-14 -left-20 w-32 h-32 ${styles.img}`} />
+        <img src="./pumpkin.png" className={`absolute top-2 -left-3 z-40 w-16 h-16 ${styles.img}`} />
         <img src="./jar.png" className={`absolute bottom-0 right-0 z-40 h-20 w-35  ${styles.img}`} />
 
         <form
-          className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-6 rounded-lg pb-8 mb-4 h-full`}
+          className={` text-gray-50 bg-[#1e293b85] backdrop-blur-sm shadow-[0px_0px_20px_7px] shadow-[#ff82157d] p-3 px-8 rounded-lg pb-8 mb-4 `}
           onSubmit={formik.handleSubmit}
           method="POST"
         >
-          <h1 className="text-primaries-100 text-center primary_font uppercase text-3xl sm:text-4xl md:text-5xl font-FEASFBRG my-6 mx-auto">Register</h1>
+          <h1 className="text-primaries-100 text-center primary_font uppercase text-2xl sm:text-4xl md:text-5xl font-FEASFBRG mb-4 mx-auto ">Register</h1>
           <div className="w-full flex flex-col md:flex-row justify-between gap-4 w-100">
 
             <div className="flex flex-col gap-2 mb-4 md:w-1/2 ">
@@ -120,7 +120,7 @@ const RegisterForm = (props) => {
             First Name
           </label> */}
               <input
-                className="px-4 py-2 w-full border-2  mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                className="px-4 py-2 w-full border-2  mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
                 id="first_name"
                 name="first_name"
                 type="text"
@@ -142,7 +142,7 @@ const RegisterForm = (props) => {
             Last Name
           </label> */}
               <input
-                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
                 id="last_name"
                 name="last_name"
                 value={formik.values.last_name}
@@ -182,11 +182,12 @@ const RegisterForm = (props) => {
                   padding: 20,
                   borderRadius: "1rem",
                   borderWidth: "2px",
-                  borderColor: "orange",
+                  borderColor: "#FF7518",
                   paddingLeft: "3rem",
                   marginLeft: "auto",
                   width: "100%",
-                }}
+                }
+                }
                 buttonStyle={{
                   background: "#0f172a",
                   color: "#000000",
@@ -202,7 +203,7 @@ const RegisterForm = (props) => {
             <div className="flex flex-col gap-2 mb-4">
 
               <CountryDropdown
-                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
                 value={formik.values.country}
                 onChange={(nation) =>
                   formik.setValues({ ...formik.values, country: nation })
@@ -225,7 +226,7 @@ const RegisterForm = (props) => {
           </label> */}
               <select
                 name="college"
-                className="px-4 py-2 w-full  border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                className="px-4 py-2 w-full  border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
                 aria-label="Default select example"
                 value={formik.values.college}
                 onClick={() => { setOthers(true) }}
@@ -249,7 +250,7 @@ const RegisterForm = (props) => {
               College Name
             </label> */}
                 <input
-                  className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+                  className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
                   id="college"
                   name="college"
                   type="text"
@@ -276,7 +277,7 @@ const RegisterForm = (props) => {
           </label> */}
             <select
               name="year"
-              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
               aria-label="Default select example"
               value={formik.values.year}
               onChange={formik.handleChange}
@@ -301,7 +302,7 @@ const RegisterForm = (props) => {
             Email Address
           </label> */}
             <input
-              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
               id="email"
               name="email"
               type="email"
@@ -323,7 +324,7 @@ const RegisterForm = (props) => {
             Password
           </label> */}
             <input
-              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
               id="password"
               name="password"
               type="password"
@@ -345,7 +346,7 @@ const RegisterForm = (props) => {
             Confirm Password
           </label> */}
             <input
-              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-orange-300 rounded-2xl  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]"
+              className="px-4 py-2 w-full border-2 mx-auto bg-slate-800 text-white border-[#FF7518] rounded-2xl  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]"
               id="confirmPassword"
               name="confirmPassword"
               type="password"
@@ -358,14 +359,14 @@ const RegisterForm = (props) => {
               <div className="text-red-600 font-semibold">{formik.errors.confirmPassword}</div>
             ) : null}
           </div>
-          <PrimaryButton type="submit" className="px-4 py-2 w-full mx-auto bg-orange-400 text-white-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[0px_0px_28px_10px_#2b6cb0]">Sign Up</PrimaryButton>
+          <PrimaryButton type="submit" className="px-4 py-2 w-full mx-auto bg-[#FF7518] text-white-800 rounded-4xl mt-3  focus:outline-none focus:shadow-[1px_1px_10px_1px_#dd6b20]">Sign Up</PrimaryButton>
 
           <button
             onClick={props.displayLogin}
             type="button"
             className={`text-md text-white mt-4 focus:outline-none `}
           >
-            Already have an account? <span className="text-yellow-400">Login</span>
+            Already have an account? <span className="text-orange-400">Login</span>
           </button>
         </form>
         {loading && <ContentLoader />}

@@ -7,6 +7,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as THREE from "three";
 import * as styles from "../styles/layout.module.css";
 import bat from "../public/bat_animation .gif"
+import { Toaster } from 'react-hot-toast'
 
 import headerImg from "../public/astronaut.svg";
 
@@ -16,9 +17,29 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'black',
+            },
+          },
+        }}
+        reverseOrder={false}
+      />
       {loader && <Loader />}
       <div className={`min-h-screen flex flex-col styles.gradientClass ${router.pathname === "/" ? "" : ""}`}>
         <Header />
+
         <div className={`${router.pathname === "/" ? "" : "background"} min-h-[95dvh]`}>
           {router.pathname !== "/" && (
             <div
