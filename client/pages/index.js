@@ -14,6 +14,8 @@ import { Header } from "../Components/Header";
 export default function Home() {
   const { user } = useContext(AppContext);
   const [isPlaying, setIsPlaying] = useState(false);
+
+
   const router = useRouter();
 
   return (
@@ -68,7 +70,7 @@ export default function Home() {
             <h2
               className={`text-gray-900 text-4xl font-bold text-center font_montserrat`}
             >
-              27th,28th & 29th October
+              27th, 28th & 29th October
             </h2>
             {/* <div className="flex flex-row items-center justify-center gap-4 text-2xl font-bold md:gap-6 text-primaries-100 md:text-5xl">
             <IoCalendarOutline /> <p>3rd, 4th &amp; 5th May</p>

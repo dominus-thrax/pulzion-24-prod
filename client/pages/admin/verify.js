@@ -18,6 +18,7 @@ const VerifyPayments = () => {
     (async () => {
       const res = await getPaymentDetails();
       setData(res);
+      console.log(res)
     })();
   }, []);
 
@@ -58,7 +59,7 @@ const VerifyPayments = () => {
     link.click();
   };
 
- 
+
 
   return (
     <AdminLayout>
@@ -67,8 +68,8 @@ const VerifyPayments = () => {
       </Head>
       <div>
         <div className="grid">
-          <div className="w-full px-4 py-4 mt-5 overflow-x-auto bg-primaries-800 text-primaries-100">
-            <div className="flex justify-between mb-5">
+          <div className="w-full px-4 py-4 mt-5 overflow-x-auto bg-primaries-800 text-primaries-100 overflow-x-scroll">
+            <div className="flex justify-between mb-5 ">
               <Select
                 options={options}
                 className="w-60 text-primaries-700"
@@ -87,7 +88,10 @@ const VerifyPayments = () => {
                   User Id
                 </th>
                 <th className="px-2 py-2 text-base text-center border-2 border-gray-900">
-                  Event IDS
+                  Event Name
+                </th>
+                <th className="px-2 py-2 text-base text-center border-2 border-gray-900">
+                  Combo Name
                 </th>
                 <th className="px-2 py-2 text-base text-center border-2 border-gray-900">
                   Transaction ID
@@ -121,9 +125,20 @@ const VerifyPayments = () => {
                       {val.user_id}
                     </td>
                     <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
-                      {val.event_id?.map((item) => (
+                      {val.event_names?.length > 0 ? val.event_names?.map((item) => (
                         <span key={item.toString()}>{item}, </span>
-                      ))}
+                      )) :
+                        <span className="text-red-400">No Individual Event</span>
+
+                      }
+                    </td>
+                    <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
+                      {val.combo_names?.length > 0 ? val.combo_names?.map((item) => (
+                        <span key={item.toString()}>{item}, </span>
+                      )) :
+                        <span className="text-red-400">No Combo Selected</span>
+
+                      }
                     </td>
                     <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
                       {val.transaction_id}
@@ -135,16 +150,16 @@ const VerifyPayments = () => {
                       {val.amount}
                     </td>
                     <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
-                      {val.first_name + " " + val.last_name}
+                      {val.user_details.split(",")[0].split("(")[1] + " " + val.user_details.split(",")[1]}
                     </td>
                     <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
-                      {val.email}
+                      {val.user_details.split(",")[2]}
                     </td>
                     <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
-                      {val.referal_code}
+                      {val.referal}
                     </td>
                     <td className="px-2 py-2 text-base text-center border-2 border-gray-900">
-                      {val.mobile_number}
+                      {val.user_details.split(",")[3].split(")")[0]}
                     </td>
                   </tr>
                 ))}

@@ -38,10 +38,10 @@ const Dashboard = () => {
   useEffect(() => {
     (async () => {
       const { categorised, eventCount } = await getCount();
-      console.log(categorised);
+      //console.log(categorised);
       setCount({
-        technical: categorised[0].count,
-        nonTechnical: categorised[1].count,
+        technical: categorised[1].count,
+        nonTechnical: categorised[0].count,
       });
       const labels = [];
       const counts = [];

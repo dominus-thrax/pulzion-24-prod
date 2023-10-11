@@ -97,6 +97,7 @@ function EventCard(props) {
           }}
         />{" "}
       </div>
+      {/*  */}
       <div className="flex justify-center w-full">
         <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
@@ -119,7 +120,7 @@ function EventCard(props) {
                 className="absolute inset-0 w-full h-full -z-10"
               />
 
-              <Link href="/event/[id]" as={`/event/${props.id}`}>
+              <Link href={`/events/${props.id}`}>
                 <a className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
                   View
                 </a>
@@ -128,6 +129,8 @@ function EventCard(props) {
           </div>
         </div>
       </div>
+
+      {/*  */}
       <EventModal
         title={props.name}
         // title="Electroquest"
