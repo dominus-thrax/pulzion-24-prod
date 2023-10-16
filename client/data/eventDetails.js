@@ -1,5 +1,454 @@
 export const eventD = [
   {
+    "id": 1,
+    "name": "CodeX",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:32:16.418Z",
+    "updated_at": "2023-10-03T07:32:16.418Z",
+    "offers": [
+      {
+        "id": 1,
+        "combo_name": "combo1",
+        "array_of_evid": [
+          1,
+          2,
+          3
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 2,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          1,
+          5,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Dextrous",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 5,
+        "combo_name": "combo4",
+        "array_of_evid": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Electroquest",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:32:27.395Z",
+    "updated_at": "2023-10-03T07:32:27.395Z",
+    "offers": [
+      {
+        "id": 1,
+        "combo_name": "combo1",
+        "array_of_evid": [
+          1,
+          2,
+          3
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 5,
+        "combo_name": "combo4",
+        "array_of_evid": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Web&App",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:32:36.530Z",
+    "updated_at": "2023-10-03T07:32:36.530Z",
+    "offers": [
+      {
+        "id": 1,
+        "combo_name": "combo1",
+        "array_of_evid": [
+          1,
+          2,
+          3
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 5,
+        "combo_name": "combo4",
+        "array_of_evid": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dataquest",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:32:46.756Z",
+    "updated_at": "2023-10-03T07:32:46.756Z",
+    "offers": [
+      {
+        "id": 3,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "array_of_evname": [
+          "Dataquest",
+          "Dextrous",
+          "Freeze The Second",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dextrous",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:32:51.865Z",
+    "updated_at": "2023-10-03T07:32:51.865Z",
+    "offers": [
+      {
+        "id": 2,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          1,
+          5,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Dextrous",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 3,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "array_of_evname": [
+          "Dataquest",
+          "Dextrous",
+          "Freeze The Second",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Freeze The Second",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:33:05.305Z",
+    "updated_at": "2023-10-03T07:33:05.305Z",
+    "offers": [
+      {
+        "id": 3,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "array_of_evname": [
+          "Dataquest",
+          "Dextrous",
+          "Freeze The Second",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Insight",
+    "description": "Do you want to win prizes with beginner-level CP skills? Here is your chance. Pulzion'23 brings to you CodeX to bag prizes with rookie coding skills. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "is_active": true,
+    "play": true,
+    "price": 20,
+    "link": null,
+    "tagline": "“Hello there, CP enthusiast!”",
+    "logo": "https://pulzion-website-images.s3.ap-south-1.amazonaws.com/logos/Code+X.png",
+    "rules": "1. Only 1st year students from PICT can participate in this event.\n2. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n3. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st year students.",
+    "teams": "FE: Individual",
+    "notes": "Akankasha Waghmare - 91304 94725",
+    "created_at": "2023-10-03T07:33:12.902Z",
+    "updated_at": "2023-10-03T07:33:12.902Z",
+    "offers": [
+      {
+        "id": 2,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          1,
+          5,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Dextrous",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 3,
+        "combo_name": "combo2",
+        "array_of_evid": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "array_of_evname": [
+          "Dataquest",
+          "Dextrous",
+          "Freeze The Second",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": true,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      },
+      {
+        "id": 5,
+        "combo_name": "combo4",
+        "array_of_evid": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "array_of_evname": [
+          "CodeX",
+          "Electroquest",
+          "Web&App",
+          "Insight"
+        ],
+        "total_price": "60.00",
+        "discounted_price": "45.00",
+        "combo_status": false,
+        "terms_c": {
+          "1": "valid till 15 oct"
+        }
+      }
+    ]
+  }
+]
+
+
+
+
+export const eventD_OLD = [
+  {
     id: 2,
     price: 50,
     name: "Recode-it",
@@ -24,7 +473,7 @@ export const eventD = [
     id: 2,
     price: 50,
     name: "Codelicious",
-    logo: "/Codelicious.png",
+    logo: "/eventLogos/Codelicious.png",
     tagline: "“Coding is intelligence having fun!”",
     description:
       "Love programming?? 🤔 Then get set for a breathtaking global event, Codelicious where language is not at all a barrier. A perfect place to showcase your coding abilities so get ready to satisfy your hunger for astonishing algorithmic programming problems.",
@@ -34,7 +483,7 @@ export const eventD = [
       "1. Participants need to have an account on codechef.\n 2. Participants will get a maximum of 2 hours to solve the questions. \n 3. Use of unfair means will result in direct disqualification.\n 4. The decision of the organizers will be considered  final and binding to all the participants.",
     rounds: "Round 1: The only round will be held on CodeChef.",
     teams: "FE-SE-TE-BE Individual",
-    notes: "Ojas Kund - 70218 18353",
+    notes: "Tarun Santani - 9370937624",
     is_active: true,
     created_at: "2022-04-09 19:14:06",
     updated_at: "2022-04-21 16:10:49",

@@ -1,0 +1,192 @@
+export const newDetails = [
+  {
+    "id": 1,
+    "name": "Codelicious",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Codelicious.png",
+    "tagline": "“Competitive coding is a battle of wits and skill, and the winner takes it all.”",
+    "price": 0,
+    "description": "Codelicious is a Competitive Programming event that is conducted globally. It will be hosted on codechef and consists of a single round. Codelicious is the perfect place to showcase your coding abilities. So get ready to satisfy your hunger for astonishing algorithmic programming problems.",
+    "type": "Technical",
+    "mode": "Online",
+    "rules": "1. Participants need to have an account on CodeChef.\n2. Participants will get a maximum of 3 hours to solve the questions.\n3. Use of unfair means will result in direct disqualification.\n4. The decision of the organisers will be considered final and binding on all the participants.",
+    "rounds": "Round 1:\nThe only round will be held on CodeChef.",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Tarun Sanatani - 93709 37624\nAniket Kolte - 95270 97211\nYash Sonavane - 95796 99645"
+  },
+  {
+    "id": 2,
+    "name": "Hire Hustle",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Hire+Hustle.png",
+    "tagline": "“Ctrl+Alt+Compete: Because life begins outside your comfort zone !”",
+    "price": 40,
+    "description": "Hire hustle is an event which simulates the entire placement process from Online coding assessment rounds to the Technical and HR interview. It offers a glimpse into the hiring procedure while also offering valuable exposure to technical interviews.",
+    "type": "Technical",
+    "mode": "Online",
+    "rules": "1. All rounds of the event will be held ONLINE.\n2. The first round will consist of 4 questions which participants have to successfully submit the code for, within 90 minutes.\n3. Qualified candidates will receive an interview schedule through the mail.\n4. The decision of the organisers and judges is final and binding.",
+    "rounds": "Round 1:\nThis is a coding round in which participants will have to write code for a given set of problems.\nRound 2:\nThis is a technical round, where qualified participants will undergo a technical interview similar to the one in the placement procedure.\nRound 3:\nThis is the last round, where participants will undergo an HR interview to assess soft skills of the participants.",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Riddhi Kulkarni - 93093 38976\nAwadhoot Khutwad - 87665 43395\nAtharva Date - 97631 78405 "
+  },
+  {
+    "id": 3,
+    "name": "CodeX",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Code+X.png",
+    "tagline": "“Hello there, CP enthusiast!”",
+    "price": 20,
+    "description": "CodeX is an exclusive competitive programming competition tailored for First Year Students who have recently embarked on their coding journey. Get ready to race against time and code your way up to the top!",
+    "type": "Technical",
+    "mode": "Offline",
+    "rules": "1. Event will be held OFFLINE.\n2. Only 1st year students from PICT can participate in this event.\n3. The 1st round will consist of 20 MCQs which participants have to answer within 15 minutes.\n4. In the 2nd round, shortlisted participants will have to code for the given problems. For this round, sample code snippets for basic loops(for, while) or conditional statements(if, elseif, else) will be given.",
+    "rounds": "Round 1:\nThis is an MCQ round consisting of questions based on various mathematical concepts.\nRound 2:\nIn this round, qualified participants will have to write code for a given set of problems. The questions are simple and designed for 1st-year students.",
+    "teams": "FE: Individual",
+    "notes": "Mikhiel Benji - 74998 67099\nOm Lachure - 95187 37103\nAditya More - 84597 75058"
+  },
+  {
+    "id": 4,
+    "name": "Web + App Dev",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Web+%2B+Android.png",
+    "tagline": "“Building innovative digital solutions, one line of code at a time.”",
+    "price": 70,
+    "description": "Calling all talented developers! Pulzion is excited to announce the most anticipated event of the year - a web/app development competition that will challenge your skills and showcase your talent. From idea generation to deployment, this event will take you on a journey of developing a website or app that is not only visually appealing but also functionally efficient.\nThemes: Agriculture, Education and Healthcare",
+    "type": "Technical",
+    "mode": "Blended",
+    "rules": "1. Problem statements are out at https://bit.ly/PulzionDevPS, and the deadline for presentation submission (Round 1) will be declared soon.\n2. Each Team can submit an entry for only on Problem Statement. Participants are expected to submit a PPT of the proposed solution and idea on the submission platform for round-1. Adding the link of the figma prototype or github repository in the PPT is optional but preferred.\n3. The shortlisted teams from round 1 will be informed by the organisers. The teams are expected to complete major implementation till round-2.\n4. Use of web frameworks and any suitable tech stack is allowed but the use of ready-made templates are prohibited.\n5. Participants should rename their PPT name according to their Leader's name as FirstName_LastName_MobileNumber.extension.\n6. All the updates will be conveyed to the leader's email id.\n.7. The decision of the organisers and judges will be final and binding on all participants.",
+    "rounds": "Round 1 (Online):\nThe judgement for this round will be on the basis of the following factors:\n1. The presentation of unique ideas implemented for the selected theme.\n2. Core understanding of code and the tech stack used.\n3. For (FE/SE - Frontend only) judged on frontend application idea/solution.\n4. For (TE/BE - Full Stack) judged on techstack, frameworks, design and idea for the full-stack application.\nRound 2 (Offline):\n.The selected teams from Round 1 will be asked to show the working web or app in blended mode.\nThe judgement of this round will be on the following factors:\n1. Maximum end-to-end implementation of the live/on-spot changes of features as directed by the judges of the event.\n2. Timely execution, cleaner code and a seamless working model/prototype of the application is desired.\n3. For (FE/SE - Frontend only) judged on frontend application implementation.\n4. For (TE/BE - Full Stack) judged on full- stack application implementation and extra points will be given to ML/Blockchain/AR-VR implementation and business potential.\n5. Both online and offline rounds will have a time limit of 4 hours similar to hackathons.",
+    "teams": "FE-SE (Frontend only): Groups of a maximum of 3 participants\nTE-BE(Full Stack Application: Groups of a maximum of 3 participants",
+    "notes": "Mustafa Trunkwala - 77559 65855\nSamarth Mali - 91563 31100"
+  },
+
+  {
+    "id": 5,
+    "name": "DataQuest",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/DataQuest.png",
+    "tagline": "“We are surrounded by data but starved for insight!”",
+    "price": 30,
+    "description": "Dataquest is an event for the budding data scientists to prove their mettle in the world of Data Science and Machine learning. Observe trends and patterns and emerge victorious in this challenge of your analytical thinking and data science knowledge.",
+    "type": "Technical",
+    "mode": "Online",
+    "rules": "1. The competition will be hosted on the Submission Platform.\n2. The problem statement along with the dataset will be released on the platform.\n3. The link for the contest will be shared with the participants through email.\n4. Participants are expected to submit their CSV files along with .ipynb/py files.\n5. You can view the public leaderboard to compete against the best of the best solutions and achieve better results.\n6. The right to decide optimization metric will rest with the judges and it will be final and binding.",
+    "rounds": "Round 1:\n1. For (FE-SE) category only 1 round would be there. The winners will be decided according to the decided metrics.\n2. For (TE-BE) category 2 rounds would be there. Participants will be filtered out according to the decided metrics and qualified to round 2.\n3. A maximum of 3 submissions are allowed per day. The best score out of the submissions will be considered for evaluation.\nRound 2 (only for the TE-BE category):\n1. For (TE-BE) category 2 rounds are going to be conducted. Participants will be filtered out from round 1 qualified to round 2.\n2. A maximum of 3 submissions are allowed per day. The best score out of the submissions will be considered for evaluation.",
+    "teams": "FE-SE (Junior Category): Individual Participation.\nTE-BE (Senior Category): Individual Participation",
+    "notes": "Atharva Date - 97631 78405\nSiddhi Hajare - 80077 77363"
+  },
+  {
+    "id": 6,
+    "name": "ElectroQuest",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/ElectroQuest.png",
+    "tagline": "“Let Electricity Treasure You!”",
+    "price": 50,
+    "description": "ElectroQuest is a one-of-a-kind blend of Treasure Hunting and Electronic Skills to get insight and a perfect platform to electrify your mind! So take your pull-out maps from the drawers and get ready to begin an adventurous exciting journey at ElectroQuest!",
+    "type": "Technical",
+    "mode": "Offline",
+    "rules": "Rule 1:\n1. All the teams would be given a maximum of 2 hours to finish the treasure hunt in round 1.\n2. Use of the internet or any other resource is allowed during the treasure hunt.\n3. Only the top 5 teams from each category would qualify for the second round.\n4. The hunt is strictly restricted to the college campus.\n5. Any help or clarity on the proceedings of the event would be given by volunteers present on site.\n6.Hints related to the question will be provided by volunteers to the team by deducting the certain number of points per hint.(2 hints max).\nRule 2:\n1. For this round all teams have 1 hour for designing the circuit.\n2. Team can use the first 20 minutes for internet searching..\n3. The winning team will be announced, based on the accuracy and speed of completing the given tasks in both rounds.\n4. The decision of the organizers and judges will be final and binding on all participants.",
+    "rounds": "Round 1:\nThe first round is a treasure hunt across the campus using tech related clues. The qualifying teams would be given problem statements having difficulty levels according to the year of the participants.\nRound 2:\nFE and SE/TE/BE students would have to face simple circuit debugging and circuit designing problems in the second round.",
+    "teams": "1. FE (Junior Category): Individual or Team of 3 (Max)\n2. SE/TE/BE (Senior Category): Individual or Team of 3 (Max)\nNote: Only team leader needs to register.",
+    "notes": "Ganesh Patil - 88068 14069\nKedar Pawar - 93098 34217"
+  },
+
+  {
+    "id": 7,
+    "name": "Dextrous",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Dextrous.png",
+    "tagline": "“Aptitude leads to Excellence.”",
+    "price": 30,
+    "description": "Knowledge is indeed a powerful asset, but enthusiasm is the catalyst that ignites it. Join us at Pulzion for DEXTROUS, a full-scale corporate hiring experience featuring standard steps like Aptitude Test, Group Discussion, and HR Interview, all evaluated by industry professionals. This event focuses on soft skills and general aptitude; technical expertise is not necessary.",
+    "type": "Non Technical",
+    "mode": "Offline",
+    "rules": "1. All the rounds are elimination rounds.\n2. Selected participants would receive a mail or phone call from team.\n3. Decisions of organizers will be considered as final.",
+    "rounds": "Round 1: A general MCQ Type Quiz to test your aptitude\nRound 2: Group Discussion Round\nRound 3:HR Interview Round",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Pritika Rohera - 80870 69750\nAnshika Singh- 79774 19190"
+  },
+
+  {
+    "id": 8,
+    "name": "Fandom (Anime)",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/FAndoM+QUIz+White.png",
+    "tagline": "“You see your favourite fandom, we test your craziness!”",
+    "price": 30,
+    "description": "Make the most of your long weekends and free time with a Pop Culture quiz competition! Do your parents think binge-watching is a waste of time? Here's your chance to prove them wrong. Test your knowledge in popular fandom topics like Indian OTTs, Western OTTs, Sitcoms, Marvel, and Anime. Join the quiz competition, showcase your fanhood, and seize the opportunity to win fantastic prizes.",
+    "type": "Non Technical",
+    "mode": "Offline",
+    "rules": "1. Every participant is allowed to appear for the first round.\n2. The participants qualifying for the first round will appear in the second round.\n3. Use of any unfair means will result in direct disqualification.\n4. The decision of the organizers will be final and binding on all participants.",
+    "rounds": "Round 1:\nA general quiz of duration 30 minutes.\nRound 2:\nAn interactive round having a variety of questions related to your favourite Fandoms.",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Pranav Jaju - 81794 45688\nAditi Date - 75229 34369"
+  },
+
+  {
+    "id": 9,
+    "name": "Fandom (Marvel)",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/FAndoM+QUIz+White.png",
+    "tagline": "“You see your favourite fandom, we test your craziness!”",
+    "price": 30,
+    "description": "Make the most of your long weekends and free time with a Pop Culture quiz competition! Do your parents think binge-watching is a waste of time? Here's your chance to prove them wrong. Test your knowledge in popular fandom topics like Indian OTTs, Western OTTs, Sitcoms, Marvel, and Anime. Join the quiz competition, showcase your fanhood, and seize the opportunity to win fantastic prizes.",
+    "type": "Non Technical",
+    "mode": "Offline",
+    "rules": "1. Every participant is allowed to appear for the first round.\n2. The participants qualifying for the first round will appear in the second round.\n3. Use of any unfair means will result in direct disqualification.\n4. The decision of the organizers will be final and binding on all participants.",
+    "rounds": "Round 1:\nA general quiz of duration 30 minutes.\nRound 2:\nAn interactive round having a variety of questions related to your favourite Fandoms.",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Pranav Jaju - 81794 45688\nAditi Date - 75229 34369"
+  },
+
+  {
+    "id": 10,
+    "name": "Fandom (Indian OTTs + Western OTTs)",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/FAndoM+QUIz+White.png",
+    "tagline": "“You see your favourite fandom, we test your craziness!”",
+    "price": 30,
+    "description": "Make the most of your long weekends and free time with a Pop Culture quiz competition! Do your parents think binge-watching is a waste of time? Here's your chance to prove them wrong. Test your knowledge in popular fandom topics like Indian OTTs, Western OTTs, Sitcoms, Marvel, and Anime. Join the quiz competition, showcase your fanhood, and seize the opportunity to win fantastic prizes.",
+    "type": "Non Technical",
+    "mode": "Offline",
+    "rules": "1. Every participant is allowed to appear for the first round.\n2. The participants qualifying for the first round will appear in the second round.\n3. Use of any unfair means will result in direct disqualification.\n4. The decision of the organizers will be final and binding on all participants.",
+    "rounds": "Round 1:\nA general quiz of duration 30 minutes.\nRound 2:\nAn interactive round having a variety of questions related to your favourite Fandoms.",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Pranav Jaju - 81794 45688\nAditi Date - 75229 34369"
+  },
+
+  {
+    "id": 11,
+    "name": "Fandom (TMKOC)",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/FAndoM+QUIz+White.png",
+    "tagline": "“You see your favourite fandom, we test your craziness!”",
+    "price": 30,
+    "description": "Make the most of your long weekends and free time with a Pop Culture quiz competition! Do your parents think binge-watching is a waste of time? Here's your chance to prove them wrong. Test your knowledge in popular fandom topics like Indian OTTs, Western OTTs, Sitcoms, Marvel, and Anime. Join the quiz competition, showcase your fanhood, and seize the opportunity to win fantastic prizes.",
+    "type": "Non Technical",
+    "mode": "Offline",
+    "rules": "1. Every participant is allowed to appear for the first round.\n2. The participants qualifying for the first round will appear in the second round.\n3. Use of any unfair means will result in direct disqualification.\n4. The decision of the organizers will be final and binding on all participants.",
+    "rounds": "Round 1:\nA general quiz of duration 30 minutes.\nRound 2:\nAn interactive round having a variety of questions related to your favourite Fandoms.",
+    "teams": "FE/SE/TE/BE: Individual",
+    "notes": "Pranav Jaju - 81794 45688\nAditi Date - 75229 34369"
+  },
+
+  {
+    "id": 12,
+    "name": "Insight",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Insights.png",
+    "tagline": "“A writer is a world trapped in a person.”",
+    "price": 20,
+    "description": "Insight is a literary showcase where you can flaunt your writing talents. Explore poetry, storytelling, articles, and passages, and let your words work their magic. Join us and let your creativity shine!",
+    "type": "Non Technical",
+    "mode": "Blended",
+    "rules": "1. Shortlisted participants would be informed by our team after Round 1.\n2. Plagiarised entries will be disqualified.\n3. Round 1 topics will be declared 2-3 days before the event.\n4. The decision of the organisers and judges will be final and binding on all participants.",
+    "rounds": "Round 1 (Online):Story writing: Topics: https://bit.ly/PulzionInsightTP \nRound 2 (Offline):\nParticipants would be given a topic for picture narrative. The topic will be given on the spot. Participants will compete in a limited time frame.",
+    "teams": "FE/SE/TE/BE Individual",
+    "notes": "Pritika Rohera - 80870 69750\nAnushka Joshi- 78218 91432"
+  },
+
+  {
+    "id": 13,
+    "name": "Freeze the second",
+    "logo": "https://pulzion-ems.s3.ap-south-1.amazonaws.com/event_logos/White/Freeze+the+second.png",
+    "tagline": "“If you can see it, you can shoot it.”",
+    "price": 20,
+    "description": "Freeze the Second is a captivating photography event that challenges photographers to capture fleeting moments in time with precision and artistry.This event celebrates the beauty of freezing time through the lens of a camera, highlighting the power of photography to immortalise the ephemeral and turn it into timeless art.",
+    "type": "Non Technical",
+    "mode": "Online",
+    "rules": "1. The participants will be required to submit their entry through the submission platform!.\n2. Only one picture per participant is allowed.\n3. Photo must be in JPEG, JPG, or PNG format only.\n4. You are required to provide a unique title for image.\n5. Advanced editing used to create illusions, deceptions and/or manipulations, and the adding and removing of significant elements within the frame is prohibited.\n6. The decision of the organizers and judges will be final and binding on all participants.",
+    "rounds": "Round 1:\nIt will be a single-round competition.",
+    "teams": "FE/SE/TE/BE Individual",
+    "notes": "Atharva Pardeshi- 87673 79887\nAnkita Darade - 99708 83293"
+  }
+]

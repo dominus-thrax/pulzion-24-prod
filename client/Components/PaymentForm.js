@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import QrCode from "react-qr-code";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { paymentForm } from "../action/paymentForm";
 import { Router, useRouter } from "next/router";
 import { useCartContext } from "../context/CartContext";
@@ -16,36 +16,46 @@ export default function PaymentForm(props) {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get(
-        "https://pulzion-ems.s3.ap-south-1.amazonaws.com/referal/referal.json"
-      );
-      
-      setData(res.data.refreal);
+      // const res = await axios.get(
+      //   "https://pulzion-ems.s3.ap-south-1.amazonaws.com/referal/referal.json"
+      // );
+
+      // setData(res.data.refreal);
     })();
   }, []);
 
   async function register(values) {
     try {
       setLoader(true);
-      const data = await paymentForm(
+
+      const res = await paymentForm(
         values.transaction_id,
         values.referal_code,
-        props.cart
+        props.events,
+        props.combos
       );
-      if (data?.error) {
+      console.log("Response:")
+      console.log(res);
+      if (res.error) {
         setLoader(false);
-        toast.error(data.error);
+        toast.error(res.error);
         return;
       }
+      console.log("Clear Cart");
       await clearCart();
-      props.setCart([]);
+      props.setEvents([]);
+      props.setCombos([]);
+
       setLoader(false);
       toast.success("Transaction has been sent for verification");
+
       router.push("/orders");
     } catch (error) {
-      
+
       setLoader(false);
+      console.log(error.data);
       toast.error("Something went wrong");
+      // console.log(error);
     }
   }
 
@@ -72,7 +82,7 @@ export default function PaymentForm(props) {
       className="fixed top-0 left-0 w-[100%] min-h-screen backdrop-blur"
     >
       <div
-        className="fixed w-11/12 overflow-y-auto md:max-h-[500px] flex flex-col max-w-xl text-white rounded-3xl shadow-[0px_0px_15px_5px] shadow-sky-700"
+        className="fixed w-11/12 overflow-y-auto md:max-h-[500px] flex flex-col max-w-xl bg-slate-800 bg-opacity-90 text-white rounded-3xl  shadow-[1px_3px_26px_2px_#dd6b20]"
         style={{
           top: "50%",
           left: "50%",
@@ -81,7 +91,7 @@ export default function PaymentForm(props) {
           height: "90vh",
         }}
       >
-        <div className="flex flex-row items-center w-full px-5 py-6 overflow-hidden shadow-2xl bg-sky-700 bg-opacity-10 md:px-8 event_modal_title rounded-t-3xl">
+        <div className="flex flex-row items-center w-full px-5 py-6 overflow-hidden shadow-2xl bg-slate-800 bg-opacity-90 md:px-8 event_modal_title rounded-t-3xl">
           <div className="font-bold whitespace-pre sm:text-xl text-md basis-1/2 md:text-2xl">
             Registration Form
           </div>
@@ -106,7 +116,7 @@ export default function PaymentForm(props) {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-between w-full gap-2 px-2 shadow-lg sm:py-6 sm:flex-row md:px-5 event_modal_title rounded-t-3xl">
+        <div className="flex flex-col items-center justify-between w-full  gap-2 px-2 shadow-lg sm:py-6 sm:flex-row md:px-5 event_modal_title rounded-t-3xl">
           <div className="flex flex-col gap-1 mt-2 bg-white sm:h-auto rounded-xl">
             <QrCode
               className="p-2 pointer-events-none sm:p-4"
@@ -160,15 +170,15 @@ export default function PaymentForm(props) {
                 </div>
               ) : null}
 
-              <label
+              {/* <label
                 className="block mt-6 font-bold text-md text-primaries-100"
                 htmlFor="referal_code"
-              >
-                {/* Referral (Optional) */}
-                Are You Referred By Someone?
-              </label>
+              > */}
+              {/* Referral (Optional) */}
+              {/* Are You Referred By Someone?
+              </label> */}
 
-              <select
+              {/* <select
                 name="referal_code"
                 className="w-full px-3 py-2 mt-1 leading-tight border rounded shadow appearance-none bg-primaries-700 text-primaries-100 focus:outline-none focus:shadow-outline"
                 aria-label="Default select example"
@@ -186,7 +196,7 @@ export default function PaymentForm(props) {
                     </option>
                   );
                 })}
-              </select>
+              </select> */}
               <button
                 type="submit"
                 className="float-right mt-4 px-4 py-2 mb-2 w-[55%] text-center border-4 border-[#3a5f9d] hover:border-[#172947] text-primaries-100 rounded-xl"

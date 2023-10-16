@@ -11,7 +11,7 @@ const MyEvents = () => {
 	return (
 		<Layout>
 			<Head>
-				<title>Pulzion'23 | MY Events</title>
+				<title>Pulzion | My Events</title>
 				<meta name='description' content="Pulzion is the annual flagship event organized by PICT ACM
 				Student Chapter (PASC). Pulzion consists of multiple events in
 				technical as well as non-technical domains including coding
@@ -30,3 +30,4 @@ const MyEvents = () => {
 }
 
 export default privateUserRoute(MyEvents);
+// export default (MyEvents);

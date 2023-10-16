@@ -1,82 +1,104 @@
 .title {
   margin-bottom: 25px;
   color: #aeb6bf;
-  font-size: 18px;
+  font-size: 10;
 }
+
 .title span {
   color: #5dade2;
 }
+
 /* .content {
   width: 640px;
   margin: 45px auto;
 } */
-.tabs-header {
-  /* display: table; */
-  /* width: 80%; */
-
-  /* list-style-type: none; */
-}
 .tabs-header li {
   /* display: table-cell; */
   /* display: inline-block; */
   /* width: calc(100% / 3); */
+  letter-spacing: 2px;
   text-align: center;
-  color: #ecf0f1;
+  margin: 10px 15px;
+  /* background: rgba(0,0,0,0.7); */
+  color: #EA580C;
   cursor: pointer;
+  font-weight: bolder;
+  border-radius: 10px;
 }
-.tabs-header li > a {
+
+.tabs-header li {
   display: block;
-  padding: 15px;
-  transition: all 0.2s ease-in;
-  transform: skew(-40deg);
-}
-.tabs-header li > a span {
-  display: block;
-  transform: skew(40deg);
-}
-.tabs-header li > a:hover {
-  background: #2471a3;
-  color: #f7f9f9;
-}
-.tabs-header li.active > a {
-  background: #2471a3;
-}
-.tabs-content {
-  margin-top: 15px;
+  border-radius: 10px;
+  padding: 20px 15px 15px;
+  /* margin: 10px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  padding: 20px 25px;
-  overflow: hidden;
-  background: #000;
+
+  transition: all 0.2s ease-in;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'FEASFBRG', cursive;
+  /* font-size: xx-small; */
 }
+
+
+.tabs-header li span {
+  font-size: 2.5rem;
+  color: #f2f3f4;
+  display: block;
+}
+
+.tabs-header li.active {
+  /* filter:hue-rotate(30deg); */
+  /* color: #EA580C; */
+  scale: 1.1;
+  transition: all 0.2s;
+}
+
+.tab-active {
+  background-color: #000 !important;
+  box-shadow: 1px 3px 22px 8px #dd6b20;
+
+}
+
 .tabs-content .tabs-textItem {
   display: none;
   transform: translateY(100%);
 }
+
 .tabs-content .tabs-textItem.show {
   display: block;
   transform: translateY(0);
   animation: change 0.49s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .tabs-content .tabs-textItem p {
   font: normal 15px/1.5 "Open Sans";
   color: #f2f3f4;
 }
+
+.tab-active span {
+
+  color: #EA580C !important;
+}
+
+.tabs-content {
+  margin-top: 15px;
+  position: relative;
+  padding: 20px 25px;
+  overflow: hidden;
+
+  background: #000;
+}
+
 @keyframes change {
   0% {
     transform: translateY(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 767px) {
-  .tabs-header li > a {
-    transform: skew(0deg);
-  }
-  .tabs-header li > a span {
-    display: block;
-    transform: skew(0deg);
   }
 }

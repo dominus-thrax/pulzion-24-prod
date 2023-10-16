@@ -12,6 +12,7 @@ import { addToCart } from "../action/cart";
 import { useCartContext } from "../context/CartContext.js";
 import { useRouter } from 'next/router'
 import { GrView } from "react-icons/gr"
+import Link from "next/link";
 
 function EventCard(props) {
   const modalRef = useRef();
@@ -23,7 +24,7 @@ function EventCard(props) {
   const teams = seperateLine(props.teams ? props.teams : "");
   const notes = seperateLine(props.notes ? props.notes : "");
   const isLoggedIn = !!user?.id;
-  
+
   const [slots, setSlots] = useState([]);
   const alreadyRegistered = isLoggedIn
     ? !!contEvents.find((item) => item.id === props.id)?.id
@@ -65,7 +66,7 @@ function EventCard(props) {
         toast.error("Slot booking isn't active for this event!");
       }
     } catch (e) {
-      
+
       toast.error("Something went wrong");
     }
     setLoading(false);
@@ -88,37 +89,49 @@ function EventCard(props) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className={`animated z-[2] top-24 w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]`}>
+    <div className="flex flex-col items-center justify-center pl-2">
+      <div className={`animated z-[2] top-24 w-[170px] sm:w-[210px] sm:h-[210px] h-[170px]`} >
         <img src={props.logo} alt={props.name} className="event-logo"
           style={{
-            padding: "30px"
+            padding: "35px",
           }}
         />{" "}
       </div>
-      <div className="w-full">
-        <div className="xl:w-[100%] -z-0 sm:w-full cards h-[350px] xl:h-[400px] py-5 bg-gradient-to-br from-[#172947c5] to-black"
+      {/*  */}
+      <div className="flex justify-center w-full">
+        <div className="w-[100%] -z-0 sm:w-full cards py-5"
         >
-          <div className="p-10 w-[100%] h-[350px] xl:h-[400px] gap-4 -top-5 flex flex-col justify-center items-center">
-              <h2 className="mt-20 text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
-              <h3 className="text-lg font-medium tracking-wider text-center text-white">{props.tagline}</h3>
-              {registeredEvent?.fk_slot && (
-                <h3 className="mt-2 text-center">
-                  {displayDate(registeredEvent.start_time)}{" "}
-                  {displayFormat(registeredEvent.start_time)} -{" "}
-                  {displayFormat(registeredEvent.end_time)}
-                </h3>
-              )}
-              <button
-                className="relative mt-auto mb-3 py-2 px-6 text-black no-underline bg-[#03d3f0] hover:font-bold text-center rounded-full uppercase tracking-wide"
-                onClick={handleOpen}
-              >
-                View
-              </button>
+          <div className="p-10 w-[100%] h-[500px] xl:h-[500px] gap-4 -top-2 flex flex-col justify-center items-center mt-[-7rem]">
+            <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
+            <h3 className="text-lg font-extrabold tracking-wider text-center text-white">{props.tagline}</h3>
+            {registeredEvent?.fk_slot && (
+              <h3 className="mt-2 text-center">
+                {displayDate(registeredEvent.start_time)}{" "}
+                {displayFormat(registeredEvent.start_time)} -{" "}
+                {displayFormat(registeredEvent.end_time)}
+              </h3>
+            )}
+            <button
+              className="relative z-0 p-5 text-center bg-no-repeat bg-contain rounded-sm sm:p-7"
+
+            >
+              <img
+                src="/homepage_button.svg"
+                className="absolute inset-0 w-full h-full -z-10"
+              />
+
+              <Link href={`/events/${props.id}`}>
+                <a className="text-[#bdf5fa] text-lg sm:text-xl font-semibold">
+                  View
+                </a>
+              </Link>
+            </button>
           </div>
         </div>
-      </div>      
-      <EventModal        
+      </div>
+
+      {/*  */}
+      <EventModal
         title={props.name}
         // title="Electroquest"
         play={props.play}
@@ -140,6 +153,7 @@ function EventCard(props) {
         handleBook={handleBook}
         registeredEvent={registeredEvent}
         setSlots={setSlots}
+
       />
     </div>
   );

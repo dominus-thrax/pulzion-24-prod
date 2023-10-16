@@ -2,17 +2,17 @@ import React from 'react';
 
 const PrimaryButton = ({ children, handleClick, ...otherProps }) => {
   return (
-    <button 
-      className='px-8 py-2 bg-primaries-500 text-white shadow-md hover:scale-105 ease-in-out'
+    <button
+      className="inline-block text-black  font-semibold rounded-md border-0 bg-[#FF7518]  font-inherit text-center text-sm  py-2 px-4 cursor-pointer shadow-2xl shadow-orange-500/20"
       style={{
-        borderRadius: '30px',
+        borderRadius: "10px",
       }}
       onClick={handleClick}
       {...otherProps}
     >
       {children}
     </button>
-  )
+  );
 }
 
 export default PrimaryButton

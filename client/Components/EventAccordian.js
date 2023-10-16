@@ -7,7 +7,7 @@ const EventAccordian = ({ title, children, index, activeIndex, setActiveIndex })
 
   return (
     <div className="w-full mb-4">
-      <button className='flex items-center gap-4 w-full text-primaries-100 text-xl font-bold hover:text-blue-500' onClick={() => handleSetIndex(index)}>
+      <button className='flex items-center gap-4 w-full text-primaries-100 text-xl font-bold hover:text-[hsl(21,90%,48%)]' onClick={() => handleSetIndex(index)}>
         <div className="flex items-center">
           <IoChevronDown className={`${activeIndex === index ? "rotate-180" : ""} ease-in-out duration-300`} />
         </div>
@@ -17,9 +17,9 @@ const EventAccordian = ({ title, children, index, activeIndex, setActiveIndex })
       </button>
 
       {/* {(activeIndex === index) && ( */}
-        <div className={`py-2 pl-4 text-left text-sm ease-in-out duration-300 ${activeIndex === index ? "block" : "hidden"}`}>
-          {children}
-        </div>
+      <div className={`py-2 pl-4 text-left text-sm ease-in-out duration-300 ${activeIndex === index ? "block" : "hidden"}`}>
+        {children}
+      </div>
       {/* )} */}
     </div>
   );
