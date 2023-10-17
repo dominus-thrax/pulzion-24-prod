@@ -33,8 +33,8 @@ const ChangePassword = ({ handleForget }) => {
         }
     });
     return (
-        <div className={`flex justify-center`}>
-            <form className={`bg-primaries-700 shadow-md px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
+        <div className={`flex justify-center border-none`}>
+            <form className={`bg-primaries-700 border-none px-8 pt-6 pb-8 mb-4 h-full w-full`} onSubmit={formik.handleSubmit}>
                 <h1 className={`text-primaries-100 mb-4`}>You would have received an OTP on your mail. Provide that along with the changed password</h1>
                 <div className="mb-4 flex flex-col gap-2">
                     {/* <label className="block text-primaries-100 text-lg font-bold" htmlFor="otp">OTP</label> */}
@@ -87,7 +87,7 @@ const ChangePassword = ({ handleForget }) => {
                     ) : null}
                 </div>
 
-                <button className={`px-8 py-2 text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2 hover:text-white shadow-md hover:scale-105 ease-in-out`}
+                <button className={`px-8 py-2 text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md  hover:text-white shadow-md hover:scale-105 ease-in-out`}
                     type="submit"
                     style={{
                         borderRadius: '30px',
