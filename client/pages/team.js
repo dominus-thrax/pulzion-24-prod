@@ -82,7 +82,23 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/yash-sonawane-a49870202",
     },
     {
-      name: "Aditi Datte",
+      name: "Aditya Mahajan",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAditya%20Mahajan.jpg?alt=media&token=36b84a19-089a-47fe-8f7e-2a5a776f8b06&_gl=1*9lgmiv*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTcxNTAuNjAuMC4w",
+      designation: "Domain Director (Competitive Programming)",
+
+      linkedin: "https://www.linkedin.com/in/yash-sonawane-a49870202",
+    },
+    {
+      name: "Varad Pundlik",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FVarad%20Pundlik.jpg?alt=media&token=e4ddfb87-db70-455a-b00c-ff6359a1fd6e&_gl=1*gegsg1*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTcxNjMuNDcuMC4w",
+      designation: "Domain Director (Competitive Programming)",
+
+      linkedin: "https://www.linkedin.com/in/yash-sonawane-a49870202",
+    },
+    {
+      name: "Aditi Date",
 
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAditi%20Date.jpg?alt=media&token=382ab584-a604-4deb-b986-9c31ab7fc07a&_gl=1*vv28r5*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTIzNzUuNDIuMC4w",
