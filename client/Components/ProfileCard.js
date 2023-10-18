@@ -6,7 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 const ProfileCard = ({
   name,
   avatar,
-  designation,
+  // designation,
   linkedin,
   ...otherProps
 }) => {
@@ -41,8 +41,8 @@ const ProfileCard = ({
 
       </div>
       <div className={styles.details}>
-        <h3 className={`${styles.name} text-[rgb(185,89,0)]`}>{name}</h3>
-        <h5 className={`${styles.designation} text-[rgb(185,89,0)]`}>{designation}</h5>
+        <h3 className={`${styles.name} text-orange-400`}>{name}</h3>
+        {/* <h5 className={`${styles.designation} text-blue-300`}>{designation}</h5> */}
       </div>
     </div>
   );
