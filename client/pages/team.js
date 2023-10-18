@@ -84,7 +84,7 @@ const TeamPage = () => {
     {
       name: "Aditya Mahajan",
       avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAditya%20Mahajan.jpg?alt=media&token=36b84a19-089a-47fe-8f7e-2a5a776f8b06&_gl=1*9lgmiv*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTcxNTAuNjAuMC4w",
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAditya%20Mahajan.jpg?alt=media&token=2ca95b13-5864-404a-be5c-f07fb0da7af1&_gl=1*17seipe*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTg0OTAuMzguMC4w",
       designation: "Domain Director (Competitive Programming)",
 
       linkedin: "https://www.linkedin.com/in/yash-sonawane-a49870202",
@@ -242,6 +242,13 @@ const TeamPage = () => {
       name: "Rohit Kuvar",
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FRohit%20Kuvar_.jpg?alt=media&token=becebe96-041e-4f9f-bddc-adf2727418cb&_gl=1*v48xl1*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQzOTkuNjAuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/prasenjeet-sonawane-856b23205/",
+    },
+    {
+      name: "Prathamesh Dikondawar",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FPrathamesh%20Dikondawar.jpg?alt=media&token=552c1276-84fb-4cbf-bcdd-f69c4731855f&_gl=1*1mjm30b*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTgzMzIuNTEuMC4w",
       designation: "Creative Head",
       linkedin: "https://www.linkedin.com/in/prasenjeet-sonawane-856b23205/",
     },
