@@ -243,7 +243,7 @@ const TeamPage = () => {
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FRohit%20Kuvar_.jpg?alt=media&token=becebe96-041e-4f9f-bddc-adf2727418cb&_gl=1*v48xl1*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQzOTkuNjAuMC4w",
       designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/prasenjeet-sonawane-856b23205/",
+      linkedin: "https://www.linkedin.com/in/rohit-kuvar-821309136/",
     },
     {
       name: "Prathamesh Dikondawar",
