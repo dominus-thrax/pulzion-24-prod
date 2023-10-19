@@ -82,6 +82,13 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/mikhiel-benji-5061b2285/",
     },
     {
+      name: "Riddhi Kulkarni",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FRiddhi%20Kulkarni.jpeg?alt=media&token=b07a7b89-3ba2-459b-bb9b-15672843465e&_gl=1*1tdw4s4*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQ0NjguNjAuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/riddhi-kulkarni-9a6b84232/",
+    },
+    {
       name: "Aditya Mahajan",
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAditya%20Mahajan.jpg?alt=media&token=2ca95b13-5864-404a-be5c-f07fb0da7af1&_gl=1*17seipe*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTg0OTAuMzguMC4w",
@@ -96,6 +103,22 @@ const TeamPage = () => {
       designation: "Domain Director (Competitive Programming)",
 
       linkedin: "https://www.linkedin.com/in/varad-pundlik-3a6178205/",
+    },
+    {
+      name: "Awadhoot Khutwad",
+
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAwadhooooot.jpg?alt=media&token=90d9e81b-cf40-4f3e-92fb-f8bc1bb9ea9e&_gl=1*da9nx*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI0MTQuMy4wLjA",
+      designation: "Marketing Head",
+
+      linkedin: "https://www.linkedin.com/in/awadhoot-khutwad-47879a22a/",
+    },
+    {
+      name: "Soumya Garg",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FSoumyaGarg.jpeg?alt=media&token=a72ae26e-e954-41bf-9f76-43ed7bf2eb8d&_gl=1*q9efpy*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI0NjQuNjAuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/soumya-garg-3a7453166/",
     },
     {
       name: "Aditi Date",
@@ -115,22 +138,12 @@ const TeamPage = () => {
 
       linkedin: "https://www.linkedin.com/in/ankita-darade-a0371a239/",
     },
-
     {
-      name: "Awadhoot Khutwad",
-
+      name: "Advait Naik",
       avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAwadhooooot.jpg?alt=media&token=90d9e81b-cf40-4f3e-92fb-f8bc1bb9ea9e&_gl=1*da9nx*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI0MTQuMy4wLjA",
-      designation: "Marketing Head",
-
-      linkedin: "https://www.linkedin.com/in/awadhoot-khutwad-47879a22a/",
-    },
-    {
-      name: "Soumya Garg",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FSoumyaGarg.jpeg?alt=media&token=a72ae26e-e954-41bf-9f76-43ed7bf2eb8d&_gl=1*q9efpy*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI0NjQuNjAuMC4w",
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAdvait.jpg?alt=media&token=b2385831-4364-44d1-8f50-0c8dc7c11999&_gl=1*1dfdudc*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTU3ODguMzUuMC4w",
       designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/soumya-garg-3a7453166/",
+      linkedin: "https://www.linkedin.com/in/advait-naik-344689245/",
     },
     {
       name: "Anshika Singh",
@@ -154,13 +167,6 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/aniket-kolte-19b9631a1/",
     },
     {
-      name: "Aditya Malu",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FMaluuuuuu.jpg?alt=media&token=ba94365b-7dec-40fe-a040-0aad6d4047c4&_gl=1*jv9zi8*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI3NDguNTkuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/aditya-malu-2aa0a022a/",
-    },
-    {
       name: "Om Lachure",
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FOm_Lachure.jpg?alt=media&token=13541c2a-b0a2-46e9-ae38-92c255e1707c&_gl=1*jdkluu*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI4MDAuNy4wLjA",
@@ -181,7 +187,6 @@ const TeamPage = () => {
       designation: "Creative Head",
       linkedin: "https://www.linkedin.com/in/tanisha-bharadiya-313b6a246/",
     },
-    
     {
       name: "Siddhi Hajare",
       avatar:
@@ -204,13 +209,6 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/ganesh-patil-a74a7b249/",
     },
     {
-      name: "Anushka Joshi",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAnushka%20Joshi.jpg?alt=media&token=a9d66461-808e-4def-998e-521498329a72&_gl=1*1c3b3uy*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQxMDIuMzAuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/anushka512/",
-    },
-    {
       name: "Kedar Pawar",
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FKedarPawar.jpg?alt=media&token=4ad2b270-6de9-4464-b8a8-0dd540cf8f01&_gl=1*3ttrft*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQxNzQuNTIuMC4w",
@@ -218,46 +216,11 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/kedar-pawar-02554122a/",
     },
     {
-      name: "Shravani Kamthankar",
+      name: "Anushka Joshi",
       avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FShravani%20Kamthankar.jpg?alt=media&token=d7e53549-5bf5-45e2-aea3-597db8623eb1&_gl=1*1j6t0gh*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQxOTQuMzIuMC4w",
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAnushka%20Joshi.jpg?alt=media&token=a9d66461-808e-4def-998e-521498329a72&_gl=1*1c3b3uy*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQxMDIuMzAuMC4w",
       designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/shravani-kamthankar-307242239/",
-    },
-    {
-      name: "Atharva Pardeshi",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAtharva%20Pardeshi_.jpg?alt=media&token=bcc6c5b4-8496-4dad-93a9-311f90fe9e77&_gl=1*e1f1o8*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQyMTEuMTUuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/atharva-pardeshi-01054b237/",
-    },
-    {
-      name: "Kishanlal Choudhary",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FKishanlal_Choudhary.jpg?alt=media&token=354aaa2d-2c81-405a-8524-b5300adb31b8&_gl=1*op0uut*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQyNzcuNjAuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/kishanlal-choudhary-a94154217/",
-    },
-    {
-      name: "Rohit Kuvar",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FRohit%20Kuvar_.jpg?alt=media&token=becebe96-041e-4f9f-bddc-adf2727418cb&_gl=1*v48xl1*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQzOTkuNjAuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/rohit-kuvar-821309136/",
-    },
-    {
-      name: "Prathamesh Dikondawar",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FPrathamesh%20Dikondawar.jpg?alt=media&token=552c1276-84fb-4cbf-bcdd-f69c4731855f&_gl=1*1mjm30b*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTgzMzIuNTEuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/prathameshdikondawar/",
-    },
-    {
-      name: "Riddhi Kulkarni",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FRiddhi%20Kulkarni.jpeg?alt=media&token=b07a7b89-3ba2-459b-bb9b-15672843465e&_gl=1*1tdw4s4*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQ0NjguNjAuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/riddhi-kulkarni-9a6b84232/",
+      linkedin: "https://www.linkedin.com/in/anushka512/",
     },
     {
       name: "Shivam Chandak",
@@ -274,11 +237,46 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/shraddha-asolkar-1a7104236/",
     },
     {
-      name: "Advait Naik",
+      name: "Atharva Pardeshi",
       avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAdvait.jpg?alt=media&token=b2385831-4364-44d1-8f50-0c8dc7c11999&_gl=1*1dfdudc*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTU3ODguMzUuMC4w",
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FAtharva%20Pardeshi_.jpg?alt=media&token=bcc6c5b4-8496-4dad-93a9-311f90fe9e77&_gl=1*e1f1o8*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQyMTEuMTUuMC4w",
       designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/advait-naik-344689245/",
+      linkedin: "https://www.linkedin.com/in/atharva-pardeshi-01054b237/",
+    },
+    {
+      name: "Rohit Kuvar",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FRohit%20Kuvar_.jpg?alt=media&token=becebe96-041e-4f9f-bddc-adf2727418cb&_gl=1*v48xl1*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQzOTkuNjAuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/rohit-kuvar-821309136/",
+    },
+    {
+      name: "Kishanlal Choudhary",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FKishanlal_Choudhary.jpg?alt=media&token=354aaa2d-2c81-405a-8524-b5300adb31b8&_gl=1*op0uut*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQyNzcuNjAuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/kishanlal-choudhary-a94154217/",
+    },
+    {
+      name: "Aditya Malu",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FMaluuuuuu.jpg?alt=media&token=ba94365b-7dec-40fe-a040-0aad6d4047c4&_gl=1*jv9zi8*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTI3NDguNTkuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/aditya-malu-2aa0a022a/",
+    },
+    {
+      name: "Shravani Kamthankar",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FShravani%20Kamthankar.jpg?alt=media&token=d7e53549-5bf5-45e2-aea3-597db8623eb1&_gl=1*1j6t0gh*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQxOTQuMzIuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/shravani-kamthankar-307242239/",
+    },
+    {
+      name: "Prathamesh Dikondawar",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FPrathamesh%20Dikondawar.jpg?alt=media&token=552c1276-84fb-4cbf-bcdd-f69c4731855f&_gl=1*1mjm30b*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTgzMzIuNTEuMC4w",
+      designation: "Creative Head",
+      linkedin: "https://www.linkedin.com/in/prathameshdikondawar/",
     },
     {
       name: "Madhushri Wagh",
@@ -314,7 +312,7 @@ const TeamPage = () => {
             linkedin="https://www.linkedin.com/in/dr-geetanjali-kale-17148922/"
           />
         </div>
-        <SectionHeading>Pulzion Leads</SectionHeading>
+        <SectionHeading>Team Pulzion</SectionHeading>
         <div className="grid items-center justify-center grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-20">
           {profiles.map((profile, index) => (
             <ProfileCard
