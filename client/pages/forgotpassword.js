@@ -20,12 +20,14 @@ const ForgotPassword = () => {
     const router = useRouter();
     const [email, setEmail] = useState();
     const [loading, setLoading] = useState(false);
-    
-    const toggleOTPScreen = async(values) => {
+
+    const toggleOTPScreen = async (values) => {
         try {
             setLoading(true)
+            console.log(values)
             const data = await sendOTP(values.email);
-            if(data?.error) {
+            console.log(data)
+            if (data?.error) {
                 toast.error(data.error);
                 setLoading(false)
                 return;
@@ -33,29 +35,32 @@ const ForgotPassword = () => {
             setEmail(values.email);
             setLoading(false);
             setSentotp(true)
-        } catch(e) {
-            
+        } catch (e) {
+
             toast.error('Something went wrong!')
             setLoading(false);
         }
     }
 
     const handleForget = async (values) => {
+        console.log("Hiiiiii")
         try {
             setLoading(true)
             const data = await forgetPassword({
                 ...values,
                 email,
             })
-            if(data?.error) {
+            console.log("Data: ");
+            console.log(data);
+            if (data?.error) {
                 toast.error(data.error);
                 setLoading(false)
                 return;
             }
             toast.success('Password Updated Successfully!');
             router.push('/register');
-        } catch(e) {
-            
+        } catch (e) {
+
             toast.error('Something went wrong!')
         }
         setLoading(false);
@@ -69,8 +74,8 @@ const ForgotPassword = () => {
                 </div>
             </div>
         </Layout>
-        
-    ) 
+
+    )
 }
 
 export default ForgotPassword;

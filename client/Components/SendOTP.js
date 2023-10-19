@@ -38,9 +38,9 @@ const SendOTP = (props) => {
                         <div className="text-white-500">{formik.errors.email}</div>
                     ) : null}
                 </div>
-                <span className="inline-block text-sm  text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
+                <button type="submit" className="inline-block text-sm  text-black bg-orange-500 rounded-md p-2  hover:bg-orange-800 hover:rounded-md hover:p-2  hover:text-white align-baseline cursor-pointer ">
                     Get OTP
-                </span>
+                </button>
             </form>
         </div>
     )
