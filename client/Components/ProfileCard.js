@@ -22,6 +22,7 @@ const ProfileCard = ({
     >
       <div className={styles.avatar_bg}>
         <img src={avatar} className={styles.custom_avatar} alt="profile" />
+        <div className={`${styles.blur_bg} shadow-2xl`}></div>
         <div className={`${styles.social_container}`}>
           <ul class={styles.social_icons}>
             <li>
@@ -37,11 +38,11 @@ const ProfileCard = ({
             </li>
           </ul>
         </div>
-        <div className={`${styles.blur_bg} shadow-2xl`}></div>
+
       </div>
       <div className={styles.details}>
-        <h3 className={`${styles.name} text-blue-400`}>{name}</h3>
-        <h5 className={`${styles.designation} text-blue-300`}>{designation}</h5>
+        <h3 className={`${styles.name} text-orange-400`}>{name}</h3>
+        <h5 className={`text-orange-400 mont_font font-semibold italic uppercase text-4xl`}>{designation}</h5>
       </div>
     </div>
   );
