@@ -133,22 +133,22 @@ const Mail = () => {
             >
               <option value="0">Select Status</option>
               <option value="1">Codelicious</option>
-              <option value="2">Compute & Compete</option>
-              <option value="3">Bug Off</option>
-              <option value="4">Hire Hustle</option>
-              <option value="5">CodeX</option>
-              <option value="6">Web + App Dev</option>
-              <option value="7">DataQuest</option>
-              <option value="8">ElectroQuest</option>
-              <option value="9">Dextrous</option>
-              <option value="10">Fandom (Western OTTs + Sidcoms)</option>
-              <option value="11">Fandom Anime</option>
-              <option value="12">Fandom (Marvel)</option>
-              <option value="13">Fandom (Indian OTTs)</option>
-              <option value="14">Paper presentation</option>
-              <option value="15">Insight</option>
-              <option value="16">Photoshop Royale</option>
-              <option value="18">Freeze The Second</option>
+              {/* <option value="2">Compute & Compete</option> */}
+              {/* <option value="3">Bug Off</option> */}
+              <option value="2">Hire Hustle</option>
+              <option value="3">CodeX</option>
+              <option value="4">Web + App Dev</option>
+              <option value="5">DataQuest</option>
+              <option value="6">ElectroQuest</option>
+              <option value="7">Dextrous</option>
+              <option value="8">Fandom Anime</option>
+              <option value="9">Fandom (Marvel)</option>
+              <option value="10">Fandom (OTTs)</option>
+              <option value="11">Fandom (TMKOC)</option>
+              {/* <option value="14">Paper presentation</option> */}
+              <option value="12">Insight</option>
+              {/* <option value="16">Photoshop Royale</option> */}
+              <option value="13">Freeze The Second</option>
             </select>
             {event === "" ? (
               <div className="text-red-500">Event cannot be empty</div>
