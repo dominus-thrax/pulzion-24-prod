@@ -40,8 +40,8 @@ const Dashboard = () => {
       const { categorised, eventCount } = await getCount();
       //console.log(categorised);
       setCount({
-        technical: categorised[1].count,
-        nonTechnical: categorised[0].count,
+        technical: categorised[0].count,
+        nonTechnical: categorised[1].count,
       });
       const labels = [];
       const counts = [];
