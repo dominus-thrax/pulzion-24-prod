@@ -8,13 +8,14 @@ import React, {
 
 import { MdAdd } from "react-icons/md";
 import { toast } from "react-hot-toast";
-
+import { getSlots } from '../action/slots'
 import ToolTipButton from './Button/ToolTipButton';
 import { userRegisterEvent } from "../action/registeration";
 import AppContext from "../context/AppContext";
 import { addCombo, addItem } from '../action/cart';
 import PrimaryButton from './Button/PrimaryButton';
 import { useRouter } from "next/router";
+import SlotCard from "./SlotCard";
 
 const EventDetails = ({ event }) => {
     const router = useRouter();
@@ -70,6 +71,7 @@ const EventDetails = ({ event }) => {
         try {
             setLoading(true);
             const data = await getSlots(id);
+            console.log(data)
             if (data?.error) {
                 toast.error(data.error);
                 return;
@@ -244,28 +246,31 @@ const EventDetails = ({ event }) => {
                         )
                     )}
                     {isLoggedIn && alreadyRegistered && (
-                        <div className="flex flex-wrap items-center justify-center gap-2">
+                        <div className="flex flex-col flex-wrap items-center justify-center gap-2">
                             {!registeredEvent?.fk_slot && id !== 1 && (
                                 <button
                                     className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
                                     onClick={
                                         slots?.length > 0 ? () => setSlots([]) : fetchSlots
                                     }
-                                    // onClick={
-                                    //     () => toast.warn("Slot booking for this event has not started yet!")
-                                    // }
+                                // onClick={
+                                //     () => toast.warn("Slot booking for this event has not started yet!")
+                                // }
                                 >
                                     {slots?.length > 0 ? "Cancel" : "Book Slot"}
                                 </button>
                             )}
+                            {slots.map((slot) => (
+                                <SlotCard key={slot.id} slot={slot} handleBook={handleBook} />
+                            ))}
                             {event.play && (
                                 <a
                                     className="px-5 py-2 tracking-wider hover:cursor-pointer text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
                                     href={id === 1 ? "https://www.codechef.com/CODL2023" : event.link}
                                     target="_blank"
-                                    // onClick={() => {
-                                    //     toast.warn('Event hasn\'t started yet.')
-                                    // }}
+                                // onClick={() => {
+                                //     toast.warn('Event hasn\'t started yet.')
+                                // }}
                                 >
                                     Play
                                 </a>
