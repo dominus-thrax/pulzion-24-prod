@@ -31,12 +31,12 @@ export default function Home() {
     //   imgUrl: "./postman.png",
     //   type: "Workshop Partner",
     // },
-    {
-      id: 4,
-      name: "Interview Buddy",
-      imgUrl: "./InterviewBuddy_Logo2.png",
-      type: "Education Partner",
-    },
+    // {
+    //   id: 4,
+    //   name: "Interview Buddy",
+    //   imgUrl: "./InterviewBuddy_Logo2.png",
+    //   type: "Education Partner",
+    // },
     {
       id: 5,
       name: "Give My Certificate",
