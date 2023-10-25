@@ -248,12 +248,12 @@ const EventDetails = ({ event }) => {
                             {!registeredEvent?.fk_slot && id !== 1 && (
                                 <button
                                     className="px-5 py-2 tracking-wider text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
-                                    // onClick={
-                                    //     slots?.length > 0 ? () => setSlots([]) : fetchSlots
-                                    // }
                                     onClick={
-                                        () => toast.warn("Slot booking for this event has not started yet!")
+                                        slots?.length > 0 ? () => setSlots([]) : fetchSlots
                                     }
+                                    // onClick={
+                                    //     () => toast.warn("Slot booking for this event has not started yet!")
+                                    // }
                                 >
                                     {slots?.length > 0 ? "Cancel" : "Book Slot"}
                                 </button>
@@ -261,11 +261,11 @@ const EventDetails = ({ event }) => {
                             {event.play && (
                                 <a
                                     className="px-5 py-2 tracking-wider hover:cursor-pointer text-white uppercase duration-500 ease-in-out rounded-md bg-orange-500 hover:bg-orange-700"
-                                    // href={id === 1 ? "https://www.codechef.com/CDLS2023" : event.link}
-                                    // target="_blank"
-                                    onClick={() => {
-                                        toast.warn('Event hasn\'t started yet.')
-                                    }}
+                                    href={id === 1 ? "https://www.codechef.com/CODL2023" : event.link}
+                                    target="_blank"
+                                    // onClick={() => {
+                                    //     toast.warn('Event hasn\'t started yet.')
+                                    // }}
                                 >
                                     Play
                                 </a>
