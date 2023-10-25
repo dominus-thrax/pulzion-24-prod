@@ -3,7 +3,7 @@ import { IoAlarmOutline, IoAlarmSharp, IoCalendarSharp } from 'react-icons/io5';
 import { displayDate, displayFormat } from '../utils/displayTime';
 import ToolTipButton from './Button/ToolTipButton';
 
-const SlotCard = ({ slot, handleBook }) => {
+const SlotCard = ({ slot, handleBook ,eventId}) => {
     return (
         <>
             <div className='flex flex-col gap-4 py-4'>
@@ -20,7 +20,7 @@ const SlotCard = ({ slot, handleBook }) => {
                     <p className='text-xl font-bold tracking-wide text-white'>
                         capacity: {slot.capacity}
                     </p>
-                    <ToolTipButton loader={false} text="Book Now" handleConfirm={()=>handleBook(slot.id)}/>
+                    <ToolTipButton loader={false} text="Book Now" handleConfirm={()=>handleBook(eventId,slot.id)}/>
                 </div>
             </div>
             <div className='w-full h-px bg-white opacity-10'></div>

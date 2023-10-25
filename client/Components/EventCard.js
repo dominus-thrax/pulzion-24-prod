@@ -105,11 +105,14 @@ function EventCard(props) {
             <h2 className="mt-[11rem] text-xl font-bold tracking-wider text-center text-white uppercase">{props.name}</h2>
             <h3 className="text-lg font-extrabold tracking-wider text-center text-white">{props.tagline}</h3>
             {registeredEvent?.fk_slot && (
-              <h3 className="mt-2 text-center">
+            <>
+              <h4 className="text-center text-violet-900 font-sans font-semibold text-xl">Booked Slot:</h4>
+              <h3 className="text-center text-white font-sans font-semibold text-xl">
                 {displayDate(registeredEvent.start_time)}{" "}
                 {displayFormat(registeredEvent.start_time)} -{" "}
                 {displayFormat(registeredEvent.end_time)}
               </h3>
+            </>
             )}
             <button
               className="relative z-0 p-5 text-center bg-no-repeat bg-contain rounded-sm sm:p-7"

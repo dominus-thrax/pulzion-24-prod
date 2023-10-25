@@ -8,7 +8,7 @@ import React, {
 
 import { MdAdd } from "react-icons/md";
 import { toast } from "react-hot-toast";
-import { getSlots } from '../action/slots'
+import { getSlots,bookSlot } from '../action/slots'
 import ToolTipButton from './Button/ToolTipButton';
 import { userRegisterEvent } from "../action/registeration";
 import AppContext from "../context/AppContext";
@@ -92,10 +92,10 @@ const EventDetails = ({ event }) => {
 
 
     // Handle Booking - 
-    const handleBook = async (slot_id) => {
+    const handleBook = async (event_id,slot_id) => {
         try {
             setLoading(true);
-            const data = await bookSlot(props.id, slot_id, dispatchEvents);
+            const data = await bookSlot(event_id, slot_id, dispatchEvents);
             if (data?.error) {
                 toast.error(data.error);
             } else {
@@ -261,7 +261,7 @@ const EventDetails = ({ event }) => {
                                 </button>
                             )}
                             {slots.map((slot) => (
-                                <SlotCard key={slot.id} slot={slot} handleBook={handleBook} />
+                                <SlotCard key={slot.id} slot={slot} handleBook={handleBook} eventId = {id} />
                             ))}
                             {event.play && (
                                 <a
