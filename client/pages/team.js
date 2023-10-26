@@ -271,20 +271,6 @@ const TeamPage = () => {
       designation: "Creative Head",
       linkedin: "https://www.linkedin.com/in/shravani-kamthankar-307242239/",
     },
-    {
-      name: "Prathamesh Dikondawar",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FPrathamesh%20Dikondawar.jpg?alt=media&token=552c1276-84fb-4cbf-bcdd-f69c4731855f&_gl=1*1mjm30b*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU5NjcxMi4xMy4xLjE2OTc1OTgzMzIuNTEuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/prathameshdikondawar/",
-    },
-    {
-      name: "Madhushri Wagh",
-      avatar:
-        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FMadhushri%20Wagh.jpg?alt=media&token=c564a4fb-a0ab-4c25-a438-3320e16ef0a5&_gl=1*xccd5w*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTUzNzYuNjAuMC4w",
-      designation: "Creative Head",
-      linkedin: "https://www.linkedin.com/in/madhushriwagh/",
-    },
   ];
 
   return (

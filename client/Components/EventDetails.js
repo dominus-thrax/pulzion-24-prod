@@ -347,7 +347,7 @@ const EventDetails = ({ event }) => {
                             )) :
                                 <div className="h-full w-full flex items-center justify-center">
                                     <h4 className='text-xl '>
-                                        Combos are coming soon.....
+                                        No combos available
                                     </h4>
                                 </div>
                             }
