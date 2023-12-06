@@ -7,12 +7,12 @@ import SectionHeading from "../Components/SectionHeading";
 
 export default function Home() {
   const sponsors = [
-    // {
-    //   id: 1,
-    //   name: "Mithi Softwares",
-    //   imgUrl: "./mithi_new.png",
-    //   type: "Associate Sponsor",
-    // },
+    {
+      id: 1,
+      name: "GrowthyfAI",
+      imgUrl: "./growthyfAI.png",
+      type: "Associate Sponsor",
+    },
     {
       id: 2,
       name: "Jamboree",
@@ -21,34 +21,28 @@ export default function Home() {
     },
     {
       id: 3,
-      name: "Budhani Bros",
-      imgUrl: "./budhani2.png",
-      type: "Snack Partner",
-    },
-    // {
-    //   id: 3,
-    //   name: "Postman",
-    //   imgUrl: "./postman.png",
-    //   type: "Workshop Partner",
-    // },
-    // {
-    //   id: 4,
-    //   name: "Interview Buddy",
-    //   imgUrl: "./InterviewBuddy_Logo2.png",
-    //   type: "Education Partner",
-    // },
-    {
-      id: 5,
       name: "Give My Certificate",
       imgUrl: "./GMC LogoS.png",
       type: "Certificate Partner",
     },
-    // {
-    //   id: 6,
-    //   name: "Nestle",
-    //   imgUrl: "./nestle.png",
-    //   type: "Refreshment Partner",
-    // },
+    {
+      id: 4,
+      name: "Budhani Bros",
+      imgUrl: "./budhani2.png",
+      type: "Snack Partner",
+    },
+    {
+      id: 5,
+      name: "Parle Agro",
+      imgUrl: "./parle-agro.png",
+      type: "Hydration Partner",
+    },
+    {
+      id: 6,
+      name: "Campus Sponsers",
+      imgUrl: "./campus-times.png",
+      type: "Media Partner",
+    },
 
     // {
     //   id: 8,
