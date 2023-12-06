@@ -223,6 +223,13 @@ const TeamPage = () => {
       linkedin: "https://www.linkedin.com/in/anushka512/",
     },
     {
+      name: "Madhushri Wagh",
+      avatar:
+        "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FMadhushri%20Wagh.jpg?alt=media&token=c564a4fb-a0ab-4c25-a438-3320e16ef0a5",
+      designation: "Content Head",
+      linkedin: "https://www.linkedin.com/in/madhushriwagh/",
+    },
+    {
       name: "Shivam Chandak",
       avatar:
         "https://firebasestorage.googleapis.com/v0/b/pulzion-team-page.appspot.com/o/Leads%2FShivamChandak.jpeg?alt=media&token=f8940ca1-03cd-4295-a191-3f94b6f673a9&_gl=1*1ms401m*_ga*NjI2MTcyMDc3LjE2OTI1ODY4OTM.*_ga_CW55HF8NVT*MTY5NzU1MTUxNi4xMi4xLjE2OTc1NTQ1NTcuNTkuMC4w",
